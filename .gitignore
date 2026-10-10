@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AI実験室の実験結果（再現には実行条件を残せばよいので、結果は管理しない）
+results/
