@@ -1,26 +1,58 @@
 """API換算コストの計算。
 
 単価は Anthropic 公式の料金表（https://platform.claude.com/docs/en/about-claude/pricing、
-2026-10-10 に取得）を USD / 100万トークンで転記したものです。
+2026-10-12 に確認）を USD / 100万トークンで転記したものです。
 
 注意:
 - Claude Haiku 5.5 は1リクエストのプロンプト（入力＋キャッシュ読み書き）が10万トークンを超えると
   高価格帯になります。CLI の使用量はリクエストを合算した値しか得られないため、ここでは基本料金だけで計算し、
   平均プロンプト長が閾値を超えた試行には注記を付けます（trial.json の cost.notes）。
-- キャッシュ書き込みのTTL内訳は CLI の出力から確実に得られないため、DEFAULT_CACHE_WRITE_TTL を仮定します。
+- Opus 4.8 と Sonnet 4.6 は100万トークンまで通常単価です（長文の割増なし）。
+- キャッシュ書き込みのTTL内訳が取得できない場合は、DEFAULT_CACHE_WRITE_TTL を仮定します。
 """
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 # 実験で使うモデル。短い名前から正式なモデルIDへの対応。
-MODEL_IDS = {"haiku": "claude-haiku-5-5", "opus": "claude-opus-5-5"}
+MODEL_IDS = {
+    "haiku": "claude-haiku-5-5",
+    "opus": "claude-opus-5-5",
+    "opus48": "claude-opus-4-8",
+    "sonnet46": "claude-sonnet-4-6",
+    "haiku45": "claude-haiku-4-5",
+}
+
+PRICING_SOURCE_URL = "https://platform.claude.com/docs/en/about-claude/pricing"
+PRICING_CHECKED_ON = "2026-10-12"
 
 # サブスクリプションのメイン会話のキャッシュ書き込みは1時間TTLとして扱う（料金表の2倍の書き込み単価）。
 DEFAULT_CACHE_WRITE_TTL = "1h"
 
 PRICES_PER_MTOK: dict[str, dict[str, float]] = {
+    "claude-haiku-4-5": {
+        "input": 1.00,
+        "output": 5.00,
+        "cache_write_5m": 1.25,
+        "cache_write_1h": 2.00,
+        "cache_read": 0.10,
+    },
+    "claude-sonnet-4-6": {
+        "input": 3.00,
+        "output": 15.00,
+        "cache_write_5m": 3.75,
+        "cache_write_1h": 6.00,
+        "cache_read": 0.30,
+    },
+    "claude-opus-4-8": {
+        "input": 5.00,
+        "output": 25.00,
+        "cache_write_5m": 6.25,
+        "cache_write_1h": 10.00,
+        "cache_read": 0.50,
+    },
     "claude-opus-5-5": {
         "input": 4.00,
         "output": 20.00,
@@ -64,7 +96,7 @@ class TokenCounts:
 def price_key(model_name: str) -> str | None:
     """CLI が報告するモデル名（日付サフィックス付きを含む）を価格表のキーに対応付ける。対応しなければ None。"""
     for key in PRICES_PER_MTOK:
-        if model_name == key or model_name.startswith(key + "-"):
+        if model_name == key or re.fullmatch(re.escape(key) + r"-\d{8}", model_name):
             return key
     return None
 

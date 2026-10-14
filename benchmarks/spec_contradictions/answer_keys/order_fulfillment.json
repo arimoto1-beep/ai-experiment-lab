@@ -1,0 +1,21 @@
+{
+  "spec": "order_fulfillment",
+  "version": 1,
+  "contradictions": [
+    {"requirement_ids": ["R01", "R02"], "reason": "支払確定済み・未出荷・通常便・梱包完了・受付30分以内の同じ注文で、キャンセルの受付と拒否を同時に要求する。", "severity": "major"},
+    {"requirement_ids": ["R03", "R04"], "reason": "国内通常便の同じ請求書の同じ送料欄に500円と0円を同時に保存することはできない。", "severity": "major"},
+    {"requirement_ids": ["R05", "R06", "R07"], "reason": "R07により後払い通常在庫品注文は配送処理対象で出荷前は未払いである。R05は出荷前に出荷可能状態へ入れることを要求するが、R06は支払確定を必須にしているため、その注文を処理できない。いずれか1要件を除けばこの不整合は解消する。", "severity": "critical"},
+    {"requirement_ids": ["R08", "R09"], "reason": "同じ出荷完了確定処理の終了時に、同じ追跡番号欄を非空と空にすることを同時に要求する。", "severity": "major"}
+  ],
+  "insufficient_information": [
+    {"requirement_ids": ["R16"], "reason": "返品を拒否する長期間の閾値が不明で、例えば出荷10日後を拒否すべきか判断できない。", "missing_information": "出荷完了から返品拒否までの日数と境界"},
+    {"requirement_ids": ["R17"], "reason": "営業日カレンダーがないため、特定の日が営業日か判断できない。", "missing_information": "曜日・祝日・会社休業日のカレンダー"}
+  ],
+  "non_contradictions": [
+    {"requirement_ids": ["R10", "R11"], "reason": "未払いでも通常便と速達便という排他的な配送条件が異なる。"},
+    {"requirement_ids": ["R12", "R13"], "reason": "R12がR13を明示的な例外としているため、梱包済みの住所変更を拒否しても原則と両立する。"},
+    {"requirement_ids": ["R03", "R14"], "reason": "通常便と速達便が異なる。送料無料会員の規定は速達便だけを対象にしている。"},
+    {"requirement_ids": ["R03", "R15"], "reason": "国内配送と海外配送が異なる。"}
+  ],
+  "normal_requirement_ids": ["R18", "R19", "R20"]
+}

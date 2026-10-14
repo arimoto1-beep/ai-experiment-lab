@@ -45,7 +45,15 @@ def _table(headers: list[str], rows: list[list[str]]) -> str:
 def format_report(entries: list[tuple[str, dict[str, Any]]]) -> str:
     result_rows: list[list[str]] = []
     cost_rows: list[list[str]] = []
+    model_rows: list[list[str]] = []
     for name, summary in entries:
+        actual = summary.get("actual_model_ids")
+        model_rows.append([
+            name,
+            ",".join(actual) if actual else "-",
+            _cell(summary.get("model_mismatch_trials")),
+            _cell(summary.get("model_unverified_trials")),
+        ])
         result_rows.append(
             [
                 name,
@@ -60,6 +68,11 @@ def format_report(entries: list[tuple[str, dict[str, Any]]]) -> str:
             ]
         )
         tokens = summary["tokens"]
+        mean_cost = summary.get("api_equivalent_usd_mean")
+        # 保存済みの旧形式にも対応する。計算が不完全な実験では平均を表示しない。
+        if "api_equivalent_usd_mean" not in summary and summary["cost_complete"] and summary["completed_runs"]:
+            total_cost = summary["api_equivalent_usd_total"]
+            mean_cost = total_cost / summary["completed_runs"] if total_cost is not None else None
         cost_rows.append(
             [
                 name,
@@ -68,6 +81,7 @@ def format_report(entries: list[tuple[str, dict[str, Any]]]) -> str:
                 str(tokens["cache_read"]),
                 str(tokens["cache_write"]),
                 _cell(summary["api_equivalent_usd_total"], "usd"),
+                _cell(mean_cost, "usd"),
                 _cell(summary["api_equivalent_usd_per_pass"], "usd"),
                 _cell(summary["cost_complete"], "bool"),
                 _cell(summary["cli_reported_usd_total"], "usd"),
@@ -78,16 +92,21 @@ def format_report(entries: list[tuple[str, dict[str, Any]]]) -> str:
         result_rows,
     )
     costs = _table(
-        ["experiment", "input", "output", "cache_read", "cache_write", "api_usd", "usd_per_pass", "cost_complete", "cli_usd"],
+        ["experiment", "input", "output", "cache_read", "cache_write", "api_usd", "mean_api_usd", "usd_per_pass", "cost_complete", "cli_usd"],
         cost_rows,
     )
+    models = _table(["experiment", "actual_models", "model_mismatch", "model_unverified"], model_rows)
     notes = (
-        "注: api_usd は公式単価からトークン数を基に計算した API 換算の推定値です（キャッシュ書き込みは1時間TTLの単価と仮定）。\n"
+        "注: モデルと Effort の組み合わせを比較します。Effort が異なる結果は、純粋なモデル能力比較とは区別してください。\n"
+        "    model_mismatch は指定と異なるモデルが報告された試行数、model_unverified は実モデルを確認できない試行数です。\n"
+        "    旧形式のモデル照合欄は - です。合否は隠しテストによるため、モデル照合の異常は別に確認してください。\n"
+        "    api_usd は公式単価からトークン数を基に計算した API 換算の推定値です。TTL内訳が不明なキャッシュ書き込みは1時間単価を仮定します。\n"
+        "    mean_api_usd は失敗も含む1試行あたりの平均です。計算が不完全な場合は - です。\n"
         "    cli_usd は Claude Code が報告した total_cost_usd の合計で、参考値です。Haiku 5.5 では CLI が単価を認識できず\n"
         "    Opus 5.5 相当の単価で計算するため、実際より大きく出ます（第1回の実機確認で確認済み。api_usd を使ってください）。\n"
         "    cost_complete が no の場合、一部の使用量が計算に含まれていません（trial.json の cost.notes を参照）。"
     )
-    return "\n\n".join(["[結果と時間]\n" + results, "[トークンと API 換算コスト]\n" + costs, notes])
+    return "\n\n".join(["[結果と時間]\n" + results, "[モデル照合]\n" + models, "[トークンと API 換算コスト]\n" + costs, notes])
 
 
 def build_report(exp_dirs: list[Path]) -> str:

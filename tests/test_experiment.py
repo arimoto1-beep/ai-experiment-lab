@@ -1,10 +1,13 @@
 import json
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
 
-from ai_lab.experiment import ExperimentConfig, price_trial, run_experiment
+from ai_lab.experiment import ExperimentConfig, check_model, price_trial, run_experiment
+from ai_lab.pricing import PRICES_PER_MTOK, PRICING_CHECKED_ON, PRICING_SOURCE_URL
 from ai_lab.problems import PROJECT_ROOT
+from ai_lab.report import build_report
 
 FIXTURES = PROJECT_ROOT / "tests" / "fixtures"
 REFERENCE_SOLUTION = FIXTURES / "reference" / "duration_parse.py"
@@ -176,3 +179,142 @@ def test_price_trial_without_usage_reports_no_cost():
     assert tokens is None
     assert cost["api_equivalent_usd"] is None
     assert cost["complete"] is False
+
+
+@pytest.mark.parametrize("problem, solution", [
+    ("duration_parse", REFERENCE_SOLUTION),
+    ("arithmetic_parser", FIXTURES / "arithmetic" / "reference.py"),
+    ("inventory_allocation", FIXTURES / "inventory" / "reference.py"),
+])
+@pytest.mark.parametrize("model_id, label, effort, expected_cost", [
+    ("claude-haiku-5-5", "haiku", "medium", FAKE_COST_USD),
+    ("claude-haiku-5-5", "haiku", "max", FAKE_COST_USD),
+    ("claude-opus-4-8", "opus48", "high", 0.02325),
+])
+def test_three_settings_use_existing_problems_and_record_results(
+    tmp_path, fake_command, monkeypatch, problem, solution, model_id, label, effort, expected_cost,
+):
+    arg_log = _arg_log(tmp_path, monkeypatch)
+    monkeypatch.setenv("FAKE_CLAUDE_SOLUTION", str(solution))
+    config = replace(_config(tmp_path, runs=1), problem=problem, model_id=model_id, model_label=label, effort=effort)
+
+    exp_dir = run_experiment(config, fake_command, log=lambda _: None)
+
+    call = _calls(arg_log)[0]
+    assert call["argv"][call["argv"].index("--model") + 1] == model_id
+    assert call["argv"][call["argv"].index("--effort") + 1] == effort
+    assert sorted(Path(call["cwd"]).iterdir()) == [Path(call["cwd"]) / "solution.py"]
+    trial = _json(exp_dir / "trial_01" / "trial.json")
+    assert trial["problem"] == problem and trial["effort"] == effort
+    assert trial["model_check"]["status"] == "match"
+    assert trial["model_check"]["actual_model_ids"] == [model_id]
+    assert trial["outcome"] == "pass" and trial["evaluation"]["tests"] > 0
+    assert trial["claude"]["model_usage"][model_id]["inputTokens"] == 100
+    assert trial["cost"]["api_equivalent_usd"] == pytest.approx(expected_cost)
+    assert trial["claude"]["cli_total_cost_usd"] == pytest.approx(FAKE_COST_USD)
+    assert trial["cost"]["pricing_source"] == PRICING_SOURCE_URL
+    assert trial["cost"]["pricing_checked_on"] == PRICING_CHECKED_ON
+    assert trial["cost"]["rates_per_mtok"][model_id] == PRICES_PER_MTOK[model_id]
+    summary = _json(exp_dir / "summary.json")
+    assert summary["comparison_basis"] == "model_and_effort"
+    assert summary["actual_model_ids"] == [model_id]
+    assert summary["model_mismatch_trials"] == summary["model_unverified_trials"] == 0
+    assert summary["api_equivalent_usd_mean"] == pytest.approx(expected_cost)
+    assert summary["mean_wall_seconds"] >= 0
+    meta = _json(exp_dir / "experiment.json")
+    assert meta["comparison_basis"] == "model_and_effort"
+    assert meta["pricing_checked_on"] == PRICING_CHECKED_ON
+
+
+@pytest.mark.parametrize("actual, status", [
+    (["claude-opus-4-8"], "match"),
+    (["claude-opus-4-8-20260528"], "match"),
+    (["claude-opus-5-5"], "mismatch"),
+    (["claude-opus-4-8", "claude-haiku-5-5"], "mismatch"),
+    (["claude-opus-4-8-fast"], "mismatch"),
+    ([], "unverified"),
+])
+def test_model_id_verification_uses_reported_ids(actual, status):
+    check = check_model({"model_usage": dict.fromkeys(actual, {})}, "claude-opus-4-8")
+    assert check["status"] == status
+    assert check["actual_model_ids"] == sorted(actual)
+
+
+@pytest.mark.parametrize("actual, expected_cost", [
+    ("claude-opus-4-8", 0.02325),
+    ("claude-opus-5-5", 0.018),
+    ("claude-unknown-9", None),
+])
+def test_mismatched_model_is_visible_and_priced_using_actual_id(tmp_path, fake_command, monkeypatch, actual, expected_cost):
+    monkeypatch.setenv("FAKE_CLAUDE_SOLUTION", str(REFERENCE_SOLUTION))
+    monkeypatch.setenv("FAKE_CLAUDE_MODEL", actual)
+    messages = []
+    exp_dir = run_experiment(_config(tmp_path, runs=1), fake_command, log=messages.append)
+
+    trial = _json(exp_dir / "trial_01" / "trial.json")
+    assert trial["outcome"] == "pass"  # 隠しテストによる合否は維持
+    assert trial["model_check"]["status"] == "mismatch"
+    assert trial["model_check"]["unexpected_model_ids"] == [actual]
+    if expected_cost is None:
+        assert trial["cost"]["api_equivalent_usd"] is None
+        assert trial["cost"]["complete"] is False
+    else:
+        assert trial["cost"]["api_equivalent_usd"] == pytest.approx(expected_cost)
+    assert any("mismatch" in message for message in messages)
+    summary = _json(exp_dir / "summary.json")
+    assert summary["model_mismatch_trials"] == 1
+    assert summary["actual_model_ids"] == [actual]
+    report = build_report([exp_dir])
+    assert actual in report and "model_mismatch" in report
+
+
+def test_missing_actual_model_preserves_usage_without_guessing_a_cost(tmp_path, fake_command, monkeypatch):
+    monkeypatch.setenv("FAKE_CLAUDE_SOLUTION", str(REFERENCE_SOLUTION))
+    monkeypatch.setenv("FAKE_CLAUDE_NO_MODEL_USAGE", "1")
+    exp_dir = run_experiment(_config(tmp_path, runs=1), fake_command, log=lambda _: None)
+
+    trial = _json(exp_dir / "trial_01" / "trial.json")
+    assert trial["model_check"]["status"] == "unverified"
+    assert trial["model_check"]["actual_model_ids"] == []
+    assert trial["tokens"] == {"input": 100, "output": 50, "cache_read": 3000, "cache_write": 2000}
+    assert trial["cost"]["api_equivalent_usd"] is None
+    assert trial["cost"]["complete"] is False
+    summary = _json(exp_dir / "summary.json")
+    assert summary["model_unverified_trials"] == 1
+    assert summary["api_equivalent_usd_mean"] is None
+
+
+@pytest.mark.parametrize("cache_5m, cache_1h", [(2000, 0), (0, 2000), (500, 1500)])
+def test_cache_write_ttl_breakdown_uses_separate_official_prices(cache_5m, cache_1h):
+    cli = {
+        "model_usage": {"claude-opus-4-8": {
+            "inputTokens": 100, "outputTokens": 50,
+            "cacheReadInputTokens": 3000, "cacheCreationInputTokens": 2000,
+        }},
+        "usage": {"cache_creation": {
+            "ephemeral_5m_input_tokens": cache_5m, "ephemeral_1h_input_tokens": cache_1h,
+        }},
+        "num_turns": 3,
+    }
+    tokens, cost = price_trial(cli, "claude-opus-4-8")
+    expected = (100 * 5 + 50 * 25 + 3000 * 0.5 + cache_5m * 6.25 + cache_1h * 10) / 1_000_000
+    assert cost["api_equivalent_usd"] == pytest.approx(expected)
+    assert tokens["cache_write"] == 2000
+    assert cost["cache_write_ttl_assumed"] is None
+    assert cost["cache_write_tokens_by_ttl"] == {"5m": cache_5m, "1h": cache_1h}
+    assert cost["complete"] is True
+
+
+@pytest.mark.parametrize("models, cache_total", [
+    (["claude-opus-4-8"], 1000),  # TTL内訳が合計と不一致
+    (["claude-opus-4-8", "claude-haiku-5-5"], 4000),  # モデル別にTTLを割り当てられない
+])
+def test_ambiguous_ttl_retains_the_documented_one_hour_assumption(models, cache_total):
+    cli = {
+        "model_usage": {name: {"cacheCreationInputTokens": 2000} for name in models},
+        "usage": {"cache_creation": {"ephemeral_5m_input_tokens": cache_total}},
+    }
+    _, cost = price_trial(cli, "claude-opus-4-8")
+    assert cost["cache_write_ttl_assumed"] == "1h"
+    assert cost["cache_write_tokens_by_ttl"] is None
+    assert any("TTL内訳" in note for note in cost["notes"])

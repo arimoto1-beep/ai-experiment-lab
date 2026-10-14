@@ -1,0 +1,20 @@
+{
+  "spec": "access_control",
+  "version": 1,
+  "contradictions": [
+    {"requirement_ids": ["R01", "R02"], "reason": "有効なサポート担当者と担当テナントという同じ条件で、同じ会員電話番号の書き換えを全面禁止しながら常に許可している。", "severity": "critical"},
+    {"requirement_ids": ["R03", "R04"], "reason": "退会完了した同じ会員の同じメールアドレスについて、即時完全削除と元の値での180日保持を同時に要求している。別の記録への匿名化ではなく同じ値の保持であり、両立しない。", "severity": "critical"},
+    {"requirement_ids": ["R05", "R06", "R07"], "reason": "R07によりサービス連携専用アカウントは保護対象だが電話認証を登録できない。R05はそのアカウントにも多要素認証必須設定を要求し、R06はその有効化に電話認証登録を必須とするため、設定不能となる。いずれか1要件を除けばこの不整合は解消する。", "severity": "critical"},
+    {"requirement_ids": ["R08", "R09"], "reason": "同じ未取消の招待リンクの発行12時間後から24時間未満の間に、R08は有効、R09は無効を同時に要求している。", "severity": "major"}
+  ],
+  "insufficient_information": [
+    {"requirement_ids": ["R16"], "reason": "異常アクセスの条件が不明で、特定の失敗回数や接続元でロックすべきか判断できない。", "missing_information": "異常を判定する回数・時間幅・接続元の基準"},
+    {"requirement_ids": ["R17"], "reason": "責任者の範囲が不明で、誰が緊急操作を許可できるか確定できない。", "missing_information": "許可者のロール・所属・代理権限"}
+  ],
+  "non_contradictions": [
+    {"requirement_ids": ["R10", "R11"], "reason": "システム管理者と一般利用者という排他的なロールが異なる。"},
+    {"requirement_ids": ["R12", "R13"], "reason": "復旧チケットによる1回のログインは、R12が明示した例外である。"},
+    {"requirement_ids": ["R14", "R15"], "reason": "法人契約と個人無料契約という排他的な契約区分が異なる。"}
+  ],
+  "normal_requirement_ids": ["R18", "R19", "R20"]
+}

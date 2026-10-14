@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+import pytest
+
 from ai_lab import cli
 
 
@@ -41,6 +43,28 @@ def test_dry_run_shows_the_plan_without_calling_claude(tmp_path, capsys):
     assert "claude-haiku-5-5" in out
     assert "--effort medium" in out
     assert "--bare" not in out
+    assert not (tmp_path / "results").exists()
+
+
+@pytest.mark.parametrize(
+    "model, effort, expected_id",
+    [
+        ("haiku", "medium", "claude-haiku-5-5"),
+        ("haiku", "max", "claude-haiku-5-5"),
+        ("opus48", "high", "claude-opus-4-8"),
+        ("claude-opus-4-8", "high", "claude-opus-4-8"),
+        ("opus", "medium", "claude-opus-5-5"),
+    ],
+)
+def test_comparison_conditions_and_existing_opus_alias(tmp_path, capsys, model, effort, expected_id):
+    rc = cli.main([
+        "run", "--model", model, "--effort", effort,
+        "--results-dir", str(tmp_path / "results"), "--dry-run",
+    ])
+    out = capsys.readouterr().out
+    assert rc == 0
+    assert f"--model {expected_id}" in out
+    assert f"--effort {effort}" in out
     assert not (tmp_path / "results").exists()
 
 
@@ -112,3 +136,33 @@ def test_report_explains_an_experiment_without_summary(tmp_path, capsys):
 
     assert rc == 1
     assert "summary.json" in capsys.readouterr().err
+
+
+def test_report_compares_three_settings_and_reads_legacy_results(tmp_path, capsys):
+    medium = _write_experiment(tmp_path, "haiku_medium", _summary())  # 既存形式
+    maximum = _write_experiment(tmp_path, "haiku_max", _summary(
+        effort="max", actual_model_ids=["claude-haiku-5-5"], model_mismatch_trials=0,
+        model_unverified_trials=0, api_equivalent_usd_mean=0.0007,
+    ))
+    opus = _write_experiment(tmp_path, "opus48_high", _summary(
+        model="claude-opus-4-8", effort="high", actual_model_ids=["claude-opus-4-8"],
+        model_mismatch_trials=1, model_unverified_trials=0, api_equivalent_usd_mean=0.02325,
+        cli_reported_usd_total=0.000465,
+    ))
+
+    assert cli.main(["report", str(medium), str(maximum), str(opus)]) == 0
+    out = capsys.readouterr().out
+    assert all(name in out for name in ("haiku_medium", "haiku_max", "opus48_high"))
+    assert all(effort in out for effort in ("medium", "max", "high"))
+    assert "66.7%" in out and "12.5" in out
+    assert "mean_api_usd" in out and "0.000400" in out  # 旧形式の合計 / 試行数
+    assert "0.000700" in out and "0.023250" in out and "0.000465" in out
+    assert "actual_models" in out and "model_mismatch" in out and "model_unverified" in out
+    assert "純粋なモデル能力比較" in out
+
+
+def test_report_does_not_average_an_incomplete_cost(tmp_path, capsys):
+    exp_dir = _write_experiment(tmp_path, "incomplete", _summary(cost_complete=False))
+    assert cli.main(["report", str(exp_dir)]) == 0
+    out = capsys.readouterr().out
+    assert "0.000400" not in out

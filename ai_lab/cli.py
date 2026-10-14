@@ -21,7 +21,7 @@ from ai_lab.pricing import MODEL_IDS, PRICES_PER_MTOK
 from ai_lab.problems import PROJECT_ROOT, build_prompt, load_problem
 from ai_lab.report import build_report
 
-EFFORT_LEVELS = ("low", "medium", "high", "xhigh", "max")
+EFFORT_LEVELS = ("default", "low", "medium", "high", "xhigh", "max")
 
 
 def _resolve_model(value: str) -> tuple[str, str]:
@@ -43,8 +43,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     run = commands.add_parser("run", help="課題をモデルに解かせて、結果を保存する")
     run.add_argument("--problem", default="duration_parse", help="problems/ 以下の課題名（既定: duration_parse）")
-    run.add_argument("--model", default="haiku", help="haiku / opus、またはモデルID（例: claude-haiku-5-5）")
-    run.add_argument("--effort", default="medium", choices=EFFORT_LEVELS, help="effort（既定: medium）")
+    run.add_argument("--model", default="haiku", help="haiku / opus / opus48 / sonnet46 / haiku45、またはモデルID")
+    run.add_argument("--effort", choices=EFFORT_LEVELS, help="省略時はHaiku 4.5のみdefault、他はmedium。defaultはCLIの--effortを省略")
     run.add_argument("--runs", type=int, default=1, help="独立した試行の回数（既定: 1）")
     run.add_argument("--timeout", type=float, default=1200, help="1試行の上限秒数（既定: 1200）")
     run.add_argument("--results-dir", type=Path, default=PROJECT_ROOT / "results", help="結果の保存先（既定: results/）")
@@ -84,7 +84,7 @@ def _run(args: argparse.Namespace) -> int:
         problem=args.problem,
         model_id=model_id,
         model_label=model_label,
-        effort=args.effort,
+        effort=claude_cli.resolve_effort(model_id, args.effort),
         runs=args.runs,
         timeout=args.timeout,
         results_dir=args.results_dir.resolve(),

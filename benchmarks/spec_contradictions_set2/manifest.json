@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dataset_set": "set2",
+  "frozen_on": "2026-10-11",
+  "sha256": {
+    "answer_keys/notification_delivery.json": "43e5f0e2e2913436303add3619303b27b3ddc939a2a1706ec7f254cd9254059a",
+    "answer_keys/resource_booking.json": "a0790ff5c2668537297b15f5a87abcf557b418fbf128ee671f8d5f4bdb28527a",
+    "answer_keys/subscription_billing.json": "b7abf92a138ea129984197982dc410f996ceaa148e4da60d0ffcc2126fcc4856",
+    "specs/notification_delivery.md": "c727d6ce82fde68cfad7b81a522c1fe30fe3658cd607046b75fbb6a7d4235f50",
+    "specs/resource_booking.md": "e773f0543447ceec10443079aac7a9478a688aa3d4a48bbc2eeac0289bdbcd79",
+    "specs/subscription_billing.md": "cc4e21b7a61faa9b33cb7153c27df071c482508b65c6de554698e36ea3185048"
+  }
+}

@@ -10,6 +10,10 @@
   FAKE_CLAUDE_SLEEP       本体実行の待ち秒数（タイムアウトの試験用）
   FAKE_CLAUDE_OUTPUT      json（既定）または text（JSON 以外を返す試験用）
   FAKE_CLAUDE_ARGLOG      受け取った引数・作業ディレクトリ・環境の要約を追記する JSON Lines ファイル
+  FAKE_CLAUDE_MODEL       modelUsage に報告する実モデルID（未指定なら --model と同じ）
+  FAKE_CLAUDE_NO_MODEL_USAGE  設定されていれば modelUsage を返さない
+  FAKE_CLAUDE_RESPONSE    result に入れる模擬回答文字列（未指定なら従来の完了文）
+  FAKE_CLAUDE_THINKING_TOKENS  出力50トークンに含まれるThinkingの報告値（未指定なら未報告）
 """
 
 from __future__ import annotations
@@ -48,6 +52,7 @@ def main(argv: list[str]) -> int:
         record = {
             "argv": argv,
             "cwd": os.getcwd(),
+            "cwd_entries": sorted(path.name for path in Path.cwd().iterdir()),
             "env": {
                 "ANTHROPIC_API_KEY": "ANTHROPIC_API_KEY" in os.environ,
                 "CLAUDE_CODE_USE_BEDROCK": "CLAUDE_CODE_USE_BEDROCK" in os.environ,
@@ -83,12 +88,12 @@ def main(argv: list[str]) -> int:
         "duration_ms": 4321,
         "duration_api_ms": 4000,
         "num_turns": 3,
-        "result": "実装しました。",
+        "result": os.environ.get("FAKE_CLAUDE_RESPONSE", "実装しました。"),
         "session_id": "fake-session",
         "total_cost_usd": 0.000465,
         "usage": usage,
         "modelUsage": {
-            model: {
+            os.environ.get("FAKE_CLAUDE_MODEL", model): {
                 "inputTokens": 100,
                 "outputTokens": 50,
                 "cacheReadInputTokens": 3000,
@@ -98,6 +103,13 @@ def main(argv: list[str]) -> int:
         },
         "permission_denials": [],
     }
+    if os.environ.get("FAKE_CLAUDE_NO_MODEL_USAGE"):
+        del payload["modelUsage"]
+    if "FAKE_CLAUDE_THINKING_TOKENS" in os.environ:
+        thinking = int(os.environ["FAKE_CLAUDE_THINKING_TOKENS"])
+        usage["output_tokens_details"] = {"thinking_tokens": thinking}
+        for entry in payload.get("modelUsage", {}).values():
+            entry["thinkingTokens"] = thinking
     print(json.dumps(payload, ensure_ascii=False))
     return exit_code
 

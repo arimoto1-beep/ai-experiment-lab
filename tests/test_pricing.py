@@ -14,6 +14,25 @@ def test_opus_55_list_prices_per_million_tokens():
     assert cost_usd(model, TokenCounts(cache_write=ONE_MILLION), "1h") == pytest.approx(8.00)
 
 
+@pytest.mark.parametrize(
+    "tokens, ttl, expected",
+    [
+        (TokenCounts(input=ONE_MILLION), "1h", 5.00),
+        (TokenCounts(output=ONE_MILLION), "1h", 25.00),
+        (TokenCounts(cache_read=ONE_MILLION), "1h", 0.50),
+        (TokenCounts(cache_write=ONE_MILLION), "5m", 6.25),
+        (TokenCounts(cache_write=ONE_MILLION), "1h", 10.00),
+    ],
+)
+def test_opus_48_official_rates_without_a_long_context_premium(tokens, ttl, expected):
+    assert cost_usd("claude-opus-4-8", tokens, ttl) == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("name", ["claude-opus-4-8-fast", "claude-opus-4-8-unknown", "claude-opus-4-80"])
+def test_unknown_model_variants_do_not_inherit_an_opus_48_price(name):
+    assert price_key(name) is None
+
+
 def test_haiku_55_list_prices_for_prompts_up_to_100k_tokens():
     model = "claude-haiku-5-5"
     assert cost_usd(model, TokenCounts(input=ONE_MILLION)) == pytest.approx(0.10)

@@ -23,6 +23,9 @@ from ai_lab.evaluate import evaluate
 from ai_lab.pricing import (
     DEFAULT_CACHE_WRITE_TTL,
     LONG_PROMPT_THRESHOLD_TOKENS,
+    PRICES_PER_MTOK,
+    PRICING_CHECKED_ON,
+    PRICING_SOURCE_URL,
     TokenCounts,
     cost_usd,
     price_key,
@@ -54,6 +57,19 @@ def _write_json(path: Path, data: Any) -> None:
 
 def _int(value: Any) -> int:
     return int(value or 0)
+
+
+def check_model(cli: dict[str, Any], requested_model_id: str) -> dict[str, Any]:
+    """modelUsage でモデルを照合する。usage だけでは実モデルを確認できない。"""
+    model_usage = cli.get("model_usage")
+    actual = sorted(model_usage) if isinstance(model_usage, dict) else []
+    unexpected = [name for name in actual if name != requested_model_id and price_key(name) != requested_model_id]
+    return {
+        "requested_model_id": requested_model_id,
+        "actual_model_ids": actual,
+        "status": "unverified" if not actual else "mismatch" if unexpected else "match",
+        "unexpected_model_ids": unexpected,
+    }
 
 
 def tokens_by_model(cli: dict[str, Any], requested_model_id: str) -> dict[str, TokenCounts]:
@@ -98,6 +114,24 @@ def price_trial(cli: dict[str, Any], requested_model_id: str) -> tuple[dict[str,
     total_cost = 0.0
     total = TokenCounts()
     turns = _int(cli.get("num_turns"))
+    model_verified = check_model(cli, requested_model_id)["status"] != "unverified"
+    if not model_verified:
+        complete = False
+        notes.append("modelUsage がないため実モデルは未確認です。トークン数だけを保存し、料金は計算していません。")
+
+    # usage のTTL内訳は全モデル合計なので、単一モデルで合計が一致する場合だけ割り当てる。
+    usage = cli.get("usage") or {}
+    cache_creation = usage.get("cache_creation") if isinstance(usage, dict) else None
+    cache_by_ttl = None
+    if len(per_model) == 1 and isinstance(cache_creation, dict):
+        cache_5m = _int(cache_creation.get("ephemeral_5m_input_tokens"))
+        cache_1h = _int(cache_creation.get("ephemeral_1h_input_tokens"))
+        if cache_5m >= 0 and cache_1h >= 0 and cache_5m + cache_1h == next(iter(per_model.values())).cache_write:
+            cache_by_ttl = {"5m": cache_5m, "1h": cache_1h}
+    if cache_by_ttl is None and any(t.cache_write for t in per_model.values()):
+        notes.append("キャッシュ書き込みのTTL内訳をモデル別に確定できないため、1時間TTLの単価を仮定しています。")
+
+    rates_used: dict[str, dict[str, float]] = {}
     for name, tokens in per_model.items():
         total = total + tokens
         key = price_key(name)
@@ -105,8 +139,15 @@ def price_trial(cli: dict[str, Any], requested_model_id: str) -> tuple[dict[str,
             complete = False
             notes.append(f"価格表にないモデルの使用量は含めていません: {name}")
             continue
+        if not model_verified:
+            continue
+        rates_used[key] = PRICES_PER_MTOK[key]
         priced = True
         total_cost += cost_usd(key, tokens)
+        if cache_by_ttl is not None:
+            # 既定の1時間単価で計上したうち、5分TTL分を公式の5分単価に置き換える。
+            cache_5m_tokens = TokenCounts(cache_write=cache_by_ttl["5m"])
+            total_cost += cost_usd(key, cache_5m_tokens, "5m") - cost_usd(key, cache_5m_tokens, "1h")
         threshold = LONG_PROMPT_THRESHOLD_TOKENS.get(key)
         if threshold and turns and tokens.prompt_tokens / turns > threshold:
             notes.append(
@@ -122,7 +163,11 @@ def price_trial(cli: dict[str, Any], requested_model_id: str) -> tuple[dict[str,
     cost_record = {
         "api_equivalent_usd": round(total_cost, 6) if priced else None,
         "complete": complete,
-        "cache_write_ttl_assumed": DEFAULT_CACHE_WRITE_TTL,
+        "cache_write_ttl_assumed": DEFAULT_CACHE_WRITE_TTL if cache_by_ttl is None else None,
+        "cache_write_tokens_by_ttl": cache_by_ttl,
+        "pricing_source": PRICING_SOURCE_URL,
+        "pricing_checked_on": PRICING_CHECKED_ON,
+        "rates_per_mtok": rates_used,
         "notes": notes,
     }
     return tokens_record, cost_record
@@ -164,6 +209,9 @@ def run_trial(
     tokens, cost = price_trial(cli, config.model_id)
     record = {
         "trial": index,
+        "problem": config.problem,
+        "effort": config.effort,
+        "model_check": check_model(cli, config.model_id),
         "outcome": "pass" if evaluation.passed else "fail",
         "started_at": started_at,
         "finished_at": _now(),
@@ -187,10 +235,16 @@ def summarize(trials: list[dict[str, Any]], meta: dict[str, Any]) -> dict[str, A
         key: sum(t["tokens"][key] for t in trials if t["tokens"])
         for key in ("input", "output", "cache_read", "cache_write")
     }
+    model_checks = [t["model_check"] for t in trials]
+    cost_complete = all(t["cost"]["complete"] for t in trials)
     return {
         "problem": meta["problem"],
         "model": meta["model"],
         "effort": meta["effort"],
+        "comparison_basis": meta["comparison_basis"],
+        "actual_model_ids": sorted({name for check in model_checks for name in check["actual_model_ids"]}),
+        "model_mismatch_trials": sum(check["status"] == "mismatch" for check in model_checks),
+        "model_unverified_trials": sum(check["status"] == "unverified" for check in model_checks),
         "requested_runs": meta["runs"],
         "completed_runs": completed,
         "passed": passed,
@@ -200,8 +254,9 @@ def summarize(trials: list[dict[str, Any]], meta: dict[str, Any]) -> dict[str, A
         "mean_wall_seconds": round(sum(t["wall_seconds"] for t in trials) / completed, 3) if completed else None,
         "tokens": token_totals,
         "api_equivalent_usd_total": usd_total,
+        "api_equivalent_usd_mean": round(usd_total / completed, 6) if (usd_total is not None and completed and cost_complete) else None,
         "api_equivalent_usd_per_pass": round(usd_total / passed, 6) if (usd_total is not None and passed) else None,
-        "cost_complete": all(t["cost"]["complete"] for t in trials),
+        "cost_complete": cost_complete,
         "cli_reported_usd_total": round(sum(cli_costs), 6) if cli_costs else None,
         "updated_at": _now(),
     }
@@ -230,9 +285,13 @@ def run_experiment(
         "problem": config.problem,
         "model": config.model_id,
         "effort": config.effort,
+        "comparison_basis": "model_and_effort",
         "runs": config.runs,
         "timeout_seconds": config.timeout,
         "max_turns": claude_cli.MAX_TURNS,
+        "pricing_source": PRICING_SOURCE_URL,
+        "pricing_checked_on": PRICING_CHECKED_ON,
+        "rates_per_mtok": PRICES_PER_MTOK,
         "prompt_sha256": hashlib.sha256(prompt.encode("utf-8")).hexdigest(),
         "claude_command": claude_command,
         "claude_version": preflight["version"],
@@ -251,8 +310,10 @@ def run_experiment(
         trials.append(record)
         log(
             f"[{index}/{config.runs}] 結果={record['outcome']} / CLI={record['claude']['status']} / "
-            f"{record['wall_seconds']} 秒"
+            f"モデル照合={record['model_check']['status']} / {record['wall_seconds']} 秒"
         )
+        if record["model_check"]["status"] != "match":
+            log(f"注意: 指定モデル={config.model_id} / 実モデル={record['model_check']['actual_model_ids']}。この試行の比較条件は確認できません。")
         # 途中で止まっても、そこまでの結果が残るように毎回集計を書き直す。
         _write_json(exp_dir / "summary.json", summarize(trials, meta))
     return exp_dir

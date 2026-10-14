@@ -1,0 +1,6 @@
+benchmarks/spec_contradictions/specs/*.md text eol=lf
+benchmarks/spec_contradictions/answer_keys/*.json text eol=lf
+benchmarks/spec_contradictions/manifest.json text eol=lf
+benchmarks/spec_contradictions_set2/specs/*.md text eol=lf
+benchmarks/spec_contradictions_set2/answer_keys/*.json text eol=lf
+benchmarks/spec_contradictions_set2/manifest.json text eol=lf

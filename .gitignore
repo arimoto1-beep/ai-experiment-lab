@@ -221,3 +221,6 @@ __marimo__/
 
 # AI実験室の実験結果（再現には実行条件を残せばよいので、結果は管理しない）
 results/
+
+# Detailed generated analysis snapshots; keep curated reports and CSVs in Git.
+/analysis/*/analysis.json

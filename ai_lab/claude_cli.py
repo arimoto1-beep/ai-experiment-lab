@@ -16,6 +16,8 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import Any
 
+from ai_lab.pricing import price_key
+
 # 従量課金（APIキー・クラウド経由）に繋がる環境変数。子プロセスからは必ず取り除く。
 BILLING_ENV_VARS = (
     "ANTHROPIC_API_KEY",
@@ -75,14 +77,23 @@ def nested_run_reason(env: Mapping[str, str]) -> str | None:
     return None
 
 
-def build_args(model_id: str, effort: str, prompt: str) -> list[str]:
+def resolve_effort(model_id: str, effort: str | None) -> str:
+    """Haiku 4.5はEffort非対応。defaultはCLIへフラグを渡さない設定を表す。"""
+    if price_key(model_id) == "claude-haiku-4-5":
+        if effort not in (None, "default"):
+            raise ValueError("Haiku 4.5はEffort非対応です。--effortを省略するかdefaultを指定してください。")
+        return "default"
+    return "medium" if effort is None else effort
+
+
+def build_args(model_id: str, effort: str | None, prompt: str) -> list[str]:
+    effort = resolve_effort(model_id, effort)
     return [
         "-p",
         prompt,
         "--model",
         model_id,
-        "--effort",
-        effort,
+        *([] if effort == "default" else ["--effort", effort]),
         "--output-format",
         "json",
         # 読み書きだけを許可する。実行系のツール（Bash など）は与えない。
@@ -212,6 +223,24 @@ def _count(value: Any) -> int:
     return len(value) if isinstance(value, list) else 0
 
 
+def _thinking_tokens(result: dict[str, Any]) -> int | None:
+    """出力に含まれるThinking内訳。報告がない場合は推測せずNoneにする。"""
+    def valid(value: Any) -> bool:
+        return type(value) is int and value >= 0
+
+    usage = result.get("usage")
+    details = usage.get("output_tokens_details") if isinstance(usage, dict) else None
+    value = details.get("thinking_tokens") if isinstance(details, dict) else None
+    if valid(value):
+        return value
+    model_usage = result.get("modelUsage")
+    if isinstance(model_usage, dict) and model_usage:
+        values = [entry.get("thinkingTokens") if isinstance(entry, dict) else None for entry in model_usage.values()]
+        if all(valid(value) for value in values):
+            return sum(values)
+    return None
+
+
 def summarize_run(run: CliRun) -> dict[str, Any]:
     """CLI の実行結果を trial.json に記録する形に整える。"""
     result = parse_output(run.stdout)
@@ -239,5 +268,6 @@ def summarize_run(run: CliRun) -> dict[str, Any]:
         "cli_total_cost_usd": result.get("total_cost_usd"),
         "usage": result.get("usage"),
         "model_usage": result.get("modelUsage"),
+        "thinking_tokens": _thinking_tokens(result),
         "result_text": result.get("result"),
     }

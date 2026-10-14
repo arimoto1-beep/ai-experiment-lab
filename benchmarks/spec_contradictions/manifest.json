@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "frozen_on": "2026-10-11",
+  "sha256": {
+    "answer_keys/access_control.json": "524817f4c65a52fee04c827193bc9e84f3db7ef07629d0a1bc57c117e520cce8",
+    "answer_keys/expense_approval.json": "9fb3a488f21266aa5f3d1ffd531b03d1aba989649349fc98b3cf1f2342a03407",
+    "answer_keys/order_fulfillment.json": "bafa6bade8f841d07ad9859f1d03e8d3e3f2a81dade8168e31005c146ed0837e",
+    "specs/access_control.md": "a927b2723706b682a35409777cb1f0532871320decb5eb108ce979573a2557d1",
+    "specs/expense_approval.md": "d24b778aabd27bb1e4f9dbde2af75042a40429d1187851cfba36c3138a623f5b",
+    "specs/order_fulfillment.md": "9fba1ad4d2ae1a10bcad94a1eaa6ddedfd115904d8a57c0c0862adcd2823959d"
+  }
+}

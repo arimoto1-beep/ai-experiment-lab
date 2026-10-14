@@ -1,0 +1,20 @@
+{
+  "spec": "expense_approval",
+  "version": 1,
+  "contradictions": [
+    {"requirement_ids": ["R01", "R02"], "reason": "国内一般経費・税込1万円以下という同じ申請条件に対して、支払確定に必要な承認者数をちょうど1人とちょうど2人の両方にすることはできない。", "severity": "critical"},
+    {"requirement_ids": ["R03", "R04"], "reason": "国内交通費の同じ申請レコードの同じ申請通貨欄にJPYとUSDを同時に保存することはできない。", "severity": "major"},
+    {"requirement_ids": ["R05", "R06", "R07"], "reason": "R07により期末仮申請は当月支払対象だが、領収書確認は翌月5日より前に完了しない。R05の当月末までの支払確定と、R06の領収書確認完了という前提条件を同時に満たせない。いずれか1要件を除けばこの不整合は解消する。", "severity": "critical"},
+    {"requirement_ids": ["R08", "R09"], "reason": "同じ支払済み申請の同じ監査ログについて、7年間保存することと支払確定日の当日中に削除することを同時に要求している。", "severity": "critical"}
+  ],
+  "insufficient_information": [
+    {"requirement_ids": ["R16"], "reason": "通知期限が不明で、例えば受付30分後の通知が適合するか判断できない。", "missing_information": "通知までの上限時間"},
+    {"requirement_ids": ["R17"], "reason": "換算基準日が不明で、利用日・申請日・支払日のどのレートを使うか確定できない。", "missing_information": "為替レートの基準日と取得元"}
+  ],
+  "non_contradictions": [
+    {"requirement_ids": ["R10", "R11"], "reason": "正社員とパート社員という排他的な雇用区分が異なる。"},
+    {"requirement_ids": ["R12", "R13"], "reason": "1000円以下の通常交通費はR12に明示された例外であり、領収書画像なしでもR06の確認を代替資料で行える。"},
+    {"requirement_ids": ["R14", "R15"], "reason": "定期券費と単発交通費は別の費目であり、回数制限の対象が異なる。"}
+  ],
+  "normal_requirement_ids": ["R18", "R19", "R20"]
+}
