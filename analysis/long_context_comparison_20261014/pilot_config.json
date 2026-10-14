@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "problem_seed": 101,
+  "position": "middle",
+  "distraction": "similar",
+  "chars_per_token": 4.0,
+  "target_document_tokens": {"short": 10000, "medium": 50000, "long90k": 90000},
+  "context_budget_tokens": 180000,
+  "cli_overhead_reserve_tokens": 20000,
+  "output_reserve_tokens": 8000,
+  "runs_per_cell": 1,
+  "conditions": {
+    "default": {"model": "claude-haiku-4-5", "cli_model": "haiku45", "effort_flag": null},
+    "medium": {"model": "claude-haiku-5-5", "cli_model": "haiku", "effort_flag": "medium"},
+    "high": {"model": "claude-haiku-5-5", "cli_model": "haiku", "effort_flag": "high"}
+  },
+  "experiments": [
+    {"directory": "long_context_haiku45_default_n19syylh", "length": "short", "effort": "default"},
+    {"directory": "long_context_haiku_medium_12j2gphu", "length": "short", "effort": "medium"},
+    {"directory": "long_context_haiku_high_wsyk4egh", "length": "short", "effort": "high"},
+    {"directory": "long_context_haiku45_default_sqcjgww6", "length": "medium", "effort": "default"},
+    {"directory": "long_context_haiku_medium_0br101o7", "length": "medium", "effort": "medium"},
+    {"directory": "long_context_haiku_high_2tdltpqu", "length": "medium", "effort": "high"},
+    {"directory": "long_context_haiku45_default_urbc8t6m", "length": "long90k", "effort": "default"},
+    {"directory": "long_context_haiku_medium_h7tag9c8", "length": "long90k", "effort": "medium"},
+    {"directory": "long_context_haiku_high_nibex0t7", "length": "long90k", "effort": "high"}
+  ]
+}

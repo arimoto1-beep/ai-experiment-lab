@@ -12,7 +12,8 @@ from typing import Any
 from ai_lab.experiment import _write_json
 
 VERSION = 1
-LENGTHS = {"short": 10_000, "medium": 50_000, "long": 120_000}
+DEFAULT_LENGTHS = ("short", "medium", "long")
+LENGTHS = {"short": 10_000, "medium": 50_000, "long": 120_000, "long90k": 90_000}
 POSITIONS = {"start": 0.05, "middle": 0.50, "end": 0.95}
 DISTRACTIONS = ("neutral", "similar")
 FACTS = ("base_fee", "standard_route", "discount_percent", "discount_segment",

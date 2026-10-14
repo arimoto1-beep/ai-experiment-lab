@@ -1,0 +1,13 @@
+﻿model,effort,problem_seed,position,distraction,length,metric,short_trials,longer_trials,short_accuracy,longer_accuracy,longer_minus_short
+claude-haiku-4-5,default,101,middle,similar,long90k,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-4-5,default,101,middle,similar,long90k,composition_correct,1,1,1.0,1.0,0.0
+claude-haiku-4-5,default,101,middle,similar,medium,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-4-5,default,101,middle,similar,medium,composition_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,high,101,middle,similar,long90k,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,high,101,middle,similar,long90k,composition_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,high,101,middle,similar,medium,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,high,101,middle,similar,medium,composition_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,medium,101,middle,similar,long90k,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,medium,101,middle,similar,long90k,composition_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,medium,101,middle,similar,medium,extraction_correct,1,1,1.0,1.0,0.0
+claude-haiku-5-5,medium,101,middle,similar,medium,composition_correct,1,1,1.0,1.0,0.0

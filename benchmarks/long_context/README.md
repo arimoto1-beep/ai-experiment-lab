@@ -80,6 +80,25 @@ python -m ai_lab.long_context_benchmark plan results/long_context_corpus --runs 
 python -m pytest tests/test_long_context.py -q
 ```
 
+### 9万トークン相当の追加資料
+
+`long90k` は9万トークン目標（既定では36万ASCII文字）の追加設定です。既定の生成対象は引き続きshort・medium・longの54件で、12万トークン版のlongも残します。同じseed・位置・紛らわしさなら、問い、採点対象の事実、最終正解、根拠ID・本文は同じです。資料長に伴い根拠の文字位置と無関係レコード数は変わりますが、根拠の相対配置とsimilarの頻度（約20%）を維持します。
+
+既存資料を上書きせず、別のコーパスへ生成します。4文字/トークンの近似設定を変えないので、同じ設定から作った中程度の校正値を利用できます。以下は生成・検証・dry-runだけで、実モデルを呼びません。
+
+```powershell
+python -m ai_lab.long_context_benchmark generate --output-dir results/long_context_corpus_90k --seeds 101 --lengths long90k --positions middle --distractions similar
+python -m ai_lab.long_context_benchmark validate results/long_context_corpus_90k
+
+$corpus = "results/long_context_corpus_90k"
+$cal = "results/long_context_calibration_medium_20261014.json"
+python -m ai_lab.long_context_benchmark run $corpus --case-id s101_long90k_middle_similar --model haiku45 --calibration $cal --limit 1 --dry-run
+python -m ai_lab.long_context_benchmark run $corpus --case-id s101_long90k_middle_similar --model haiku --effort medium --calibration $cal --limit 1 --dry-run
+python -m ai_lab.long_context_benchmark run $corpus --case-id s101_long90k_middle_similar --model haiku --effort high --calibration $cal --limit 1 --dry-run
+```
+
+校正値がない場合や推定が上限を超える場合は、安全チェックを通過しません。上限18万・CLI用2万・出力用8000の予約は変更しません。dry-runの通過は、実モデルの入力実測やコンテキスト保持の保証ではありません。
+
 独立したPowerShellで、**同じ1問題を各条件1回、計3回**から始めます。まず `--dry-run` 付きで条件を確認してください。dry-runはClaudeを起動せず、校正なしの長文も条件表示だけを行います。実実行ではコンテキスト検査が別途働きます。
 
 ```powershell

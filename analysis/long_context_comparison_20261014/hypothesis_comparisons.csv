@@ -1,0 +1,9 @@
+﻿effort,problem_seed,position,distraction,length,metric,haiku45_length_change,haiku55_length_change,haiku55_minus_haiku45_change
+high,101,middle,similar,long90k,extraction_correct,0.0,0.0,0.0
+high,101,middle,similar,long90k,composition_correct,0.0,0.0,0.0
+high,101,middle,similar,medium,extraction_correct,0.0,0.0,0.0
+high,101,middle,similar,medium,composition_correct,0.0,0.0,0.0
+medium,101,middle,similar,long90k,extraction_correct,0.0,0.0,0.0
+medium,101,middle,similar,long90k,composition_correct,0.0,0.0,0.0
+medium,101,middle,similar,medium,extraction_correct,0.0,0.0,0.0
+medium,101,middle,similar,medium,composition_correct,0.0,0.0,0.0

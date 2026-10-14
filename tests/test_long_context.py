@@ -73,6 +73,58 @@ def test_generated_files_are_regenerated_and_tampering_is_rejected(case, tmp_pat
     with pytest.raises(ValueError, match="metadata or gold"): load_case(output)
 
 
+def test_long90k_preserves_question_gold_evidence_and_distraction_profile(tmp_path):
+    original = build_case(101, "long", "middle", "similar")
+    smaller = build_case(101, "long90k", "middle", "similar")
+    assert smaller.case_id == "s101_long90k_middle_similar"
+    assert smaller.question == original.question
+    assert answer(smaller) == answer(original)
+    assert len(smaller.document) == 360_000 < len(original.document) == 480_000
+    assert smaller.config["chars_per_token"] == original.config["chars_per_token"] == 4
+    assert smaller.config["similar_filler_count"] == (smaller.config["filler_count"] + 4) // 5
+    for sid, offset in smaller.gold["evidence_offsets"].items():
+        original_offset = original.gold["evidence_offsets"][sid]
+        assert abs(offset / len(smaller.document) - original_offset / len(original.document)) < .005
+        assert smaller.document[offset:].splitlines()[0] == original.document[original_offset:].splitlines()[0]
+    assert all(original.gold["source_values"][sid] == values for sid, values in smaller.gold["source_values"].items())
+    corpus = tmp_path / "corpus"
+    bench.generate(corpus, [101], ["long90k"], ["middle"], ["similar"], 4)
+    assert bench.corpus_cases(corpus) == [smaller]
+    assert build_case(101, "long90k", "middle", "similar") == smaller
+    assert score_response(json.dumps(answer(smaller)), smaller)["strict_success"]
+
+
+def test_default_generation_keeps_original_three_lengths(tmp_path):
+    corpus = tmp_path / "corpus"
+    assert bench.main(["generate", "--output-dir", str(corpus), "--seeds", "101",
+                       "--positions", "middle", "--distractions", "similar"]) == 0
+    assert [case.config["length"] for case in bench.corpus_cases(corpus)] == ["short", "medium", "long"]
+
+
+@pytest.mark.parametrize("label,effort,ratio", [("haiku45", "default", .30), ("haiku", "medium", .39), ("haiku", "high", .39)])
+def test_long90k_dry_run_passes_common_guard_without_invoking_cli(tmp_path, capsys, monkeypatch, label, effort, ratio):
+    corpus = tmp_path / "corpus"
+    bench.generate(corpus, [101], ["long90k"], ["middle"], ["similar"], 4)
+    model = bench.MODEL_IDS[label]
+    calibration = {"version": 1, "chars_per_token": 4.0, "models": {model: {"tokens_per_byte_with_margin": ratio}}}
+    calibration_path = tmp_path / "calibration.json"
+    calibration_path.write_text(json.dumps(calibration), encoding="utf-8")
+    monkeypatch.setattr(bench, "run_benchmark", lambda *args, **kwargs: pytest.fail("Dry-run must not invoke the model"))
+    monkeypatch.setattr(claude_cli, "preflight", lambda *args, **kwargs: pytest.fail("Dry-run must not invoke CLI preflight"))
+    assert bench.main(["run", str(corpus), "--case-id", "s101_long90k_middle_similar", "--model", label,
+                       "--effort", effort, "--calibration", str(calibration_path), "--limit", "1", "--dry-run"]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert result["model"] == model and result["effort"] == effort
+    assert result["calls"] == 1 and result["model_invoked"] is False
+    guard = result["schedule"][0]["guard"]
+    assert guard["status"] == "estimate_pass"
+    assert guard["estimated_context_tokens"] <= guard["context_budget"] == 180_000
+    assert guard["cli_overhead_reserve"] == 20_000 and guard["output_reserve"] == 8_000
+    if label == "haiku":
+        with pytest.raises(ValueError, match="No request sent"):
+            bench.input_guard(build_case(101, "long", "middle", "similar"), model, calibration)
+
+
 def test_prompt_contains_only_manual_question_schema_and_generic_instructions(case):
     prompt = build_prompt(case)
     assert case.document in prompt

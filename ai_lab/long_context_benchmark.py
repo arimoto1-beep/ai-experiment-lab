@@ -20,7 +20,7 @@ from typing import Any
 
 from ai_lab import claude_cli
 from ai_lab.experiment import _now, _write_json, check_model, price_trial
-from ai_lab.long_context_data import DISTRACTIONS, LENGTHS, POSITIONS, Case, build_case, build_prompt, digest, load_case, save_case
+from ai_lab.long_context_data import DEFAULT_LENGTHS, DISTRACTIONS, LENGTHS, POSITIONS, Case, build_case, build_prompt, digest, load_case, save_case
 from ai_lab.long_context_scoring import score_response
 from ai_lab.pricing import MODEL_IDS, PRICES_PER_MTOK, PRICING_SOURCE_URL, TokenCounts, cost_usd
 from ai_lab.problems import PROJECT_ROOT
@@ -40,9 +40,10 @@ def corpus_cases(directory: Path) -> list[Case]:
         raise ValueError("Unknown or empty corpus manifest")
     cases = []
     seen = set()
+    length_names = "|".join(re.escape(name) for name in LENGTHS)
     for item in manifest["cases"]:
         name = item["case_id"]
-        if not isinstance(name, str) or not re.fullmatch(r"s\d+_(short|medium|long)_(start|middle|end)_(neutral|similar)", name) or name in seen:
+        if not isinstance(name, str) or not re.fullmatch(fr"s\d+_({length_names})_(start|middle|end)_(neutral|similar)", name) or name in seen:
             raise ValueError("Invalid or duplicate case ID")
         seen.add(name)
         case = load_case(directory / name)
@@ -480,7 +481,7 @@ def main(argv: list[str] | None = None) -> int:
     gen = commands.add_parser("generate")
     gen.add_argument("--output-dir", type=Path, required=True)
     gen.add_argument("--seeds", nargs="+", type=int, default=[101, 103, 104])
-    gen.add_argument("--lengths", nargs="+", choices=LENGTHS, default=list(LENGTHS))
+    gen.add_argument("--lengths", nargs="+", choices=LENGTHS, default=list(DEFAULT_LENGTHS))
     gen.add_argument("--positions", nargs="+", choices=POSITIONS, default=list(POSITIONS))
     gen.add_argument("--distractions", nargs="+", choices=DISTRACTIONS, default=list(DISTRACTIONS))
     gen.add_argument("--chars-per-token", type=float, default=4.0)

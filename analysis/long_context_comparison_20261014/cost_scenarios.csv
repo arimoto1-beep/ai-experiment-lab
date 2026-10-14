@@ -1,0 +1,10 @@
+﻿experiment,length,condition,total_input_tokens,cache_read_share,output_tokens_including_thinking,api_equivalent_usd_saved,api_equivalent_usd_recomputed,long_context_rate_multiplier,all_input_uncached_usd,all_input_cache_write_1h_usd,all_input_cache_read_usd
+long_context_haiku45_default_n19syylh,short,4.5 default,13821,0.0,1327,0.034268,0.034268,1,0.020456,0.034277,0.008017100000000001
+long_context_haiku_medium_12j2gphu,short,5.5 medium,16413,0.032596112837385,1502,0.003932,0.00393175,1,0.0023923,0.0040336,0.00091513
+long_context_haiku_high_wsyk4egh,short,5.5 high,16414,0.9763616425003047,1469,0.000972,0.00097216,1,0.0023759000000000002,0.0040173000000000006,0.00089864
+long_context_haiku45_default_sqcjgww6,medium,4.5 default,52752,0.0,1034,0.110665,0.110665,1,0.057922,0.110674,0.0104452
+long_context_haiku_medium_0br101o7,medium,5.5 medium,68695,0.03252056190406871,1245,0.013937,0.013936840000000002,1,0.007492,0.0143615,0.00130945
+long_context_haiku_high_2tdltpqu,medium,5.5 high,68695,0.9943664022126792,1720,0.00162,0.0016202800000000002,1,0.0077295,0.014599,0.00154695
+long_context_haiku45_default_urbc8t6m,long90k,4.5 default,91511,0.0,2082,0.193423,0.193423,1,0.101921,0.193432,0.019561099999999998
+long_context_haiku_medium_h7tag9c8,long90k,5.5 medium,120705,0.018507932562859864,1351,0.12196,0.1219592,5,0.06373,0.1240825,0.00941275
+long_context_haiku_high_nibex0t7,long90k,5.5 high,120704,0.9968020943796394,2036,0.01149,0.011490900000000002,5,0.065442,0.125794,0.0111252
