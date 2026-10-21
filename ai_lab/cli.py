@@ -16,6 +16,7 @@ import sys
 from pathlib import Path
 
 from ai_lab import claude_cli
+from ai_lab import agentic_dev
 from ai_lab.experiment import ExperimentConfig, run_experiment
 from ai_lab.pricing import MODEL_IDS, PRICES_PER_MTOK
 from ai_lab.problems import PROJECT_ROOT, build_prompt, load_problem
@@ -50,6 +51,18 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--results-dir", type=Path, default=PROJECT_ROOT / "results", help="結果の保存先（既定: results/）")
     run.add_argument("--claude-bin", help="claude の実行ファイル（既定: PATH 上の claude）")
     run.add_argument("--dry-run", action="store_true", help="モデルを呼ばず、実行内容だけを表示する")
+
+    agentic = commands.add_parser("agentic", help="隔離コンテナで複数ファイル開発課題を実行する")
+    agentic.add_argument("--task", choices=agentic_dev.TASKS, required=True)
+    agentic.add_argument("--model", choices=("haiku45", "haiku"), required=True)
+    agentic.add_argument("--effort", choices=EFFORT_LEVELS)
+    agentic.add_argument("--runs", type=int, default=1)
+    agentic.add_argument("--timeout", type=float, default=900)
+    agentic.add_argument("--results-dir", type=Path, default=PROJECT_ROOT / "results")
+    agentic.add_argument("--image", default="ai-lab-agent:1")
+    agentic.add_argument("--worker-image", default="ai-lab-agent-worker:1")
+    agentic.add_argument("--docker-bin", default="docker")
+    agentic.add_argument("--dry-run", action="store_true")
 
     report = commands.add_parser("report", help="保存済みの実験結果を比較表で表示する")
     report.add_argument("dirs", nargs="+", type=Path, help="実験の結果ディレクトリ（results/ 以下）")
@@ -119,6 +132,28 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "report":
             print(build_report([path.resolve() for path in args.dirs]))
+            return 0
+        if args.command == "agentic":
+            if args.runs < 1 or args.timeout <= 0:
+                raise ValueError("--runs と --timeout は正の値を指定してください")
+            model_id, _ = _resolve_model(args.model)
+            config = agentic_dev.AgenticConfig(
+                task=args.task, model_id=model_id,
+                effort=claude_cli.resolve_effort(model_id, args.effort),
+                runs=args.runs, timeout=args.timeout,
+                results_dir=args.results_dir.resolve(), image=args.image,
+                worker_image=args.worker_image,
+                docker_bin=args.docker_bin,
+            )
+            if args.dry_run:
+                print(agentic_dev.dry_run(config))
+                return 0
+            reason = claude_cli.nested_run_reason(os.environ)
+            if reason:
+                print(f"エラー: Claude Code 内からの入れ子実行です（{reason}）。", file=sys.stderr)
+                return 2
+            exp_dir = agentic_dev.run(config)
+            print(build_report([exp_dir]))
             return 0
         return _run(args)
     except (RuntimeError, FileNotFoundError, ValueError) as exc:

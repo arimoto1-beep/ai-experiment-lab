@@ -1,5 +1,8 @@
 # ai-experiment-lab
+
 AIの能力・判断・協調・自律性を実験で検証するプロジェクト
+
+次の複数ファイル開発実験（Haiku 4.5 / 5.5）の固定課題、隔離方式、dry-run手順は [benchmarks/agentic_dev/README.md](benchmarks/agentic_dev/README.md) を参照してください。
 
 ## 第1回実験: 安いAIを何度も実行すれば、高性能AIの1回の実行に勝てるか
 

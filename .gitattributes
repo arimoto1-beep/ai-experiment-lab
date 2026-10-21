@@ -4,3 +4,44 @@ benchmarks/spec_contradictions/manifest.json text eol=lf
 benchmarks/spec_contradictions_set2/specs/*.md text eol=lf
 benchmarks/spec_contradictions_set2/answer_keys/*.json text eol=lf
 benchmarks/spec_contradictions_set2/manifest.json text eol=lf
+# Frozen agentic_dev files: preserve the exact bytes recorded on 2026-10-18.
+/.gitignore -text
+ai_lab/__init__.py -text
+ai_lab/__main__.py -text
+ai_lab/agentic_dev.py -text
+ai_lab/claude_cli.py -text
+ai_lab/cli.py -text
+ai_lab/evaluate.py -text
+ai_lab/experiment.py -text
+ai_lab/long_context_benchmark.py -text
+ai_lab/long_context_data.py -text
+ai_lab/long_context_scoring.py -text
+ai_lab/pricing.py -text
+ai_lab/problems.py -text
+ai_lab/report.py -text
+ai_lab/spec_benchmark.py -text
+ai_lab/spec_rescore.py -text
+ai_lab/spec_scoring.py -text
+benchmarks/agentic_dev/.dockerignore -text
+benchmarks/agentic_dev/Dockerfile -text
+benchmarks/agentic_dev/mcp_bridge.py -text
+benchmarks/agentic_dev/mcp_worker.py -text
+benchmarks/agentic_dev/parcel_manifest/manifest.json -text
+benchmarks/agentic_dev/parcel_manifest/problem.md -text
+benchmarks/agentic_dev/parcel_manifest/public_tests/test_manifest.py -text
+benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/__init__.py -text
+benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/parse.py -text
+benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/price.py -text
+benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/service.py -text
+benchmarks/agentic_dev/README.md -text
+benchmarks/agentic_dev/room_booking/manifest.json -text
+benchmarks/agentic_dev/room_booking/problem.md -text
+benchmarks/agentic_dev/room_booking/public_tests/test_booking.py -text
+benchmarks/agentic_dev/room_booking/starter/src/room_booking/__init__.py -text
+benchmarks/agentic_dev/room_booking/starter/src/room_booking/calendar.py -text
+benchmarks/agentic_dev/room_booking/starter/src/room_booking/service.py -text
+benchmarks/agentic_dev/room_booking/starter/src/room_booking/timeutil.py -text
+benchmarks/agentic_dev/Worker.Dockerfile -text
+/README.md -text
+tests/test_agentic_dev.py -text
+tests/test_agentic_docker.py -text

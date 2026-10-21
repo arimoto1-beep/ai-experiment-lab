@@ -1,0 +1,314 @@
+{
+  "parcel_manifest|claude-haiku-4-5": {
+    "n": 5,
+    "passed": 4,
+    "hidden_passed_total": 39,
+    "hidden_test_total": 40,
+    "cli_seconds": {
+      "median": 29.757,
+      "min": 27.637,
+      "max": 30.084
+    },
+    "total_seconds": {
+      "median": 32.027,
+      "min": 29.763,
+      "max": 32.342
+    },
+    "thinking_tokens": {
+      "median": 1839,
+      "min": 1582,
+      "max": 2303
+    },
+    "tool_calls": {
+      "median": 10,
+      "min": 10,
+      "max": 10
+    },
+    "output_tokens": {
+      "median": 3194,
+      "min": 2944,
+      "max": 3659
+    },
+    "cache_read_tokens": {
+      "median": 33001,
+      "min": 27412,
+      "max": 33553
+    },
+    "cache_write_tokens": {
+      "median": 4147,
+      "min": 3961,
+      "max": 9267
+    },
+    "api_equivalent_usd": {
+      "median": 0.028685,
+      "min": 0.027246,
+      "max": 0.036036
+    },
+    "public_test_fail_trials": 0,
+    "post_edit_fail_trials": 0,
+    "revision_writes_total": 0,
+    "additional": {
+      "n": 4,
+      "passed": 3,
+      "cli_seconds": {
+        "median": 29.8515,
+        "min": 28.436,
+        "max": 30.084
+      },
+      "thinking_tokens": {
+        "median": 1933.0,
+        "min": 1823,
+        "max": 2303
+      },
+      "tool_calls": {
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      }
+    },
+    "initial": {
+      "cli_seconds": 27.637,
+      "thinking_tokens": 1582
+    },
+    "tool_totals": {
+      "list_files_calls": 5,
+      "read_file_calls": 25,
+      "write_file_calls": 15,
+      "public_test_calls": 5
+    }
+  },
+  "parcel_manifest|claude-haiku-5-5": {
+    "n": 5,
+    "passed": 5,
+    "hidden_passed_total": 40,
+    "hidden_test_total": 40,
+    "cli_seconds": {
+      "median": 16.183,
+      "min": 15.249,
+      "max": 17.577
+    },
+    "total_seconds": {
+      "median": 18.698,
+      "min": 17.412,
+      "max": 20.13
+    },
+    "thinking_tokens": {
+      "median": 383,
+      "min": 328,
+      "max": 433
+    },
+    "tool_calls": {
+      "median": 10,
+      "min": 10,
+      "max": 10
+    },
+    "output_tokens": {
+      "median": 2117,
+      "min": 1965,
+      "max": 2131
+    },
+    "cache_read_tokens": {
+      "median": 27505,
+      "min": 21725,
+      "max": 27537
+    },
+    "cache_write_tokens": {
+      "median": 1388,
+      "min": 1273,
+      "max": 7153
+    },
+    "api_equivalent_usd": {
+      "median": 0.001613,
+      "min": 0.001512,
+      "max": 0.002707
+    },
+    "public_test_fail_trials": 0,
+    "post_edit_fail_trials": 0,
+    "revision_writes_total": 0,
+    "additional": {
+      "n": 4,
+      "passed": 4,
+      "cli_seconds": {
+        "median": 16.4775,
+        "min": 15.249,
+        "max": 17.577
+      },
+      "thinking_tokens": {
+        "median": 395.5,
+        "min": 328,
+        "max": 433
+      },
+      "tool_calls": {
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      }
+    },
+    "initial": {
+      "cli_seconds": 16.183,
+      "thinking_tokens": 338
+    },
+    "tool_totals": {
+      "list_files_calls": 5,
+      "read_file_calls": 25,
+      "write_file_calls": 15,
+      "public_test_calls": 5
+    }
+  },
+  "room_booking|claude-haiku-4-5": {
+    "n": 5,
+    "passed": 5,
+    "hidden_passed_total": 50,
+    "hidden_test_total": 50,
+    "cli_seconds": {
+      "median": 50.544,
+      "min": 47.799,
+      "max": 83.841
+    },
+    "total_seconds": {
+      "median": 53.118,
+      "min": 50.162,
+      "max": 86.547
+    },
+    "thinking_tokens": {
+      "median": 3949,
+      "min": 3572,
+      "max": 8045
+    },
+    "tool_calls": {
+      "median": 11,
+      "min": 11,
+      "max": 11
+    },
+    "output_tokens": {
+      "median": 5658,
+      "min": 5320,
+      "max": 9893
+    },
+    "cache_read_tokens": {
+      "median": 47884,
+      "min": 43210,
+      "max": 89469
+    },
+    "cache_write_tokens": {
+      "median": 11534,
+      "min": 6905,
+      "max": 13397
+    },
+    "api_equivalent_usd": {
+      "median": 0.058924,
+      "min": 0.046386,
+      "max": 0.081545
+    },
+    "public_test_fail_trials": 5,
+    "post_edit_fail_trials": 0,
+    "revision_writes_total": 0,
+    "additional": {
+      "n": 4,
+      "passed": 4,
+      "cli_seconds": {
+        "median": 49.9405,
+        "min": 47.799,
+        "max": 83.841
+      },
+      "thinking_tokens": {
+        "median": 3884.5,
+        "min": 3572,
+        "max": 8045
+      },
+      "tool_calls": {
+        "median": 11.0,
+        "min": 11,
+        "max": 11
+      }
+    },
+    "initial": {
+      "cli_seconds": 56.818,
+      "thinking_tokens": 4703
+    },
+    "tool_totals": {
+      "list_files_calls": 5,
+      "read_file_calls": 25,
+      "write_file_calls": 15,
+      "public_test_calls": 10
+    }
+  },
+  "room_booking|claude-haiku-5-5": {
+    "n": 5,
+    "passed": 5,
+    "hidden_passed_total": 50,
+    "hidden_test_total": 50,
+    "cli_seconds": {
+      "median": 18.831,
+      "min": 15.285,
+      "max": 23.73
+    },
+    "total_seconds": {
+      "median": 21.215,
+      "min": 17.341,
+      "max": 26.281
+    },
+    "thinking_tokens": {
+      "median": 614,
+      "min": 501,
+      "max": 1355
+    },
+    "tool_calls": {
+      "median": 10,
+      "min": 10,
+      "max": 10
+    },
+    "output_tokens": {
+      "median": 2799,
+      "min": 2550,
+      "max": 3489
+    },
+    "cache_read_tokens": {
+      "median": 28229,
+      "min": 18356,
+      "max": 30607
+    },
+    "cache_write_tokens": {
+      "median": 3801,
+      "min": 1850,
+      "max": 5245
+    },
+    "api_equivalent_usd": {
+      "median": 0.002508,
+      "min": 0.001967,
+      "max": 0.002583
+    },
+    "public_test_fail_trials": 0,
+    "post_edit_fail_trials": 0,
+    "revision_writes_total": 0,
+    "additional": {
+      "n": 4,
+      "passed": 4,
+      "cli_seconds": {
+        "median": 19.5435,
+        "min": 15.843,
+        "max": 23.73
+      },
+      "thinking_tokens": {
+        "median": 701.0,
+        "min": 605,
+        "max": 1355
+      },
+      "tool_calls": {
+        "median": 10.0,
+        "min": 10,
+        "max": 10
+      }
+    },
+    "initial": {
+      "cli_seconds": 15.285,
+      "thinking_tokens": 501
+    },
+    "tool_totals": {
+      "list_files_calls": 5,
+      "read_file_calls": 25,
+      "write_file_calls": 15,
+      "public_test_calls": 5
+    }
+  }
+}

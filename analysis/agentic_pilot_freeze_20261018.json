@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-18T22:18:37.387566+09:00",
+  "purpose": "agentic_dev four-condition pilot; freeze before model execution",
+  "git_head_before": "521e37a5f5c04d307a7e27eb8799a6048e4515cf",
+  "file_sha256": {
+    ".gitignore": "8f0d2312727b5aff6f2889871cb270508afe5d39116f8d2b0b43d072fec73e92",
+    "ai_lab/__init__.py": "dffd57372c20f593c29e46a3de9f2474a7baa64bd760db432d7fb0f6a6251602",
+    "ai_lab/__main__.py": "e8726875cd9a853d7f5ced3f95ea84da16e14160fbf2ed332b0a86e4b3f5dc98",
+    "ai_lab/agentic_dev.py": "05facc650fd0347f872b0687307289ab55e394bebec442e77c035be33f9870f8",
+    "ai_lab/claude_cli.py": "98a83592d0efe3390bef0671ae08b40968baf9c7b53beb3cccffe1ebd9293ff4",
+    "ai_lab/cli.py": "7ad9b757a7ad9b8aff0b9ff6183aef0319f274d691e0fe6f109c9d632aeebb52",
+    "ai_lab/evaluate.py": "7fd469694cb76e8bf32bfec3b0e42917a7da1fbae48674e6c52c896c686fa5e8",
+    "ai_lab/experiment.py": "58f373f541eae46fc51045f75da638dc8c586ba4fd384554910c821af95b6fcf",
+    "ai_lab/long_context_benchmark.py": "d5d90749205d1de9106a0fb23a00b633c9d3eb69d4256d1ee054eec0f66e2838",
+    "ai_lab/long_context_data.py": "9bb948d501b12131f7dfdfd7cf4dd92ec608b7618ab25f4f30d759e11278cb9a",
+    "ai_lab/long_context_scoring.py": "c60b871f065a5e3099c1be08645ecdf5737ae492bc5ed1376b56617478cce58b",
+    "ai_lab/pricing.py": "7fae8b1d37ba2760be0190e126642492ea830de544642961e908aeac55738247",
+    "ai_lab/problems.py": "debef78306a5341540e226c3c7b10db5c0cba4688377d0ddea66db64d5a4441a",
+    "ai_lab/report.py": "c723a3895c2cfa97a48925a3ddda6c10ad90eff201b4615a3d5440ee1c02b332",
+    "ai_lab/spec_benchmark.py": "cc32ef0676f44b8d2ce1a4d46e9b988d4a676a7c2d5e799b4f2729bf5b70b074",
+    "ai_lab/spec_rescore.py": "616eadef9e565e33c2566b76aa5b634afedce66df5bc541dcabea4d5e3fe98f6",
+    "ai_lab/spec_scoring.py": "827b89e13f8aa2507f877581a161988a07bf7e4b1015ae7b87d9a6801284c902",
+    "benchmarks/agentic_dev/.dockerignore": "a11739473003beef54d7d67887976ae826c602061c4dd76ac23f5f9d70befae7",
+    "benchmarks/agentic_dev/Dockerfile": "80f69c44197810e390a51674ce935e0a76abefac05b47e00c766cc3321413f29",
+    "benchmarks/agentic_dev/mcp_bridge.py": "f88b11755fe55cab38231c270763a5d6fea071d390fe60655c380db3bf4b5aaf",
+    "benchmarks/agentic_dev/mcp_worker.py": "1dae2a023fc406c8f97d5d2d982b144c7bce50bbe4c02960336771d2102ca082",
+    "benchmarks/agentic_dev/parcel_manifest/hidden_tests/test_manifest_hidden.py": "15d950a92ce44d5c76f7972d053e6d3aea1ec9157d051ccaf05c32b1a3eb9ebb",
+    "benchmarks/agentic_dev/parcel_manifest/manifest.json": "a7344456507cbfda1bdd946a367425a8c368d988ac741b192c7fcbb28a158dd1",
+    "benchmarks/agentic_dev/parcel_manifest/problem.md": "fcd859eeaaea0cf120eed01377c1cd5ae88bed959d5d217497cbf478e50ec2b0",
+    "benchmarks/agentic_dev/parcel_manifest/public_tests/test_manifest.py": "99f8c992e3014f563c0576fc04334ee84a737cb1087a1d1b4e4612e162d2ad62",
+    "benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/__init__.py": "655476a3f5f21278a3b402a22deebde02797682b36fe4f468635af801053ac82",
+    "benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/parse.py": "c5df8048a50dbb9ffbb68cd6c84e2abc6a66f7393455f096fa118ee6326f89b9",
+    "benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/price.py": "982c1be4013f21fb5ca2b60348f1e483f738b4d3f06943dcc0df5c225ad72412",
+    "benchmarks/agentic_dev/parcel_manifest/starter/src/parcel_manifest/service.py": "b3be65dfd975a19a56ec2cfccd321eb5bcdffc8fb602fdb5b466a91c89e0184d",
+    "benchmarks/agentic_dev/README.md": "a6237f1568801ffd6ee310f1e4beef91a6b95dab4df242a36bfd6bd4c3b05084",
+    "benchmarks/agentic_dev/room_booking/hidden_tests/test_booking_hidden.py": "caf406ec1f366b1bd4d837488733f2dfd54930882e7785e9081159b4831c2dfb",
+    "benchmarks/agentic_dev/room_booking/manifest.json": "51e7b54c53dc2ee6e20783323152063da74a7cc26a6f06eef34dd8296c1e8f7f",
+    "benchmarks/agentic_dev/room_booking/problem.md": "10998299b2d3472a2f1655e2f7347713470ab5ec0426fd716e5aa1523801d897",
+    "benchmarks/agentic_dev/room_booking/public_tests/test_booking.py": "22e66b4f66583395ca9543985a090ce59a92750eac68d13b7c141a7bf3a7e90f",
+    "benchmarks/agentic_dev/room_booking/starter/src/room_booking/__init__.py": "94c8efdf88595a50afd8867b0773b36d8281b34e8af9cce8507163f0fa2706cf",
+    "benchmarks/agentic_dev/room_booking/starter/src/room_booking/calendar.py": "8944cec4d61edee33fbacfd9221c487ce4cefcb3e48abc267dafc8618dad2741",
+    "benchmarks/agentic_dev/room_booking/starter/src/room_booking/service.py": "0ff815733fbab49b7cd13cc7de5ddbde67c6ebf687609df360d88a3b893df17e",
+    "benchmarks/agentic_dev/room_booking/starter/src/room_booking/timeutil.py": "5bc7b6afa53011cfe0f7f4f35b87b6aa38385cf4fb7f41325b5fd6e9e06bdc9c",
+    "benchmarks/agentic_dev/Worker.Dockerfile": "145a79846f96763cc6e539156aa5d53d0f0b562e8a98f3d80a2e68712148fc26",
+    "README.md": "847297cc1388e93be00c94b75c0766f7b3f22068e1f0b036544d19fcce1df494",
+    "tests/fixtures/agentic_reference/parcel_manifest/parcel_manifest/__init__.py": "e9870bf5adf62c45326bde00ccbf931fec7deb0cd0b4ebdb94c8cff62660c3c4",
+    "tests/fixtures/agentic_reference/room_booking/room_booking/__init__.py": "5d7638c238d47ce1527c6b93420e2886ae49c49fa1ab5f9de8592514f105fb16",
+    "tests/test_agentic_dev.py": "5f0cacc3e43eb196f050246d5ba390ef2ef543ae3425803176a5ba1ad30b9037",
+    "tests/test_agentic_docker.py": "f47cec840aa33191cc3daba6d0eec3463c5fabbdf4ffb2a44e010049c4d5a64c"
+  },
+  "files_canonical_sha256": "a6d8d5482a836bde47825047780249372b44597a990cb37cf3e0b613ebed9ffe",
+  "prompt_sha256": {
+    "parcel_manifest": "2c90ebbbd379e3bc364a84f5415a285e23e95a45da2db6254bd4cafbb54a8b6e",
+    "room_booking": "1f00bfc3eb47b2ed1965617fbd0d85434fce9d6d87c787bc7e6822ea4041a0b2"
+  },
+  "cli_image_id": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+  "worker_image_id": "sha256:df55a0750cec45cda014a9269eb980e76a0fb2e29ea37e6186c39f6af64b59d4",
+  "conditions": {
+    "tasks": [
+      "parcel_manifest",
+      "room_booking"
+    ],
+    "models": [
+      {
+        "id": "claude-haiku-4-5",
+        "effort": "default"
+      },
+      {
+        "id": "claude-haiku-5-5",
+        "effort": "medium"
+      }
+    ],
+    "runs_per_condition": 1,
+    "timeout_seconds": 900,
+    "max_turns": 20
+  }
+}

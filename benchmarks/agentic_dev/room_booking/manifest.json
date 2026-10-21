@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "sha256": {
+    "hidden_tests/test_booking_hidden.py": "caf406ec1f366b1bd4d837488733f2dfd54930882e7785e9081159b4831c2dfb",
+    "problem.md": "10998299b2d3472a2f1655e2f7347713470ab5ec0426fd716e5aa1523801d897",
+    "public_tests/test_booking.py": "22e66b4f66583395ca9543985a090ce59a92750eac68d13b7c141a7bf3a7e90f",
+    "starter/src/room_booking/__init__.py": "94c8efdf88595a50afd8867b0773b36d8281b34e8af9cce8507163f0fa2706cf",
+    "starter/src/room_booking/calendar.py": "8944cec4d61edee33fbacfd9221c487ce4cefcb3e48abc267dafc8618dad2741",
+    "starter/src/room_booking/service.py": "0ff815733fbab49b7cd13cc7de5ddbde67c6ebf687609df360d88a3b893df17e",
+    "starter/src/room_booking/timeutil.py": "5bc7b6afa53011cfe0f7f4f35b87b6aa38385cf4fb7f41325b5fd6e9e06bdc9c"
+  }
+}
