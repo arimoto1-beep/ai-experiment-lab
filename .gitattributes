@@ -45,3 +45,6 @@ benchmarks/agentic_dev/Worker.Dockerfile -text
 /README.md -text
 tests/test_agentic_dev.py -text
 tests/test_agentic_docker.py -text
+# #7 source patches must remain applicable on Windows with core.autocrlf=true.
+analysis/react-lead-form-replication-20261031/patches/*.patch text eol=lf
+analysis/react-lead-form-diagnostic-20261031/minimal-fix.patch text eol=lf

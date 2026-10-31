@@ -224,3 +224,13 @@ results/
 
 # Detailed generated analysis snapshots; keep curated reports and CSVs in Git.
 /analysis/*/analysis.json
+
+# Terminal-Bench #7: upstream checkout and generated trial/diagnostic artifacts.
+/analysis/terminal-bench-v4.0.0/
+/analysis/react-lead-form-validation-20261029/jobs/
+/analysis/react-lead-form-diagnostic-20261031/baseline/app/
+/analysis/react-lead-form-diagnostic-20261031/patched/app/
+/analysis/react-lead-form-diagnostic-20261031/baseline/logs/
+/analysis/react-lead-form-diagnostic-20261031/patched/logs/
+/analysis/react-lead-form-diagnostic-20261031/baseline/bytes/*.bin
+/analysis/react-lead-form-diagnostic-20261031/patched/bytes/*.bin
