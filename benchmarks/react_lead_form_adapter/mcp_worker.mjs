@@ -7,6 +7,10 @@ import { spawnSync } from "node:child_process";
 const APP = "/app";
 const SOCKET = "/ipc/mcp.sock";
 const AUDIT = "/tmp/rlfm-operations.jsonl";
+const REVIEW = process.env.RLFM_REVIEW_MODE === "1";
+const REVIEW_REPORT = "/tmp/rlfm-review-report.json";
+const REVIEW_ACK = "/ipc/rlfm-review-ack";
+let phase = REVIEW ? "review" : "fix";
 const MAX_FILE = 256_000;
 const MAX_OUTPUT = 100_000;
 const commands = {
@@ -20,6 +24,7 @@ const tools = [
   { name: "write_file", description: "Replace or create a TypeScript source file. Specs, input data, tests and configuration are read-only.", inputSchema: { type: "object", properties: { path: { type: "string" }, content: { type: "string" } }, required: ["path", "content"], additionalProperties: false } },
   { name: "run_command", description: "Run one fixed npm command: npm test, npm run build, or npm run submit.", inputSchema: { type: "object", properties: { command: { type: "string", enum: Object.keys(commands) } }, required: ["command"], additionalProperties: false } },
 ];
+if (REVIEW) tools.push({ name: "submit_review", description: "Save your complete specification review before any edits. This ends the read-only phase; after host confirmation, fixes become available in this same session.", inputSchema: { type: "object", properties: { report: { type: "string" } }, required: ["report"], additionalProperties: false } });
 
 function checkedPath(value, write = false) {
   if (typeof value !== "string" || !value || value.includes("\\") || value.includes("\0") || value.startsWith("/")) throw Error("invalid path");
@@ -68,6 +73,7 @@ function call(name, args) {
       return reply(fs.readFileSync(target, "utf8"));
     }
     if (name === "write_file" && Object.keys(args).sort().join() === "content,path") {
+      if (phase !== "fix") throw Error("review phase is read-only");
       const target = checkedPath(args.path, true);
       if (typeof args.content !== "string" || Buffer.byteLength(args.content) > MAX_FILE) throw Error("invalid content");
       fs.writeFileSync(target, args.content, { encoding: "utf8", flag: "w" });
@@ -75,6 +81,7 @@ function call(name, args) {
       return reply("written");
     }
     if (name === "run_command" && Object.keys(args).join() === "command") {
+      if (phase !== "fix") throw Error("review phase is read-only");
       const argv = commands[args.command];
       if (!argv) throw Error("unsupported command");
       const env = Object.fromEntries(Object.entries(process.env).filter(([key]) => !/(ANTHROPIC|CLAUDE|API_KEY|TOKEN|SECRET|PASSWORD|CREDENTIAL|DOCKER)/i.test(key)));
@@ -84,6 +91,18 @@ function call(name, args) {
       detail = `${args.command}:exit=${result.status ?? 124}`;
       commandOutput = `exit_code=${result.status ?? 124}\n${result.stdout || ""}${result.stderr || ""}`;
       return reply(commandOutput);
+    }
+    if (REVIEW && name === "submit_review" && Object.keys(args).join() === "report") {
+      if (phase !== "review" || fs.existsSync(REVIEW_REPORT)) throw Error("review already submitted");
+      if (typeof args.report !== "string" || !args.report.trim() || Buffer.byteLength(args.report) > MAX_FILE) throw Error("invalid content");
+      fs.writeFileSync(REVIEW_REPORT, JSON.stringify({ submittedAt: new Date().toISOString(), report: args.report }) + "\n", { flag: "wx" });
+      detail = "review saved; awaiting host confirmation";
+      const until = Date.now() + 120_000;
+      const sleeper = new Int32Array(new SharedArrayBuffer(4));
+      while (!fs.existsSync(REVIEW_ACK) && Date.now() < until) Atomics.wait(sleeper, 0, 0, 200);
+      if (!fs.existsSync(REVIEW_ACK)) throw Error("review host acknowledgement timed out");
+      phase = "fix";
+      return reply("Your read-only review has been saved on the host. Continue in this same session: fix the problems you identified, using the available source-file and development-command tools. Do not request or infer private verifier results.");
     }
     throw Error("unsupported operation");
   } catch (error) {

@@ -55,12 +55,17 @@ def request(method, params=None):
     return data['result']
 request('initialize', {'protocolVersion':'2025-03-26'})
 names = {tool['name'] for tool in request('tools/list')['tools']}
-assert names == {'list_files','read_file','write_file','run_command'}, names
+review = 'submit_review' in names
+assert names == ({'list_files','read_file','write_file','run_command','submit_review'} if review else {'list_files','read_file','write_file','run_command'}), names
 def call(name, args): return request('tools/call', {'name':name,'arguments':args})
 assert not call('list_files', {})['isError']
 source = call('read_file', {'path':'src/lib/validation.ts'})
 assert not source['isError']
 original = source['content'][0]['text']
+if review:
+    assert call('write_file', {'path':'src/lib/validation.ts','content':original})['isError']
+    assert call('run_command', {'command':'npm test'})['isError']
+    assert not call('submit_review', {'report':'Dummy review gate probe; no model used.'})['isError']
 assert not call('write_file', {'path':'src/lib/validation.ts','content':original+'\n// Harbor dummy adapter probe.\n'})['isError']
 denials = [
     call('read_file', {'path':'/home/lab/.claude/dummy-marker'}),
@@ -102,6 +107,18 @@ class ReactLeadFormAgent(BaseAgent):
         return "0.1.0"
 
     async def setup(self, environment: BaseEnvironment) -> None:
+        restored = os.environ.get("RLFM_RESTORE_APP")
+        if restored:
+            source_root = Path(restored)
+            for source in sorted((source_root / "src").rglob("*")):
+                if not source.is_file() or source.suffix not in (".ts", ".tsx"):
+                    continue
+                relative = source.relative_to(source_root).as_posix()
+                await environment.upload_file(source, "/app/" + relative)
+                actual = await environment.exec("sha256sum /app/" + relative)
+                expected = hashlib.sha256(source.read_bytes()).hexdigest()
+                if actual.return_code != 0 or actual.stdout.split()[0] != expected:
+                    raise RuntimeError("restored source hash mismatch: " + relative)
         await environment.upload_file(WORKER, "/tmp/rlfm_mcp_worker.mjs")
         started = await environment.exec(
             "sh -c 'node /tmp/rlfm_mcp_worker.mjs >/tmp/rlfm-worker.log 2>&1 </dev/null &'")
@@ -161,6 +178,15 @@ class ReactLeadFormAgent(BaseAgent):
             if (model, effort) not in MODEL_OPTIONS or os.environ.get("RLFM_ENABLE_MODEL") != "explicit":
                 raise RuntimeError("model execution requires a supported model/effort and explicit enable flag")
             mcp = {"mcpServers": {"lab": {"command": "python", "args": ["/opt/ai-lab/mcp_bridge.py"]}}}
+            if os.environ.get("RLFM_RESTORE_APP"):
+                instruction += ("\n\nFirst review this program against the task specification. "
+                                "Do not change code or run development commands yet. "
+                                "Report each problem with its location, triggering condition, and reason; "
+                                "if you find none, say so. Submit the complete review using "
+                                "mcp__lab__submit_review. Once the tool confirms host-side preservation, "
+                                "continue in the same session and fix the problems you found. "
+                                "Use only the allowed file and development-command tools.")
+                (self.logs_dir / "review-instruction.txt").write_text(instruction, encoding="utf-8")
             cmd += ["claude", "-p", instruction, "--model", model,
                     *([] if effort == "default" else ["--effort", effort]),
                     "--output-format", "stream-json", "--verbose",
@@ -168,13 +194,35 @@ class ReactLeadFormAgent(BaseAgent):
                     "--strict-mcp-config", "--mcp-config", json.dumps(mcp),
                     "--tools", "", "--permission-mode", "dontAsk",
                     "--permission-prompts", "none",
-                    "--allowedTools", "mcp__lab__list_files,mcp__lab__read_file,mcp__lab__write_file,mcp__lab__run_command",
+                    "--allowedTools", "mcp__lab__list_files,mcp__lab__read_file,mcp__lab__write_file,mcp__lab__run_command"
+                    + (",mcp__lab__submit_review" if os.environ.get("RLFM_RESTORE_APP") else ""),
                     "--max-turns", str(MAX_TURNS)]
         try:
             process = await asyncio.create_subprocess_exec(
                 *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
                 env=_clean_env())
-            stdout, stderr = await process.communicate()
+            communication = asyncio.create_task(process.communicate())
+            if os.environ.get("RLFM_RESTORE_APP"):
+                reviewed = False
+                while not communication.done():
+                    present = await environment.exec("test -s /tmp/rlfm-review-report.json")
+                    if present.return_code == 0:
+                        report_path = self.logs_dir / "first-review.json"
+                        await environment.download_file("/tmp/rlfm-review-report.json", report_path)
+                        report = json.loads(report_path.read_text(encoding="utf-8"))
+                        if not isinstance(report.get("report"), str) or not report["report"].strip():
+                            raise RuntimeError("empty first review")
+                        ack = await environment.exec("touch /ipc/rlfm-review-ack")
+                        if ack.return_code != 0:
+                            raise RuntimeError("cannot acknowledge preserved review")
+                        reviewed = True
+                        break
+                    await asyncio.sleep(1)
+                stdout, stderr = await communication
+                if not reviewed:
+                    raise RuntimeError("review session ended without a preserved first review")
+            else:
+                stdout, stderr = await communication
             (self.logs_dir / "cli-stdout.jsonl").write_bytes(stdout)
             (self.logs_dir / "cli-stderr.txt").write_bytes(stderr)
             if mode == "claude":
@@ -261,11 +309,32 @@ def main() -> None:
     parser.add_argument("--effort", choices=("default", "medium"))
     parser.add_argument("--enable-model", action="store_true")
     parser.add_argument("--auth-volume", help="Existing CLI-only Claude volume; required for model mode")
+    parser.add_argument("--review-source", choices=("rlfm-1170a1288c0a", "rlfm-0df740e1d9e8", "rlfm-ea7769669b72"),
+                        help="Restore one saved #7 Haiku 5.5 artifact for a two-stage review")
     args = parser.parse_args()
     if args.mode == "claude" and (not args.enable_model or not args.auth_volume or (args.model, args.effort) not in MODEL_OPTIONS):
         parser.error("model mode requires --enable-model, --auth-volume and a supported model/effort pair")
     if args.mode == "dummy" and (args.model or args.effort or args.enable_model or args.auth_volume):
         parser.error("dummy mode does not accept model options")
+    if args.review_source and args.mode == "claude" and (args.model, args.effort) != ("claude-haiku-5-5", "medium"):
+        parser.error("review source requires Haiku 5.5 medium model mode")
+    restored = ROOT / "analysis" / "react-lead-form-review-20261102" / args.review_source / "app" if args.review_source else None
+    if restored and not restored.is_dir():
+        parser.error("restored source unavailable")
+    if restored:
+        manifest = json.loads((restored.parent.parent / "restore-manifest.json").read_text(encoding="utf-8"))
+        entry = next((item for item in manifest["restorations"]
+                      if item["source_run_id"] == args.review_source), None)
+        if entry is None or not entry["all_files_match_saved_artifact"]:
+            parser.error("saved final artifact manifest unavailable")
+        patch = ROOT / "analysis" / "react-lead-form-replication-20261031" / "patches" / (args.review_source + ".patch")
+        if hashlib.sha256(patch.read_bytes()).hexdigest() != entry["source_patch_sha256"]:
+            parser.error("saved source patch hash mismatch")
+        expected = {Path(item["path"]): item["sha256"] for item in entry["files"]}
+        actual = {p.relative_to(restored): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in restored.rglob("*") if p.is_file()}
+        if actual != expected or len(actual) != entry["file_count"]:
+            parser.error("restored source no longer matches saved final artifact hashes")
     if not TASK.exists() or not WORKER.exists():
         parser.error("pinned task or MCP worker unavailable")
     docker = os.environ.get("RLFM_DOCKER", "docker")
@@ -302,6 +371,7 @@ def main() -> None:
         "task_files_verified": 40,
         "agent_timeout_sec": 28800, "verifier_timeout_sec": 900,
         "max_turns": MAX_TURNS,
+        "review_source": args.review_source,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ipc = run_id + "-ipc"
     auth = run_id + "-dummy-auth" if args.mode == "dummy" else args.auth_volume
@@ -318,7 +388,9 @@ def main() -> None:
         for source, target in readonly
     )
     overlay.write_text(
-        f"services:\n  main:\n    network_mode: none\n    volumes:\n"
+        f"services:\n  main:\n    network_mode: none\n"
+        + ("    environment:\n      RLFM_REVIEW_MODE: '1'\n" if restored else "")
+        + "    volumes:\n"
         f"      - type: volume\n        source: trial_ipc\n        target: /ipc\n"
         + mounts +
         f"volumes:\n  trial_ipc:\n    external: true\n    name: {ipc}\n", encoding="utf-8")
@@ -329,6 +401,8 @@ def main() -> None:
     if args.mode == "claude":
         env.update({"RLFM_MODEL": args.model, "RLFM_EFFORT": args.effort,
                     "RLFM_ENABLE_MODEL": "explicit"})
+    if restored:
+        env["RLFM_RESTORE_APP"] = str(restored)
     _run_checked([docker, "volume", "create", ipc], capture_output=True, env=env)
     try:
         if args.mode == "dummy":
