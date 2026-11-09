@@ -1,0 +1,70 @@
+{
+  "task": "parcel",
+  "files": {
+    "public_tests/test_manifest.py": "99f8c992e3014f563c0576fc04334ee84a737cb1087a1d1b4e4612e162d2ad62",
+    "src/parcel_manifest/__init__.py": "655476a3f5f21278a3b402a22deebde02797682b36fe4f468635af801053ac82",
+    "src/parcel_manifest/parse.py": "5843a80d8e3d2fba535db8165da405dd3469554cb69442f8261c632c68502f49",
+    "src/parcel_manifest/price.py": "5fa52f41669613a88e653d403e2337183f7c4d59ba248e0f53008aadf6b48edd",
+    "src/parcel_manifest/service.py": "a9aaeda5339edd96793e7d9badd7090f4585d0592bea0dc76fa4b8a65734af0a"
+  },
+  "statement_sha256": "fcd859eeaaea0cf120eed01377c1cd5ae88bed959d5d217497cbf478e50ec2b0",
+  "worker_sha256": "8fdb7d08f0a398104983b3a99483a3e867939d7cf91a363cda36ab9b07385794",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "roles": {
+    "A": "Perform a general, comprehensive review of this implementation for specification violations.",
+    "B": [
+      "Focus on compliance with the written specification and contracts. Trace each required behavior to the implementation, and report concrete violations you find.",
+      "Focus on boundary values, missing or unusual but valid inputs, and failure paths. Report concrete specification violations you find.",
+      "Focus on data integrity, persisted outputs, transitions between states, and repeated operations. Report concrete specification violations you find."
+    ]
+  },
+  "common": "Review the existing implementation against the supplied task specification. Use list_files and read_file to inspect the code and local specifications. Do not edit files or execute code. Report only concrete specification violations. For each finding give the file and relevant function or line, the violated requirement, a precise input or state that reproduces it, the observed versus required behavior, and confidence (high/medium/low). Separate unverified suspicions from confirmed findings. Return JSON with keys findings (array) and suspicions (array); each finding is an object with keys location, requirement, reproduction, actual, expected, confidence. An empty findings array is valid.",
+  "design_instruction": "You are designing three independent code review perspectives for this task. You have only the task specification and file names; do not assume any particular bug. Create three distinct, complementary review perspectives with minimal overlap and good coverage of the specification. For each, write the exact instruction to give one reviewer. The reviewer will also receive the task specification, common reporting instruction, and read-only list_files/read_file tools. Each prompt must tell the reviewer what to inspect and must not mention tests, grading results, known bugs, or fixes. Return only JSON: {\"perspectives\": [{\"name\": string, \"prompt\": string}, {\"name\": string, \"prompt\": string}, {\"name\": string, \"prompt\": string}]}.",
+  "order": [
+    [
+      "A",
+      1
+    ],
+    [
+      "B",
+      1
+    ],
+    [
+      "C_design",
+      0
+    ],
+    [
+      "C",
+      1
+    ],
+    [
+      "A",
+      2
+    ],
+    [
+      "B",
+      2
+    ],
+    [
+      "C",
+      2
+    ],
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      3
+    ],
+    [
+      "C",
+      3
+    ]
+  ],
+  "auth": {
+    "version": "2.1.302 (Claude Code)",
+    "auth_method": "claude.ai"
+  }
+}

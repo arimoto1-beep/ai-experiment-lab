@@ -24,6 +24,9 @@ TOOLS = [
     {"name": "run_public_tests", "description": "Run the fixed public pytest suite.",
      "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False}},
 ]
+REVIEW_READ_ONLY = os.environ.get("AI_LAB_REVIEW_READ_ONLY") == "1"
+if REVIEW_READ_ONLY:
+    TOOLS = TOOLS[:2]
 
 
 def checked_path(value: object, *, write: bool = False) -> Path:
@@ -45,6 +48,8 @@ def checked_path(value: object, *, write: bool = False) -> Path:
 
 def call(name: str, args: object) -> dict:
     try:
+        if REVIEW_READ_ONLY and name not in ("list_files", "read_file"):
+            raise ValueError("unsupported operation")
         if not isinstance(args, dict):
             raise ValueError("invalid arguments")
         if name == "list_files" and not args:

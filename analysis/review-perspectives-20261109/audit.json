@@ -1,0 +1,650 @@
+{
+  "schema": 1,
+  "tasks": {
+    "parcel": {
+      "target_file_count": 5,
+      "statement_sha256": "fcd859eeaaea0cf120eed01377c1cd5ae88bed959d5d217497cbf478e50ec2b0",
+      "worker_sha256": "8fdb7d08f0a398104983b3a99483a3e867939d7cf91a363cda36ab9b07385794",
+      "phase_order": [
+        [
+          "A",
+          1
+        ],
+        [
+          "B",
+          1
+        ],
+        [
+          "C_design",
+          0
+        ],
+        [
+          "C",
+          1
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "B",
+          2
+        ],
+        [
+          "C",
+          2
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "B",
+          3
+        ],
+        [
+          "C",
+          3
+        ]
+      ],
+      "prompt_variants": {
+        "A": 1,
+        "B": 3,
+        "C": 3
+      },
+      "unique_sessions": 10,
+      "read_errors": 0,
+      "runs": [
+        {
+          "run_id": "parcel-a-1-bb439917",
+          "phase": "A",
+          "index": 1,
+          "prompt_sha256": "358d6b451e3ade827420c342793980e028e55f920aa35d1c9a4b5d24ad03240c",
+          "session_sha256_prefix": "e5e4be367b03c8c3",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 10.605,
+          "tokens": {
+            "input": 6,
+            "output": 1497,
+            "cache_read": 8568,
+            "cache_write": 5690
+          },
+          "thinking_tokens": 521,
+          "api_equivalent_usd": 0.001973
+        },
+        {
+          "run_id": "parcel-b-1-f1b47f0e",
+          "phase": "B",
+          "index": 1,
+          "prompt_sha256": "2d85d2c23648d1ef8f8f9c6ab6188d55ffeaa5294997b1575bbb78cffa7d5bad",
+          "session_sha256_prefix": "5f90f84d814d9a86",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 10.585,
+          "tokens": {
+            "input": 6,
+            "output": 1416,
+            "cache_read": 11187,
+            "cache_write": 2937
+          },
+          "thinking_tokens": 391,
+          "api_equivalent_usd": 0.001408
+        },
+        {
+          "run_id": "parcel-c_design-0-2883b070",
+          "phase": "C_design",
+          "index": 0,
+          "prompt_sha256": "95c71b920c456963d351bfa03fd8aa9524bce133b9eafb616e7351e5aef69bf4",
+          "session_sha256_prefix": "84c6431e3d8696f5",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 0,
+          "tools_used": [],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 11.167,
+          "tokens": {
+            "input": 2,
+            "output": 1581,
+            "cache_read": 649,
+            "cache_write": 3002
+          },
+          "thinking_tokens": 749,
+          "api_equivalent_usd": 0.001398
+        },
+        {
+          "run_id": "parcel-c-1-4ae754e8",
+          "phase": "C",
+          "index": 1,
+          "prompt_sha256": "0a4054b5a8cb5d6dc827b89f310ede87f4030eee483090033b46b8b0876c9f0b",
+          "session_sha256_prefix": "d358dfac0007a2d1",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 4,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 10.131,
+          "tokens": {
+            "input": 6,
+            "output": 1410,
+            "cache_read": 11591,
+            "cache_write": 2431
+          },
+          "thinking_tokens": 466,
+          "api_equivalent_usd": 0.001308
+        },
+        {
+          "run_id": "parcel-a-2-dee5b3bb",
+          "phase": "A",
+          "index": 2,
+          "prompt_sha256": "358d6b451e3ade827420c342793980e028e55f920aa35d1c9a4b5d24ad03240c",
+          "session_sha256_prefix": "7349f6162b263051",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 11.302,
+          "tokens": {
+            "input": 6,
+            "output": 1787,
+            "cache_read": 14258,
+            "cache_write": 0
+          },
+          "thinking_tokens": 474,
+          "api_equivalent_usd": 0.001037
+        },
+        {
+          "run_id": "parcel-b-2-d1add0c0",
+          "phase": "B",
+          "index": 2,
+          "prompt_sha256": "eea137a1f70cab08007132eaf0d3abb988f1645fd4173f4e1415326b37115e82",
+          "session_sha256_prefix": "6cd9f736729a46cf",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 14.412,
+          "tokens": {
+            "input": 6,
+            "output": 2294,
+            "cache_read": 11371,
+            "cache_write": 3000
+          },
+          "thinking_tokens": 961,
+          "api_equivalent_usd": 0.001861
+        },
+        {
+          "run_id": "parcel-c-2-b6c01b43",
+          "phase": "C",
+          "index": 2,
+          "prompt_sha256": "6a8da4f5366d56e9c0014b2d90271a885ffff152cc7e604316d787561e94af8a",
+          "session_sha256_prefix": "ec53ce1ea756f70c",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 5,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 17.53,
+          "tokens": {
+            "input": 6,
+            "output": 3252,
+            "cache_read": 11919,
+            "cache_write": 2741
+          },
+          "thinking_tokens": 1734,
+          "api_equivalent_usd": 0.002294
+        },
+        {
+          "run_id": "parcel-a-3-7114c98a",
+          "phase": "A",
+          "index": 3,
+          "prompt_sha256": "358d6b451e3ade827420c342793980e028e55f920aa35d1c9a4b5d24ad03240c",
+          "session_sha256_prefix": "71f8109634693f65",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 11.535,
+          "tokens": {
+            "input": 6,
+            "output": 1688,
+            "cache_read": 14258,
+            "cache_write": 0
+          },
+          "thinking_tokens": 552,
+          "api_equivalent_usd": 0.000987
+        },
+        {
+          "run_id": "parcel-b-3-8ce75587",
+          "phase": "B",
+          "index": 3,
+          "prompt_sha256": "fd5ad765e739644a52c2ad2fc6e260b1c9080221ff462947af8c61fbf840b5ac",
+          "session_sha256_prefix": "4b34c42ed2e1fd75",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 6,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 10.038,
+          "tokens": {
+            "input": 6,
+            "output": 1492,
+            "cache_read": 11187,
+            "cache_write": 2937
+          },
+          "thinking_tokens": 276,
+          "api_equivalent_usd": 0.001446
+        },
+        {
+          "run_id": "parcel-c-3-a538c40c",
+          "phase": "C",
+          "index": 3,
+          "prompt_sha256": "95e1f979df28baa78191afa9644b03ab1eed49fa5cbec20d6ab49b1ef9dc031a",
+          "session_sha256_prefix": "6e0b2cefe867ebcb",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 5,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 12.697,
+          "tokens": {
+            "input": 6,
+            "output": 2148,
+            "cache_read": 11978,
+            "cache_write": 2674
+          },
+          "thinking_tokens": 926,
+          "api_equivalent_usd": 0.001729
+        }
+      ]
+    },
+    "react": {
+      "target_file_count": 21,
+      "statement_sha256": "e1cc9571c8c9e69a2c12ace760ecad6ff2330bbc246b8ad025edd03a7eea9f9d",
+      "worker_sha256": "746d3eecca86178be762ffe43b9e8bdbf732696e115116a0507bc2635d2544de",
+      "phase_order": [
+        [
+          "A",
+          1
+        ],
+        [
+          "B",
+          1
+        ],
+        [
+          "C_design",
+          0
+        ],
+        [
+          "C",
+          1
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "B",
+          2
+        ],
+        [
+          "C",
+          2
+        ],
+        [
+          "A",
+          3
+        ],
+        [
+          "B",
+          3
+        ],
+        [
+          "C",
+          3
+        ]
+      ],
+      "prompt_variants": {
+        "A": 1,
+        "B": 3,
+        "C": 3
+      },
+      "unique_sessions": 10,
+      "read_errors": 12,
+      "runs": [
+        {
+          "run_id": "react-a-1-6a5d5241",
+          "phase": "A",
+          "index": 1,
+          "prompt_sha256": "1ce91c7cb2c74db044d394cba176b973369ce298ec64944715ed9c4b4071847b",
+          "session_sha256_prefix": "f4b74449afbb1627",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 21,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 105.524,
+          "tokens": {
+            "input": 8,
+            "output": 24325,
+            "cache_read": 33312,
+            "cache_write": 41615
+          },
+          "thinking_tokens": 21395,
+          "api_equivalent_usd": 0.020819
+        },
+        {
+          "run_id": "react-b-1-166f8e7f",
+          "phase": "B",
+          "index": 1,
+          "prompt_sha256": "0685059fe26456477c5d2d0532511882ec1d58d6e60c16bf9e29fc9ef8f86e04",
+          "session_sha256_prefix": "14b3f43ad2d4b7c8",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 19,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 135.316,
+          "tokens": {
+            "input": 8,
+            "output": 31268,
+            "cache_read": 35788,
+            "cache_write": 32967
+          },
+          "thinking_tokens": 28170,
+          "api_equivalent_usd": 0.022586
+        },
+        {
+          "run_id": "react-c_design-0-cc14054d",
+          "phase": "C_design",
+          "index": 0,
+          "prompt_sha256": "a09f86da408e630f0ccc45ffae12980e3ae6c5a7a05a02ee54c7e22853c507c1",
+          "session_sha256_prefix": "3fb54940c7061a85",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 0,
+          "tools_used": [],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 15.74,
+          "tokens": {
+            "input": 2,
+            "output": 3105,
+            "cache_read": 2267,
+            "cache_write": 2186
+          },
+          "thinking_tokens": 2048,
+          "api_equivalent_usd": 0.002013
+        },
+        {
+          "run_id": "react-c-1-17566272",
+          "phase": "C",
+          "index": 1,
+          "prompt_sha256": "711259cd885cf38e2aff51155fca53127917f66a660a94ffea651a8ac258c08e",
+          "session_sha256_prefix": "d463f74b7aba5ebc",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 14,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 2,
+          "denied_paths": [
+            "/app/src/spec/lead_schema.json",
+            "/app/src/spec/lead_policy.json"
+          ],
+          "cli_seconds": 78.72,
+          "tokens": {
+            "input": 10,
+            "output": 17701,
+            "cache_read": 46123,
+            "cache_write": 23328
+          },
+          "thinking_tokens": 15137,
+          "api_equivalent_usd": 0.013978
+        },
+        {
+          "run_id": "react-a-2-33bd477f",
+          "phase": "A",
+          "index": 2,
+          "prompt_sha256": "1ce91c7cb2c74db044d394cba176b973369ce298ec64944715ed9c4b4071847b",
+          "session_sha256_prefix": "c58facd1aeecf346",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 21,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 92.872,
+          "tokens": {
+            "input": 8,
+            "output": 21182,
+            "cache_read": 38080,
+            "cache_write": 34044
+          },
+          "thinking_tokens": 18221,
+          "api_equivalent_usd": 0.017781
+        },
+        {
+          "run_id": "react-b-2-6280a6e1",
+          "phase": "B",
+          "index": 2,
+          "prompt_sha256": "94b71c816d5bf847bd77e6d05cf3ca92d4fe2a1a01e996373347f9841073e1ef",
+          "session_sha256_prefix": "c3cbb0c96adb6588",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 20,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 119.692,
+          "tokens": {
+            "input": 8,
+            "output": 27375,
+            "cache_read": 35785,
+            "cache_write": 43457
+          },
+          "thinking_tokens": 23439,
+          "api_equivalent_usd": 0.022738
+        },
+        {
+          "run_id": "react-c-2-eb92c645",
+          "phase": "C",
+          "index": 2,
+          "prompt_sha256": "2a0066c9ca2a2058a62c2f78bdda7a37ccd49ded3ed39f339527f950dc24aaba",
+          "session_sha256_prefix": "15026bf26853bb31",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 10,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 1,
+          "denied_paths": [
+            "/app/src/spec/lead_schema.json"
+          ],
+          "cli_seconds": 66.881,
+          "tokens": {
+            "input": 8,
+            "output": 14465,
+            "cache_read": 25968,
+            "cache_write": 16298
+          },
+          "thinking_tokens": 12005,
+          "api_equivalent_usd": 0.010753
+        },
+        {
+          "run_id": "react-a-3-1d882407",
+          "phase": "A",
+          "index": 3,
+          "prompt_sha256": "1ce91c7cb2c74db044d394cba176b973369ce298ec64944715ed9c4b4071847b",
+          "session_sha256_prefix": "fb93b4a3add247b1",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 21,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 111.34,
+          "tokens": {
+            "input": 8,
+            "output": 25977,
+            "cache_read": 38114,
+            "cache_write": 38403
+          },
+          "thinking_tokens": 22107,
+          "api_equivalent_usd": 0.021051
+        },
+        {
+          "run_id": "react-b-3-2e17d0cf",
+          "phase": "B",
+          "index": 3,
+          "prompt_sha256": "04b61c3eb4793f7052b65983f83cf7de37e9bc6a00d84edb709293bbf4161b60",
+          "session_sha256_prefix": "35c3c5e701019004",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 15,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 0,
+          "denied_paths": [],
+          "cli_seconds": 104.913,
+          "tokens": {
+            "input": 6,
+            "output": 24042,
+            "cache_read": 12665,
+            "cache_write": 19952
+          },
+          "thinking_tokens": 21712,
+          "api_equivalent_usd": 0.016139
+        },
+        {
+          "run_id": "react-c-3-8c693ef0",
+          "phase": "C",
+          "index": 3,
+          "prompt_sha256": "714a4a62b0b2007a398a7bc145fe295eccb90dc78ba5816b8131d3446c39c114",
+          "session_sha256_prefix": "22337de18a3585ff",
+          "status": "ok",
+          "model_check": "match",
+          "code_unchanged": true,
+          "tool_calls": 25,
+          "tools_used": [
+            "mcp__lab__list_files",
+            "mcp__lab__read_file"
+          ],
+          "read_errors": 9,
+          "denied_paths": [
+            "/app/src/spec/business_calendar.json",
+            "/app/src/lib/calendar.ts",
+            "/app/src/lib/submitLead.ts",
+            "/app/src/scripts/submit.ts",
+            "/app/src/lib/tracking.ts",
+            "/app/src/App.tsx",
+            "/app/src/components/LeadForm.tsx",
+            "/app/src/main.tsx",
+            "/app/src/spec/lead_schema.json"
+          ],
+          "cli_seconds": 45.739,
+          "tokens": {
+            "input": 10,
+            "output": 9904,
+            "cache_read": 53228,
+            "cache_write": 23609
+          },
+          "thinking_tokens": 6387,
+          "api_equivalent_usd": 0.010207
+        }
+      ]
+    }
+  },
+  "total_reviews": 18,
+  "total_designs": 2,
+  "unique_sessions": 20,
+  "preregistration_sha256": "dbb3225739c839d31a555737eb80959c707c09ca6f159d0b8e964ea878cb64f2"
+}

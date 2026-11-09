@@ -1,0 +1,208 @@
+{
+  "react": {
+    "runs": 10,
+    "sessions": 10,
+    "unique_sessions": 10,
+    "tools_used": [
+      "mcp__lab__list_files",
+      "mcp__lab__read_file"
+    ],
+    "methods": {
+      "A": {
+        "runs": 3,
+        "api_equivalent_usd": 0.059651,
+        "cli_seconds": 309.736,
+        "wall_seconds": 312.906,
+        "tokens": {
+          "input": 24,
+          "output": 71484,
+          "cache_read": 109506,
+          "cache_write": 114062
+        },
+        "thinking_tokens": 61723,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "B": {
+        "runs": 3,
+        "api_equivalent_usd": 0.061463,
+        "cli_seconds": 359.921,
+        "wall_seconds": 363.168,
+        "tokens": {
+          "input": 22,
+          "output": 82685,
+          "cache_read": 84238,
+          "cache_write": 96376
+        },
+        "thinking_tokens": 73321,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "C": {
+        "runs": 3,
+        "api_equivalent_usd": 0.034938,
+        "cli_seconds": 191.34,
+        "wall_seconds": 195.132,
+        "tokens": {
+          "input": 28,
+          "output": 42070,
+          "cache_read": 125319,
+          "cache_write": 63235
+        },
+        "thinking_tokens": 33529,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "C_design": {
+        "runs": 1,
+        "api_equivalent_usd": 0.002013,
+        "cli_seconds": 15.74,
+        "wall_seconds": 15.751,
+        "tokens": {
+          "input": 2,
+          "output": 3105,
+          "cache_read": 2267,
+          "cache_write": 2186
+        },
+        "thinking_tokens": 2048,
+        "statuses": [
+          "ok"
+        ],
+        "model_checks": [
+          "match"
+        ],
+        "code_unchanged": true
+      }
+    }
+  },
+  "parcel": {
+    "runs": 10,
+    "sessions": 10,
+    "unique_sessions": 10,
+    "tools_used": [
+      "mcp__lab__list_files",
+      "mcp__lab__read_file"
+    ],
+    "methods": {
+      "A": {
+        "runs": 3,
+        "api_equivalent_usd": 0.003997,
+        "cli_seconds": 33.442,
+        "wall_seconds": 36.639,
+        "tokens": {
+          "input": 18,
+          "output": 4972,
+          "cache_read": 37084,
+          "cache_write": 5690
+        },
+        "thinking_tokens": 1547,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "B": {
+        "runs": 3,
+        "api_equivalent_usd": 0.004715,
+        "cli_seconds": 35.035,
+        "wall_seconds": 38.089,
+        "tokens": {
+          "input": 18,
+          "output": 5202,
+          "cache_read": 33745,
+          "cache_write": 8874
+        },
+        "thinking_tokens": 1628,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "C": {
+        "runs": 3,
+        "api_equivalent_usd": 0.005331,
+        "cli_seconds": 40.358,
+        "wall_seconds": 43.587,
+        "tokens": {
+          "input": 18,
+          "output": 6810,
+          "cache_read": 35488,
+          "cache_write": 7846
+        },
+        "thinking_tokens": 3126,
+        "statuses": [
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "model_checks": [
+          "match",
+          "match",
+          "match"
+        ],
+        "code_unchanged": true
+      },
+      "C_design": {
+        "runs": 1,
+        "api_equivalent_usd": 0.001398,
+        "cli_seconds": 11.167,
+        "wall_seconds": 11.175,
+        "tokens": {
+          "input": 2,
+          "output": 1581,
+          "cache_read": 649,
+          "cache_write": 3002
+        },
+        "thinking_tokens": 749,
+        "statuses": [
+          "ok"
+        ],
+        "model_checks": [
+          "match"
+        ],
+        "code_unchanged": true
+      }
+    }
+  }
+}

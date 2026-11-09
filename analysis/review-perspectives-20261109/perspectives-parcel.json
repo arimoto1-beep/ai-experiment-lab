@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Input normalization and order aggregation",
+    "prompt": "Review how the input rows are read and combined into per-order records. Read the task specification, then trace the path from build_manifest(rows) through src/parcel_manifest/parse.py and any helpers it calls. Check that: order_id is used exactly as given, with no case folding, trimming, or other alteration; zone values are trimmed of surrounding whitespace and uppercased before use; rows with the same order_id are merged into one entry even when they are not adjacent; entries appear in the order each order_id first appears in the input; and each row contributes weight_g * quantity to its order's total weight. For each point, state whether the code matches the specification, and cite file and line for any mismatch. Do not check fee arithmetic or the output dictionary layout; other reviewers cover those."
+  },
+  {
+    "name": "Fee and rounding calculation",
+    "prompt": "Review the fee calculation against the specification. Read src/parcel_manifest/price.py and any code that calls it, and check the following against the task specification: the fee is based on the order's total weight in grams, not on individual row weights; the total is rounded up to whole kilograms; the per-kilogram rate matches each zone (A 400, B 600, C 900 yen); the 250 yen surcharge applies only when total weight is strictly greater than 2000 g; and grand_total_yen is the sum of the entry fees. Verify the rounding for boundary weights such as 1, 999, 1000, 1001, 2000, and 2001 grams, and confirm that the arithmetic uses integers without floating-point error. Report each mismatch with its file and line, and state the expected and actual values you derived by reasoning through the code."
+  },
+  {
+    "name": "Return contract, empty input, and side effects",
+    "prompt": "Review the public interface and the overall wiring. Read src/parcel_manifest/__init__.py and src/parcel_manifest/service.py, plus the entry points that connect them to parse.py and price.py. Check that: build_manifest is exposed under the name the specification gives; the return value is a dictionary with exactly the keys entries and grand_total_yen; each entry has exactly the keys order_id, zone, weight_g, and fee_yen, where zone is the normalized value and weight_g is the order total; empty input returns an empty list and 0; the input dictionaries and list are not modified, including through sorting, popping, or in-place updates; and only the Python standard library is imported. Identify any mismatch with its file and line, and explain how you determined it."
+  }
+]

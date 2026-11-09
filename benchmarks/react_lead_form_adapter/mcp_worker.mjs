@@ -8,6 +8,7 @@ const APP = "/app";
 const SOCKET = "/ipc/mcp.sock";
 const AUDIT = "/tmp/rlfm-operations.jsonl";
 const REVIEW = process.env.RLFM_REVIEW_MODE === "1";
+const REVIEW_READ_ONLY = process.env.AI_LAB_REVIEW_READ_ONLY === "1";
 const REVIEW_REPORT = "/tmp/rlfm-review-report.json";
 const REVIEW_ACK = "/ipc/rlfm-review-ack";
 let phase = REVIEW ? "review" : "fix";
@@ -25,6 +26,7 @@ const tools = [
   { name: "run_command", description: "Run one fixed npm command: npm test, npm run build, or npm run submit.", inputSchema: { type: "object", properties: { command: { type: "string", enum: Object.keys(commands) } }, required: ["command"], additionalProperties: false } },
 ];
 if (REVIEW) tools.push({ name: "submit_review", description: "Save your complete specification review before any edits. This ends the read-only phase; after host confirmation, fixes become available in this same session.", inputSchema: { type: "object", properties: { report: { type: "string" } }, required: ["report"], additionalProperties: false } });
+if (REVIEW_READ_ONLY) tools.splice(2);
 
 function checkedPath(value, write = false) {
   if (typeof value !== "string" || !value || value.includes("\\") || value.includes("\0") || value.startsWith("/")) throw Error("invalid path");
@@ -60,6 +62,7 @@ function call(name, args) {
   let detail = "";
   let commandOutput = "";
   try {
+    if (REVIEW_READ_ONLY && name !== "list_files" && name !== "read_file") throw Error("unsupported operation");
     if (!args || typeof args !== "object" || Array.isArray(args)) throw Error("invalid arguments");
     if (name === "list_files" && Object.keys(args).length === 0) {
       const files = [];

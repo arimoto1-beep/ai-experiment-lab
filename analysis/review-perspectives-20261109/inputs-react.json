@@ -1,0 +1,86 @@
+{
+  "task": "react",
+  "files": {
+    "index.html": "829542e81e6d36fd980d73973b7d4a173706f557e0ab00ee36dac9c65e173ffc",
+    "package-lock.json": "66340f1e802211c9152061e2206320a8bbe5a92edb96a66f405a5de520caa930",
+    "package.json": "57432cb0e2b3940a313c0226fdfd36d0351279e454d4ab980da98f13815efd15",
+    "src/App.tsx": "f377425996a178336b5fa542fb39f8fb2a137fba8422eb1e6b75affe7bdba657",
+    "src/components/LeadForm.tsx": "3d8a8f44ef89406197971e03b0cc191819951b5c1aa311e03a2fc8a95e45472d",
+    "src/data/lead_input.json": "9c00c3a6238836ae761d9939b6de038800f362bd084cd02e357b8d8014296616",
+    "src/lib/calendar.ts": "497c30fdf5dd9a954a1296edc2e959a473dea588709af1c01c26292b90eec1d9",
+    "src/lib/ledger.ts": "e63ce8a8b31acce8c4a7f40abddf753fbaaebe6b806868d18e720af594d3405d",
+    "src/lib/outputs.ts": "ed86c329d4e35c4e064f3801e4ae80aea13a53793050e8806f1f386e2555e865",
+    "src/lib/payload.ts": "73e1ce2dcd09cd475bd536554534e0a668c48ea248130cdda950ba155e2e6c0e",
+    "src/lib/spec.ts": "5b8ade5d0c6123bf3e18a61f0aa9028ef2c141663be520afacb7eee9cdcad05f",
+    "src/lib/submitLead.ts": "8978f0c289af9d50e9c6bac52cbc20d45c65e439593b961d467fe8a0fa14efe5",
+    "src/lib/tracking.ts": "f2466406d547f5e828623a0a1f67034f307a32e6e726dbc2088d3a52b288ebbb",
+    "src/lib/validation.ts": "3b52b78581f696f62151930b2b5e746bd39a13e8dbed5d5c37cc5b1e733c126c",
+    "src/main.tsx": "f96692b15fd17b25a79a925b563c5c360c02a3bda2d3ceb55792f7876c60c690",
+    "src/scripts/submit.ts": "8c5149a2add88a4b96105a2e49c1e9d8c2b1eff5f98050411865478eb8193b11",
+    "src/spec/business_calendar.json": "8e85f0606d70bcaeac9b79122c1a5794ab5761085f785d5c928485c51ef19bc5",
+    "src/spec/lead_policy.json": "1328fc8690c637bfd244c8d6e908a70efcee4e23fa35fc215154e809683eaeb5",
+    "src/spec/lead_schema.json": "d0a9aaf654f3d1c038cbb4cba61dc74669d738216e37a95917dca04042918049",
+    "tsconfig.json": "f8d0e8c75c805a90a9a83af7671b7b12e1669dd2eeee363efb7f7db0b00d1529",
+    "vite.config.ts": "860d3c7d55c012e0284ceef6b23c94ca0721762230b80ede730d9b3c1c3663f1"
+  },
+  "statement_sha256": "e1cc9571c8c9e69a2c12ace760ecad6ff2330bbc246b8ad025edd03a7eea9f9d",
+  "worker_sha256": "746d3eecca86178be762ffe43b9e8bdbf732696e115116a0507bc2635d2544de",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "roles": {
+    "A": "Perform a general, comprehensive review of this implementation for specification violations.",
+    "B": [
+      "Focus on compliance with the written specification and contracts. Trace each required behavior to the implementation, and report concrete violations you find.",
+      "Focus on boundary values, missing or unusual but valid inputs, and failure paths. Report concrete specification violations you find.",
+      "Focus on data integrity, persisted outputs, transitions between states, and repeated operations. Report concrete specification violations you find."
+    ]
+  },
+  "common": "Review the existing implementation against the supplied task specification. Use list_files and read_file to inspect the code and local specifications. Do not edit files or execute code. Report only concrete specification violations. For each finding give the file and relevant function or line, the violated requirement, a precise input or state that reproduces it, the observed versus required behavior, and confidence (high/medium/low). Separate unverified suspicions from confirmed findings. Return JSON with keys findings (array) and suspicions (array); each finding is an object with keys location, requirement, reproduction, actual, expected, confidence. An empty findings array is valid.",
+  "design_instruction": "You are designing three independent code review perspectives for this task. You have only the task specification and file names; do not assume any particular bug. Create three distinct, complementary review perspectives with minimal overlap and good coverage of the specification. For each, write the exact instruction to give one reviewer. The reviewer will also receive the task specification, common reporting instruction, and read-only list_files/read_file tools. Each prompt must tell the reviewer what to inspect and must not mention tests, grading results, known bugs, or fixes. Return only JSON: {\"perspectives\": [{\"name\": string, \"prompt\": string}, {\"name\": string, \"prompt\": string}, {\"name\": string, \"prompt\": string}]}.",
+  "order": [
+    [
+      "A",
+      1
+    ],
+    [
+      "B",
+      1
+    ],
+    [
+      "C_design",
+      0
+    ],
+    [
+      "C",
+      1
+    ],
+    [
+      "A",
+      2
+    ],
+    [
+      "B",
+      2
+    ],
+    [
+      "C",
+      2
+    ],
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      3
+    ],
+    [
+      "C",
+      3
+    ]
+  ],
+  "auth": {
+    "version": "2.1.302 (Claude Code)",
+    "auth_method": "claude.ai"
+  }
+}
