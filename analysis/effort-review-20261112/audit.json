@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "planned_sequence_and_stop": true,
+    "four_original_reviews_byte_equal": true,
+    "model_version_effort_metrics_match_local": true,
+    "a_max_partial_state_verified": true,
+    "a_and_b_restored_byte_equal_original": true,
+    "a_high_and_b_high_review_code_evidence_present": true,
+    "public_documents_privacy_scan_clear": true
+  },
+  "published_review_sha256": {
+    "reviews/a-medium-b0fee227.md": "6dfc6035f1d4eb06f19a2a6c6a0a8926af559828192b580d08b36b7322e889cf",
+    "reviews/b-medium-c004ad44.md": "91cae010e24eb70069e7d91c92fd53435e2cad8d33431f47f75d26e77a156943",
+    "reviews/a-high-3d50edd3.md": "2b3839f116276fa538742e737b28b9e89519a2147be48b36b60006663067c09d",
+    "reviews/b-high-45cf5def.md": "794620fcfc93647dcf817639849dcf1cc19616f2ded2f0f6bf42d1c5d8f67e92"
+  },
+  "public_file_sha256_excluding_audit_json": {
+    ".gitignore": "2275873930874633674fab39184d1982179359fbaf85d76ecd6ce5bc2d177d1e",
+    "README.md": "5b0d91d995a371290bf4429d5efd73831f3a18325978d47eedd710bac48c10d6",
+    "preregistration.md": "8e8c755c0b072886f9791fe61f6220cf6afb312d2210432e70f58420e929ba41",
+    "report.md": "35fea1c4513d09f46767c3829e37b23b172edb73a12174e3a4d7c5b0f0a3cb60",
+    "restoration.json": "141e60f64db2068741f3110e55c096c7ccd5587fdc1dea6c3d3739063a0f0b49",
+    "public-runs.json": "aa6e878a58cae6db9a81aaa4ec6abdc085a80a0c29dbefe9fccb928c95e7586b",
+    "restore.py": "44a652adf8bdf3219aec8aa6dfa907fbf4b78b3e4f4b6d923d90c6c53d9baa69",
+    "run.py": "1046700c6b8b1ad323e49df08fb1d6c44aec9dd5ce0ad3bee0076b91ac3d9833",
+    "curate.py": "2c7c44b35161b5015e6274b57cfb742fb19fda42e05582e2de6f5cddd037bf41",
+    "audit.py": "c9a0d0ea446dce7223cce7a32083f380da85966c8142b64769b9dfb56dd0892d",
+    "reviews/a-high-3d50edd3.md": "2b3839f116276fa538742e737b28b9e89519a2147be48b36b60006663067c09d",
+    "reviews/a-medium-b0fee227.md": "6dfc6035f1d4eb06f19a2a6c6a0a8926af559828192b580d08b36b7322e889cf",
+    "reviews/b-high-45cf5def.md": "794620fcfc93647dcf817639849dcf1cc19616f2ded2f0f6bf42d1c5d8f67e92",
+    "reviews/b-medium-c004ad44.md": "91cae010e24eb70069e7d91c92fd53435e2cad8d33431f47f75d26e77a156943"
+  }
+}

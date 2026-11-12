@@ -1,0 +1,226 @@
+{
+  "experiment": 10,
+  "date_jst": "2026-11-12",
+  "model_id": "claude-haiku-5-5",
+  "cli_version": "2.1.302 (Claude Code)",
+  "prompt_sha256": "1ce91c7cb2c74db044d394cba176b973369ce298ec64944715ed9c4b4071847b",
+  "statement_sha256": "e1cc9571c8c9e69a2c12ace760ecad6ff2330bbc246b8ad025edd03a7eea9f9d",
+  "worker_sha256": "746d3eecca86178be762ffe43b9e8bdbf732696e115116a0507bc2635d2544de",
+  "cli_image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+  "worker_image": "sha256:2d3c09ec50df53d21e8651eaed5c8ca296a1954b6395ffd2a8624d1ca69cce2d",
+  "timeout_seconds": 600,
+  "max_turns": 35,
+  "max_budget_usd": 0.2,
+  "planned_order": [
+    [
+      "A",
+      "medium"
+    ],
+    [
+      "B",
+      "medium"
+    ],
+    [
+      "A",
+      "high"
+    ],
+    [
+      "B",
+      "high"
+    ],
+    [
+      "A",
+      "max"
+    ],
+    [
+      "B",
+      "max"
+    ]
+  ],
+  "completed_reviews": 4,
+  "timed_out": 1,
+  "not_started": [
+    "B-max"
+  ],
+  "runs": [
+    {
+      "run_id": "a-medium-b0fee227",
+      "target": "A",
+      "requested_effort": "medium",
+      "effective_effort_api_value": null,
+      "status": "ok",
+      "model_id_requested": "claude-haiku-5-5",
+      "model_id_reported_by_model_usage": [
+        "claude-haiku-5-5"
+      ],
+      "model_id_in_init": "claude-haiku-5-5",
+      "cli_version": "2.1.302",
+      "per_turn_effort_active": true,
+      "wall_seconds": 108.868,
+      "cli_seconds": 107.286,
+      "tokens": {
+        "input": 6,
+        "output": 24102,
+        "cache_read": 9942,
+        "cache_write": 22399
+      },
+      "thinking_tokens": 18050,
+      "api_equivalent_usd": 0.016631,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edit_calls": 0,
+      "command_calls": 0,
+      "tool_errors": 0,
+      "stderr_empty": true,
+      "review_file": "reviews/a-medium-b0fee227.md",
+      "review_sha256": "6dfc6035f1d4eb06f19a2a6c6a0a8926af559828192b580d08b36b7322e889cf",
+      "local_run_json_sha256": "95192c1e8978a5bacd033ad8080c1db4cfb2317a3579719c26024b27273b496b",
+      "local_stream_sha256": "394379a467b82b03f49ac377474a7e623dae5076b5edb12f0e13a0c240239fe9"
+    },
+    {
+      "run_id": "b-medium-c004ad44",
+      "target": "B",
+      "requested_effort": "medium",
+      "effective_effort_api_value": null,
+      "status": "ok",
+      "model_id_requested": "claude-haiku-5-5",
+      "model_id_reported_by_model_usage": [
+        "claude-haiku-5-5"
+      ],
+      "model_id_in_init": "claude-haiku-5-5",
+      "cli_version": "2.1.302",
+      "per_turn_effort_active": true,
+      "wall_seconds": 133.37,
+      "cli_seconds": 132.432,
+      "tokens": {
+        "input": 10,
+        "output": 30696,
+        "cache_read": 51102,
+        "cache_write": 18765
+      },
+      "thinking_tokens": 27947,
+      "api_equivalent_usd": 0.019613,
+      "code_unchanged": true,
+      "read_calls": 18,
+      "edit_calls": 0,
+      "command_calls": 0,
+      "tool_errors": 0,
+      "stderr_empty": true,
+      "review_file": "reviews/b-medium-c004ad44.md",
+      "review_sha256": "91cae010e24eb70069e7d91c92fd53435e2cad8d33431f47f75d26e77a156943",
+      "local_run_json_sha256": "707a3cf6168ac8a56aa20966dbb1c13c5a8668131803c2e89dc0416d4a55a9df",
+      "local_stream_sha256": "535aaa50b7f3238253fa1a9b000b96e213ff4da2adb4291175dccac42200fb8b"
+    },
+    {
+      "run_id": "a-high-3d50edd3",
+      "target": "A",
+      "requested_effort": "high",
+      "effective_effort_api_value": null,
+      "status": "ok",
+      "model_id_requested": "claude-haiku-5-5",
+      "model_id_reported_by_model_usage": [
+        "claude-haiku-5-5"
+      ],
+      "model_id_in_init": "claude-haiku-5-5",
+      "cli_version": "2.1.302",
+      "per_turn_effort_active": true,
+      "wall_seconds": 166.621,
+      "cli_seconds": 165.536,
+      "tokens": {
+        "input": 6,
+        "output": 38383,
+        "cache_read": 14475,
+        "cache_write": 18016
+      },
+      "thinking_tokens": 31645,
+      "api_equivalent_usd": 0.02294,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edit_calls": 0,
+      "command_calls": 0,
+      "tool_errors": 0,
+      "stderr_empty": true,
+      "review_file": "reviews/a-high-3d50edd3.md",
+      "review_sha256": "2b3839f116276fa538742e737b28b9e89519a2147be48b36b60006663067c09d",
+      "local_run_json_sha256": "4306f41007b6e15dfd01bc6c8745cf8cae8bcb9b194f52e6d8c121c6dd291839",
+      "local_stream_sha256": "c84d8b5118ebb57d56e3b2d9844740a635bf2b416a1a7c91990e7b8b3234f037"
+    },
+    {
+      "run_id": "b-high-45cf5def",
+      "target": "B",
+      "requested_effort": "high",
+      "effective_effort_api_value": null,
+      "status": "ok",
+      "model_id_requested": "claude-haiku-5-5",
+      "model_id_reported_by_model_usage": [
+        "claude-haiku-5-5"
+      ],
+      "model_id_in_init": "claude-haiku-5-5",
+      "cli_version": "2.1.302",
+      "per_turn_effort_active": true,
+      "wall_seconds": 220.352,
+      "cli_seconds": 219.481,
+      "tokens": {
+        "input": 8,
+        "output": 51727,
+        "cache_read": 38029,
+        "cache_write": 49253
+      },
+      "thinking_tokens": 48035,
+      "api_equivalent_usd": 0.036095,
+      "code_unchanged": true,
+      "read_calls": 21,
+      "edit_calls": 0,
+      "command_calls": 0,
+      "tool_errors": 0,
+      "stderr_empty": true,
+      "review_file": "reviews/b-high-45cf5def.md",
+      "review_sha256": "794620fcfc93647dcf817639849dcf1cc19616f2ded2f0f6bf42d1c5d8f67e92",
+      "local_run_json_sha256": "1dc473aadde4b18be19a2d92d8ba46e6b0403f9c1a4023fd7cd1c72ed93936c0",
+      "local_stream_sha256": "46b6db5486777f22a89f01329c19eda1d78a82348ccaac86eb6af785a1927dde"
+    },
+    {
+      "run_id": "a-max-f3f4310a",
+      "target": "A",
+      "requested_effort": "max",
+      "effective_effort_api_value": null,
+      "status": "timeout",
+      "model_id_requested": "claude-haiku-5-5",
+      "model_id_reported_by_model_usage": [],
+      "model_id_in_init": "claude-haiku-5-5",
+      "cli_version": "2.1.302",
+      "per_turn_effort_active": true,
+      "wall_seconds": 601.277,
+      "cli_seconds": 600.042,
+      "tokens": null,
+      "thinking_tokens": null,
+      "api_equivalent_usd": null,
+      "code_unchanged": true,
+      "read_calls": 17,
+      "edit_calls": 0,
+      "command_calls": 0,
+      "tool_errors": 0,
+      "stderr_empty": true,
+      "review_file": null,
+      "review_sha256": null,
+      "local_run_json_sha256": "8642cb376b8a181d254bcc0e8d28273aed80eb03681474fc1de3967a06690ae4",
+      "local_stream_sha256": "4dba852cd00191957f957293d31f77f9cff18a4265c5b4a7a7aea354eda20430",
+      "timeout_observation": {
+        "stream_events": 533,
+        "final_result_events": 0,
+        "last_event": "system.thinking_tokens",
+        "last_thinking_estimate_tokens": 16850,
+        "thinking_estimate_is_total_usage": false,
+        "usage_snapshot_request_count": 3,
+        "usage_snapshot_sum_not_final_accounting": {
+          "input": 6,
+          "cache_write": 19045,
+          "cache_read": 14589,
+          "output": 35
+        },
+        "rate_limit_status": "allowed",
+        "total_usage_and_api_cost_known": false
+      }
+    }
+  ]
+}
