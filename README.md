@@ -2,6 +2,12 @@
 
 AIの能力・判断・協調・自律性を実験で検証するプロジェクト
 
+## 第11回実験: Haiku mediumの3回統合、highの1回、Opusの1回
+
+#7の不合格成果物3件を、Haiku 5.5 mediumの独立3回、Haiku 5.5 highの1回、Opus 5.5 highの1回で読取専用レビューしました。計15レビューで、事前登録した既知14欠陥の発見は順に12、11、10件です。mediumの3回目だけがXの保存経路の欠陥を指摘し、Zの既知2欠陥は3方式とも見落としました。highの1回は既知1件あたりのAPI換算費用が最も低い一方、費用は事前に揃えていません。
+
+[実験条件・公開記録・再現手順](analysis/repeated-review-20261116/README.md)、[結果と考察](analysis/repeated-review-20261116/report.md)、[Xの追加発見の原文と根拠](analysis/repeated-review-20261116/x-a3-x1.md)を参照してください。認証情報とCLI生ログはGitに含めません。
+
 ## 第10回実験: Haiku 5.5のeffort別レビュー比較
 
 #7の初回成果物2件をHaiku 5.5のmedium・high・maxでレビューする計画を事前登録しました。mediumとhighの4件は完了し、Aではhighがmediumの見落としたCRM再書込問題を指摘しました。Bでは既知不具合の発見数は同じで、highは新規不具合1件と誤指摘1件を追加しました。A-maxは600秒でタイムアウトし、B-maxは停止条件に従い未実行です。effortが改善の原因だったか、maxの品質がどうだったかは判定できません。

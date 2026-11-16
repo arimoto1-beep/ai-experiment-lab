@@ -1,0 +1,23 @@
+[
+    {
+        "label":  "X",
+        "output":  [
+                       "{\"mode\":\"X\",\"case\":\"partial_promotion\",\"status\":\"accepted\",\"payload_status\":\"ready_for_crm\",\"payload_service\":null,\"payload_city\":null}"
+                   ],
+        "exit_code":  0
+    },
+    {
+        "label":  "Y",
+        "output":  [
+                       "{\"mode\":\"Y\",\"case\":\"accepted_then_incomplete\",\"status\":\"needs_review\",\"payload_email\":null}"
+                   ],
+        "exit_code":  0
+    },
+    {
+        "label":  "Z",
+        "output":  [
+                       "{\"mode\":\"Z\",\"case\":\"identity_text_and_custom_source\",\"ad_status\":\"rejected\",\"ad_reason\":\"invalid_lead\",\"saved_email\":\"Jane.Carter@Example.com\",\"custom_source_result\":\"TypeError: sources[entry.source].push is not a function\"}"
+                   ],
+        "exit_code":  0
+    }
+]

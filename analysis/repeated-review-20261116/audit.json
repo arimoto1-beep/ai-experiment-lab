@@ -1,0 +1,447 @@
+{
+  "preregistration_sha256_match": true,
+  "source_hashes_match": {
+    "X": true,
+    "Y": true,
+    "Z": true
+  },
+  "session_ids_unique": true,
+  "frozen_order_match": true,
+  "runs": [
+    {
+      "run_id": "x-a1-dd572718",
+      "label": "X",
+      "phase": "A1",
+      "session_id": "433df444-6c57-45c8-8663-05b27d71749a",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "d2d5d2136bdb2f4686c754ff81b458ea7617c30f5ec6e97f987e37afc4694227"
+    },
+    {
+      "run_id": "y-a1-bdb73fc9",
+      "label": "Y",
+      "phase": "A1",
+      "session_id": "75ae56c3-73fb-4b05-a5d6-e388b3b10c8e",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "4658b82e087752cc3d9db957e281e5541d5ddb9be240be77bd6beb3f2d753d44"
+    },
+    {
+      "run_id": "z-a1-66668ca9",
+      "label": "Z",
+      "phase": "A1",
+      "session_id": "531f703d-c10c-4918-a764-7035099ce727",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 18,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "7356828e203f9707681d51cb22fe595f77fa605465074819e0b3e7aa44cff9cd"
+    },
+    {
+      "run_id": "x-b-b3e4af0c",
+      "label": "X",
+      "phase": "B",
+      "session_id": "51976abb-d98b-4a2c-ae93-56f5c1e038c0",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 15,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "e5e68225fdd32b141fc0730a17f409227a697cf54447af33f1bde8aa14fe3398"
+    },
+    {
+      "run_id": "y-b-eb0ce415",
+      "label": "Y",
+      "phase": "B",
+      "session_id": "c11f94b8-0f35-4814-aa6a-a9f6f1cb011a",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 16,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "6866dec8a2b63ccb54bf00188251ec8ffe78d624decb29275b7f8abb46c571e4"
+    },
+    {
+      "run_id": "z-b-633a5180",
+      "label": "Z",
+      "phase": "B",
+      "session_id": "3fcede45-c17c-435c-9186-a70eb5e2dde2",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 21,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "bdae22c03a1fa543202376e19331644a0114ce6a5e350f836477f64a2dc920da"
+    },
+    {
+      "run_id": "x-c-3dda558a",
+      "label": "X",
+      "phase": "C",
+      "session_id": "9d8e68aa-5ce4-40b3-8fa1-f8d5510fd0c4",
+      "status": "ok",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "c058037a7b3711d2f8baedfa067c6a255f86f78343dd8a4e3b85e2273cdbb11c"
+    },
+    {
+      "run_id": "y-c-cba5364b",
+      "label": "Y",
+      "phase": "C",
+      "session_id": "be756544-435e-4b90-932b-14312a44488b",
+      "status": "ok",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 16,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "c105e3c25344a10cfd016b295ddd418c860d2cb6181f6fd2d4090535fcfe0c5d"
+    },
+    {
+      "run_id": "z-c-9c858930",
+      "label": "Z",
+      "phase": "C",
+      "session_id": "5952ffea-8327-41d6-84b2-4553dfeb6a02",
+      "status": "ok",
+      "model": [
+        "claude-opus-5-5"
+      ],
+      "effort_requested": "high",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 21,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "905c4d5f6307741372adb9ae50200a708c5e691ce8c10565b08dc57a27318558"
+    },
+    {
+      "run_id": "x-a2-53531f11",
+      "label": "X",
+      "phase": "A2",
+      "session_id": "7e35311c-74ad-4f4d-8eb3-e37adca83fcb",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "e6f1784c098990a1b10bcf97c90f307dce409d943127db7f823e3f75c44946d2"
+    },
+    {
+      "run_id": "y-a2-c93697dd",
+      "label": "Y",
+      "phase": "A2",
+      "session_id": "9c6b9948-4ea1-4c03-9703-9269a961d68c",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "f91e6d633645e22d48efa03e537c4898cdb9ff18844abc8d37095314a3c6fdaf"
+    },
+    {
+      "run_id": "z-a2-4a490afa",
+      "label": "Z",
+      "phase": "A2",
+      "session_id": "51cfadf3-eca6-4e25-a34e-391bccc89508",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 21,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "49d71eedb78f0fe8a9a97ea1abf3d8b69d3772ab9fbc051bb1cd4514da978d63"
+    },
+    {
+      "run_id": "x-a3-fc386e8b",
+      "label": "X",
+      "phase": "A3",
+      "session_id": "5861013e-0f8a-41ba-bffc-da770de5680d",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 16,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "323ed5939d8264647fde8a085eab34c891d60be22928988eda891cf6492a4495"
+    },
+    {
+      "run_id": "y-a3-5207facd",
+      "label": "Y",
+      "phase": "A3",
+      "session_id": "acf1dc0a-89f9-4d0a-aafa-67e70b01e4b3",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 13,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "68a03948c6127d92cde6fedf517664f469e5f4aba0520b21ab872af82ebbaada"
+    },
+    {
+      "run_id": "z-a3-437c5362",
+      "label": "Z",
+      "phase": "A3",
+      "session_id": "c9be594b-45f1-42ce-af03-6ade95a2528a",
+      "status": "ok",
+      "model": [
+        "claude-haiku-5-5"
+      ],
+      "effort_requested": "medium",
+      "effort_active": true,
+      "cli_version": "2.1.302",
+      "prompt_match": true,
+      "invocation_match": true,
+      "model_usage_match": true,
+      "tools_used": [
+        "mcp__lab__list_files",
+        "mcp__lab__read_file"
+      ],
+      "tools_match": true,
+      "progress_record_match": true,
+      "code_unchanged": true,
+      "read_calls": 20,
+      "edits": 0,
+      "tool_errors": 0,
+      "returncode": 0,
+      "stderr_empty": true,
+      "stream_sha256": "510b824b1f9d7ebdebdc1d9a7207ff3f1087d0dcd78372daa8846080f5084697"
+    }
+  ]
+}

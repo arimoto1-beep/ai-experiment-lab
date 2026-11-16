@@ -1,0 +1,357 @@
+[
+  {
+    "label": "X",
+    "method": "A",
+    "reviews": 3,
+    "known": [
+      "X1",
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "X6"
+    ],
+    "missed": [],
+    "new": [
+      "XN1",
+      "XN10",
+      "XN11",
+      "XN12",
+      "XN2",
+      "XN3",
+      "XN4",
+      "XN5",
+      "XN6",
+      "XN7",
+      "XN8",
+      "XN9"
+    ],
+    "false": [
+      "XF1",
+      "XF2"
+    ],
+    "repeated_groups": {
+      "X2": 3,
+      "X3": 3,
+      "X4": 3,
+      "X5": 3,
+      "X6": 3,
+      "XN1": 3,
+      "XN10": 3,
+      "XN2": 3,
+      "XN3": 2,
+      "XN4": 3,
+      "XN5": 3,
+      "XN6": 3,
+      "XN7": 3,
+      "XN8": 2,
+      "XN9": 2
+    },
+    "total_wall_seconds": 357.118,
+    "tokens": {
+      "input": 22,
+      "output": 80911,
+      "cache_read": 79465,
+      "cache_write": 76642
+    },
+    "thinking_tokens": 60569,
+    "api_equivalent_usd": 0.056581,
+    "usd_per_known": 0.00943
+  },
+  {
+    "label": "X",
+    "method": "B",
+    "reviews": 1,
+    "known": [
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "X6"
+    ],
+    "missed": [
+      "X1"
+    ],
+    "new": [
+      "XN10",
+      "XN11",
+      "XN12",
+      "XN14",
+      "XN15",
+      "XN2",
+      "XN3",
+      "XN4",
+      "XN5",
+      "XN6",
+      "XN7",
+      "XN8",
+      "XN9"
+    ],
+    "false": [],
+    "repeated_groups": {},
+    "total_wall_seconds": 172.164,
+    "tokens": {
+      "input": 6,
+      "output": 40924,
+      "cache_read": 14470,
+      "cache_write": 16453
+    },
+    "thinking_tokens": 32779,
+    "api_equivalent_usd": 0.023898,
+    "usd_per_known": 0.00478
+  },
+  {
+    "label": "X",
+    "method": "C",
+    "reviews": 1,
+    "known": [
+      "X2",
+      "X3",
+      "X4",
+      "X5",
+      "X6"
+    ],
+    "missed": [
+      "X1"
+    ],
+    "new": [
+      "XN1",
+      "XN10",
+      "XN11",
+      "XN12",
+      "XN13",
+      "XN14",
+      "XN2",
+      "XN3",
+      "XN4",
+      "XN5",
+      "XN6",
+      "XN7",
+      "XN8"
+    ],
+    "false": [],
+    "repeated_groups": {},
+    "total_wall_seconds": 124.921,
+    "tokens": {
+      "input": 8,
+      "output": 13044,
+      "cache_read": 24600,
+      "cache_write": 19529
+    },
+    "thinking_tokens": 5742,
+    "api_equivalent_usd": 0.422064,
+    "usd_per_known": 0.084413
+  },
+  {
+    "label": "Y",
+    "method": "A",
+    "reviews": 3,
+    "known": [
+      "Y1",
+      "Y2",
+      "Y3",
+      "Y4",
+      "Y5",
+      "Y6"
+    ],
+    "missed": [],
+    "new": [
+      "YN1",
+      "YN2",
+      "YN3",
+      "YN4",
+      "YN5",
+      "YN6",
+      "YN7",
+      "YN8"
+    ],
+    "false": [
+      "YF1",
+      "YF2",
+      "YF3"
+    ],
+    "repeated_groups": {
+      "Y1": 3,
+      "Y2": 2,
+      "Y3": 3,
+      "Y4": 3,
+      "Y5": 3,
+      "Y6": 3,
+      "YN2": 3,
+      "YN3": 3,
+      "YN4": 3,
+      "YN5": 2,
+      "YN6": 3,
+      "YN7": 2,
+      "YN8": 3
+    },
+    "total_wall_seconds": 325.391,
+    "tokens": {
+      "input": 20,
+      "output": 74354,
+      "cache_read": 65101,
+      "cache_write": 60246
+    },
+    "thinking_tokens": 54474,
+    "api_equivalent_usd": 0.04988,
+    "usd_per_known": 0.008313
+  },
+  {
+    "label": "Y",
+    "method": "B",
+    "reviews": 1,
+    "known": [
+      "Y1",
+      "Y2",
+      "Y3",
+      "Y4",
+      "Y5",
+      "Y6"
+    ],
+    "missed": [],
+    "new": [
+      "YN1",
+      "YN2",
+      "YN4",
+      "YN5",
+      "YN6"
+    ],
+    "false": [
+      "YF1"
+    ],
+    "repeated_groups": {},
+    "total_wall_seconds": 160.267,
+    "tokens": {
+      "input": 8,
+      "output": 37815,
+      "cache_read": 35819,
+      "cache_write": 35438
+    },
+    "thinking_tokens": 31265,
+    "api_equivalent_usd": 0.026354,
+    "usd_per_known": 0.004392
+  },
+  {
+    "label": "Y",
+    "method": "C",
+    "reviews": 1,
+    "known": [
+      "Y2",
+      "Y3",
+      "Y4",
+      "Y5",
+      "Y6"
+    ],
+    "missed": [
+      "Y1"
+    ],
+    "new": [
+      "YN2",
+      "YN4",
+      "YN6",
+      "YN7",
+      "YN8",
+      "YN9"
+    ],
+    "false": [
+      "YF4"
+    ],
+    "repeated_groups": {},
+    "total_wall_seconds": 116.258,
+    "tokens": {
+      "input": 10,
+      "output": 12036,
+      "cache_read": 47120,
+      "cache_write": 22324
+    },
+    "thinking_tokens": 5841,
+    "api_equivalent_usd": 0.428776,
+    "usd_per_known": 0.085755
+  },
+  {
+    "label": "Z",
+    "method": "A",
+    "reviews": 3,
+    "known": [],
+    "missed": [
+      "Z1",
+      "Z2"
+    ],
+    "new": [
+      "ZN1",
+      "ZN2"
+    ],
+    "false": [
+      "ZF1",
+      "ZF2"
+    ],
+    "repeated_groups": {
+      "ZN1": 2,
+      "ZN2": 2
+    },
+    "total_wall_seconds": 387.543,
+    "tokens": {
+      "input": 22,
+      "output": 88927,
+      "cache_read": 91615,
+      "cache_write": 93847
+    },
+    "thinking_tokens": 75966,
+    "api_equivalent_usd": 0.064151,
+    "usd_per_known": null
+  },
+  {
+    "label": "Z",
+    "method": "B",
+    "reviews": 1,
+    "known": [],
+    "missed": [
+      "Z1",
+      "Z2"
+    ],
+    "new": [
+      "ZN1"
+    ],
+    "false": [
+      "ZF1"
+    ],
+    "repeated_groups": {},
+    "total_wall_seconds": 160.489,
+    "tokens": {
+      "input": 8,
+      "output": 37286,
+      "cache_read": 38345,
+      "cache_write": 47152
+    },
+    "thinking_tokens": 33396,
+    "api_equivalent_usd": 0.028458,
+    "usd_per_known": null
+  },
+  {
+    "label": "Z",
+    "method": "C",
+    "reviews": 1,
+    "known": [],
+    "missed": [
+      "Z1",
+      "Z2"
+    ],
+    "new": [
+      "ZN2"
+    ],
+    "false": [
+      "ZF1"
+    ],
+    "repeated_groups": {},
+    "total_wall_seconds": 157.267,
+    "tokens": {
+      "input": 12,
+      "output": 16010,
+      "cache_read": 69873,
+      "cache_write": 30442
+    },
+    "thinking_tokens": 11687,
+    "api_equivalent_usd": 0.577759,
+    "usd_per_known": null
+  }
+]

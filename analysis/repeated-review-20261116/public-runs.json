@@ -1,0 +1,692 @@
+[
+  {
+    "label": "X",
+    "phase": "A1",
+    "run_id": "x-a1-dd572718",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 98.557,
+    "cli_seconds": 97.046,
+    "tokens": {
+      "input": 8,
+      "output": 22159,
+      "cache_read": 29881,
+      "cache_write": 33196
+    },
+    "thinking_tokens": 15839,
+    "cost": {
+      "api_equivalent_usd": 0.018018,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 33196
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "d2d5d2136bdb2f4686c754ff81b458ea7617c30f5ec6e97f987e37afc4694227",
+    "result_text_sha256": "f64f34f364e9e1a6b106d2345b0326a7279c352b91c615366133a181a8f96328"
+  },
+  {
+    "label": "Y",
+    "phase": "A1",
+    "run_id": "y-a1-bdb73fc9",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 110.188,
+    "cli_seconds": 109.123,
+    "tokens": {
+      "input": 6,
+      "output": 25246,
+      "cache_read": 14734,
+      "cache_write": 16199
+    },
+    "thinking_tokens": 18799,
+    "cost": {
+      "api_equivalent_usd": 0.016011,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 16199
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "4658b82e087752cc3d9db957e281e5541d5ddb9be240be77bd6beb3f2d753d44",
+    "result_text_sha256": "7bdf3df947019f1916ebb01dbfc38b4b03a425846f196ec1651c71b39dac3c3c"
+  },
+  {
+    "label": "Z",
+    "phase": "A1",
+    "run_id": "z-a1-66668ca9",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 159.122,
+    "cli_seconds": 158.121,
+    "tokens": {
+      "input": 6,
+      "output": 37087,
+      "cache_read": 14788,
+      "cache_write": 18974
+    },
+    "thinking_tokens": 33354,
+    "cost": {
+      "api_equivalent_usd": 0.022487,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 18974
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "7356828e203f9707681d51cb22fe595f77fa605465074819e0b3e7aa44cff9cd",
+    "result_text_sha256": "a0b071c28f605223d8e5b4b50ad480b69338b3ad5ce55e07c56f9de6c63c1a90"
+  },
+  {
+    "label": "X",
+    "phase": "B",
+    "run_id": "x-b-b3e4af0c",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 172.164,
+    "cli_seconds": 170.697,
+    "tokens": {
+      "input": 6,
+      "output": 40924,
+      "cache_read": 14470,
+      "cache_write": 16453
+    },
+    "thinking_tokens": 32779,
+    "cost": {
+      "api_equivalent_usd": 0.023898,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 16453
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "e5e68225fdd32b141fc0730a17f409227a697cf54447af33f1bde8aa14fe3398",
+    "result_text_sha256": "d737ec1c4916d43b5862bd3cc64438a78c8788ee7f0d4915f085446eef4ef218"
+  },
+  {
+    "label": "Y",
+    "phase": "B",
+    "run_id": "y-b-eb0ce415",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 160.267,
+    "cli_seconds": 158.842,
+    "tokens": {
+      "input": 8,
+      "output": 37815,
+      "cache_read": 35819,
+      "cache_write": 35438
+    },
+    "thinking_tokens": 31265,
+    "cost": {
+      "api_equivalent_usd": 0.026354,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 35438
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "6866dec8a2b63ccb54bf00188251ec8ffe78d624decb29275b7f8abb46c571e4",
+    "result_text_sha256": "e0bdb3f934e184940e06d3dceba7ddbe699a855855b4465c0ea304f374aa438c"
+  },
+  {
+    "label": "Z",
+    "phase": "B",
+    "run_id": "z-b-633a5180",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 160.489,
+    "cli_seconds": 159.325,
+    "tokens": {
+      "input": 8,
+      "output": 37286,
+      "cache_read": 38345,
+      "cache_write": 47152
+    },
+    "thinking_tokens": 33396,
+    "cost": {
+      "api_equivalent_usd": 0.028458,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 47152
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "bdae22c03a1fa543202376e19331644a0114ce6a5e350f836477f64a2dc920da",
+    "result_text_sha256": "29c309831fa7fd5177ec07325c5712826e4e3a68ae06ca98e00c31bf5b7948d6"
+  },
+  {
+    "label": "X",
+    "phase": "C",
+    "run_id": "x-c-3dda558a",
+    "status": "ok",
+    "model_requested": "claude-opus-5-5",
+    "model_actual": [
+      "claude-opus-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 124.921,
+    "cli_seconds": 123.685,
+    "tokens": {
+      "input": 8,
+      "output": 13044,
+      "cache_read": 24600,
+      "cache_write": 19529
+    },
+    "thinking_tokens": 5742,
+    "cost": {
+      "api_equivalent_usd": 0.422064,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 19529
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-opus-5-5": {
+          "input": 4.0,
+          "output": 20.0,
+          "cache_write_5m": 5.0,
+          "cache_write_1h": 8.0,
+          "cache_read": 0.2
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "c058037a7b3711d2f8baedfa067c6a255f86f78343dd8a4e3b85e2273cdbb11c",
+    "result_text_sha256": "ee01810318ff92493d84e357ba380510e7789591ad7855aad57530d39d04f2d2"
+  },
+  {
+    "label": "Y",
+    "phase": "C",
+    "run_id": "y-c-cba5364b",
+    "status": "ok",
+    "model_requested": "claude-opus-5-5",
+    "model_actual": [
+      "claude-opus-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 116.258,
+    "cli_seconds": 115.242,
+    "tokens": {
+      "input": 10,
+      "output": 12036,
+      "cache_read": 47120,
+      "cache_write": 22324
+    },
+    "thinking_tokens": 5841,
+    "cost": {
+      "api_equivalent_usd": 0.428776,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 22324
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-opus-5-5": {
+          "input": 4.0,
+          "output": 20.0,
+          "cache_write_5m": 5.0,
+          "cache_write_1h": 8.0,
+          "cache_read": 0.2
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "c105e3c25344a10cfd016b295ddd418c860d2cb6181f6fd2d4090535fcfe0c5d",
+    "result_text_sha256": "fe853bd8ce48aa146b7463ef6b7294792d9145e4f9bf0aed34f3581f4bcac5cc"
+  },
+  {
+    "label": "Z",
+    "phase": "C",
+    "run_id": "z-c-9c858930",
+    "status": "ok",
+    "model_requested": "claude-opus-5-5",
+    "model_actual": [
+      "claude-opus-5-5"
+    ],
+    "effort_requested": "high",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 157.267,
+    "cli_seconds": 156.113,
+    "tokens": {
+      "input": 12,
+      "output": 16010,
+      "cache_read": 69873,
+      "cache_write": 30442
+    },
+    "thinking_tokens": 11687,
+    "cost": {
+      "api_equivalent_usd": 0.577759,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 30442
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-opus-5-5": {
+          "input": 4.0,
+          "output": 20.0,
+          "cache_write_5m": 5.0,
+          "cache_write_1h": 8.0,
+          "cache_read": 0.2
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "905c4d5f6307741372adb9ae50200a708c5e691ce8c10565b08dc57a27318558",
+    "result_text_sha256": "1e98abffc6b08ecd5d1d6aad369be9c1c74d283825ba37d57f7feb5c420b1815"
+  },
+  {
+    "label": "X",
+    "phase": "A2",
+    "run_id": "x-a2-53531f11",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 119.245,
+    "cli_seconds": 118.26,
+    "tokens": {
+      "input": 6,
+      "output": 26874,
+      "cache_read": 14746,
+      "cache_write": 15589
+    },
+    "thinking_tokens": 20747,
+    "cost": {
+      "api_equivalent_usd": 0.016703,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 15589
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "e6f1784c098990a1b10bcf97c90f307dce409d943127db7f823e3f75c44946d2",
+    "result_text_sha256": "d88ba3b10c95e5e08af6db8df987cd2a8109f9e47d211cad50aef1372b43ead3"
+  },
+  {
+    "label": "Y",
+    "phase": "A2",
+    "run_id": "y-a2-c93697dd",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 123.88,
+    "cli_seconds": 122.507,
+    "tokens": {
+      "input": 6,
+      "output": 28506,
+      "cache_read": 15050,
+      "cache_write": 15883
+    },
+    "thinking_tokens": 20777,
+    "cost": {
+      "api_equivalent_usd": 0.017581,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 15883
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "f91e6d633645e22d48efa03e537c4898cdb9ff18844abc8d37095314a3c6fdaf",
+    "result_text_sha256": "3184899f893a9b957ad9f86ba888a895325c98adbdfa80c28599d695d7338d05"
+  },
+  {
+    "label": "Z",
+    "phase": "A2",
+    "run_id": "z-a2-4a490afa",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 109.211,
+    "cli_seconds": 107.795,
+    "tokens": {
+      "input": 8,
+      "output": 24905,
+      "cache_read": 38572,
+      "cache_write": 36175
+    },
+    "thinking_tokens": 20313,
+    "cost": {
+      "api_equivalent_usd": 0.020074,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 36175
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "49d71eedb78f0fe8a9a97ea1abf3d8b69d3772ab9fbc051bb1cd4514da978d63",
+    "result_text_sha256": "7648073db99356851ec456158e868d9215653fa83a146509e0d966ce1f963aa1"
+  },
+  {
+    "label": "X",
+    "phase": "A3",
+    "run_id": "x-a3-fc386e8b",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 139.316,
+    "cli_seconds": 137.851,
+    "tokens": {
+      "input": 8,
+      "output": 31878,
+      "cache_read": 34838,
+      "cache_write": 27857
+    },
+    "thinking_tokens": 23983,
+    "cost": {
+      "api_equivalent_usd": 0.02186,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 27857
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "323ed5939d8264647fde8a085eab34c891d60be22928988eda891cf6492a4495",
+    "result_text_sha256": "5e3cf82ef3787ecf0bb6b1cbbb2ad0c1c81f3312867e751d6cba77d8b34ef5b5"
+  },
+  {
+    "label": "Y",
+    "phase": "A3",
+    "run_id": "y-a3-5207facd",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 91.323,
+    "cli_seconds": 90.07,
+    "tokens": {
+      "input": 8,
+      "output": 20602,
+      "cache_read": 35317,
+      "cache_write": 28164
+    },
+    "thinking_tokens": 14898,
+    "cost": {
+      "api_equivalent_usd": 0.016288,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 28164
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "68a03948c6127d92cde6fedf517664f469e5f4aba0520b21ab872af82ebbaada",
+    "result_text_sha256": "45cfa4cbd878c771f7193732b1e8d85213a60f07e4aea921bd60f01ef3ff2aa1"
+  },
+  {
+    "label": "Z",
+    "phase": "A3",
+    "run_id": "z-a3-437c5362",
+    "status": "ok",
+    "model_requested": "claude-haiku-5-5",
+    "model_actual": [
+      "claude-haiku-5-5"
+    ],
+    "effort_requested": "medium",
+    "per_turn_effort_active": true,
+    "cli_version": "2.1.302",
+    "wall_seconds": 119.21,
+    "cli_seconds": 117.774,
+    "tokens": {
+      "input": 8,
+      "output": 26935,
+      "cache_read": 38255,
+      "cache_write": 38698
+    },
+    "thinking_tokens": 22299,
+    "cost": {
+      "api_equivalent_usd": 0.02159,
+      "complete": true,
+      "cache_write_ttl_assumed": null,
+      "cache_write_tokens_by_ttl": {
+        "5m": 0,
+        "1h": 38698
+      },
+      "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing_checked_on": "2026-10-12",
+      "rates_per_mtok": {
+        "claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5,
+          "cache_write_5m": 0.125,
+          "cache_write_1h": 0.2,
+          "cache_read": 0.01
+        }
+      },
+      "notes": []
+    },
+    "code_unchanged": true,
+    "stream_sha256": "510b824b1f9d7ebdebdc1d9a7207ff3f1087d0dcd78372daa8846080f5084697",
+    "result_text_sha256": "146fa245fedcf0485df8358c793ab25caa9f78bc468ec4f0fffb23e93bd27abd"
+  }
+]
