@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "auth_method": "claude.ai",
+  "cli_version": "2.1.302 (Claude Code)",
+  "source_file_count": 22,
+  "source_byte_match": true,
+  "smoke_passed": true
+}

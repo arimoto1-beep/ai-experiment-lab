@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "frozen_inputs_match": true,
+  "trial_1_invalid_and_preserved": true,
+  "trial_2_model_effort_cli_verified": true,
+  "trial_2_test_files": 2,
+  "trial_2_test_runs": 2,
+  "final_tests": 93,
+  "final_passed": 91,
+  "final_failed": 2,
+  "known_groups_model_detected": 0,
+  "evaluator_known_reproduction": [
+    "Z1",
+    "Z2"
+  ],
+  "false_positive_claims": 2,
+  "restored_source_checks": {
+    "analysis/test-driven-review-20261122/source-app": 22,
+    "results/react_lead_form_harbor/rlfm-0df740e1d9e8/jobs/rlfm-0df740e1d9e8/react-lead-form__YRqsvPJ/artifacts/app": 22,
+    "analysis/react-lead-form-review-20261102/rlfm-0df740e1d9e8/app": 22
+  },
+  "official_task_raw_blob_files_checked": 40,
+  "raw_records_checked": true,
+  "public_files_scanned": 26,
+  "secrets_or_personal_paths_found": 0,
+  "private_files_git_excluded": true
+}

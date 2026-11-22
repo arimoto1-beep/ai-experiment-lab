@@ -1,0 +1,54 @@
+{
+  "experiment": 12,
+  "trial_number": 1,
+  "trial_valid": false,
+  "invalid_reason": "Isolated Claude CLI authentication failed before inference.",
+  "attempts": 1,
+  "status": "authentication_failed_before_model_response",
+  "preflight": {
+    "auth_method": "claude.ai",
+    "cli_version": "2.1.302 (Claude Code)",
+    "source_files_byte_matched": 22,
+    "isolated_smoke_test_passed": true
+  },
+  "invocation": {
+    "requested_model": "claude-haiku-5-5",
+    "requested_effort": "high",
+    "no_session_persistence": true,
+    "timeout_seconds": 600,
+    "max_turns": 35
+  },
+  "cli_init": {
+    "model": "claude-haiku-5-5",
+    "claude_code_version": "2.1.302",
+    "per_turn_effort_active": true
+  },
+  "actual_model_usage_verified": false,
+  "assistant_error": "authentication_failed",
+  "result_error": "OAuth session expired and could not be refreshed",
+  "returncode": 1,
+  "timed_out": false,
+  "wall_seconds": 2.645,
+  "cli_seconds": 1.622,
+  "reported_tokens": {
+    "input": 0,
+    "output": 0,
+    "cache_read": 0,
+    "cache_write": 0,
+    "thinking": 0
+  },
+  "api_equivalent_usd": null,
+  "api_cost_reason": "No modelUsage was emitted; the actual model and billable usage cannot be verified.",
+  "model_tool_calls": 0,
+  "model_authored_test_files": 0,
+  "test_runs": 0,
+  "test_cases_passed": 0,
+  "test_cases_failed": 0,
+  "test_cases_unrunnable": 0,
+  "known_groups_detected": [],
+  "known_groups_scoreable": false,
+  "new_bugs_confirmed": [],
+  "false_positives": [],
+  "source_unchanged_after_attempt": true,
+  "raw_log_location_git_ignored": "results/test_driven_review_20261122/"
+}

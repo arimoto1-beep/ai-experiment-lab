@@ -1,0 +1,80 @@
+{
+  "trial_number": 2,
+  "status": "ok",
+  "inference_started": true,
+  "model_requested": "claude-haiku-5-5",
+  "model_actual": [
+    "claude-haiku-5-5"
+  ],
+  "model_check": "match",
+  "effort_requested": "high",
+  "per_turn_effort_active": true,
+  "cli_version": "2.1.302",
+  "auth_method_at_start": "claude.ai",
+  "wall_seconds": 358.593,
+  "cli_seconds": 356.702,
+  "returncode": 0,
+  "timed_out": false,
+  "tokens": {
+    "input": 20,
+    "output": 89954,
+    "cache_read": 479497,
+    "cache_write": 127628
+  },
+  "thinking_tokens": 56492,
+  "api_equivalent_usd_basic_tier": 0.0753,
+  "cache_write_tokens_by_ttl": {
+    "5m": 0,
+    "1h": 127628
+  },
+  "source_unchanged": true,
+  "prompt_sha256": "40b5b436297cd4d9e59e4d4a624cb26e3a29a0861781f54a4d11623432f89ae6",
+  "worker_sha256": "d0af6b4ac4903f14ed387e80f5d2b97276c7f748b0293a2844b39671a9d8b019",
+  "test_file_sha256": {
+    "intake_form.test.ts": "562b6bd80563418f8fb45705890abb60e44533c2534fde28fbad287ac2d43fb6",
+    "intake_pipeline.test.ts": "2e04de6b6adb980ff7a3a57d1032785d1b79d41c66088896fba7b15d377fa072"
+  },
+  "tool_calls": {
+    "mcp__lab__list_files": 1,
+    "mcp__lab__read_file": 20,
+    "mcp__lab__write_test": 3,
+    "mcp__lab__run_tests": 2
+  },
+  "read_paths": [
+    "/app/src/spec/lead_schema.json",
+    "/app/src/spec/lead_policy.json",
+    "/app/src/spec/business_calendar.json",
+    "src/spec/lead_schema.json",
+    "src/spec/lead_policy.json",
+    "src/spec/business_calendar.json",
+    "src/lib/submitLead.ts",
+    "src/lib/validation.ts",
+    "src/lib/ledger.ts",
+    "src/lib/identity.ts",
+    "src/lib/payload.ts",
+    "src/lib/calendar.ts",
+    "src/lib/outputStore.ts",
+    "src/lib/tracking.ts",
+    "src/scripts/submit.ts",
+    "package.json",
+    "src/lib/spec.ts",
+    "src/components/LeadForm.tsx",
+    "src/App.tsx",
+    "src/data/lead_input.json"
+  ],
+  "tool_operation_statuses": {
+    "list_files:ok": 1,
+    "read_file:error": 3,
+    "read_file:ok": 17,
+    "write_test:ok": 3,
+    "run_tests:ok": 2
+  },
+  "test_runs": 2,
+  "final_test_cases": 93,
+  "final_passed": 91,
+  "final_failed": 2,
+  "final_unrunnable": 0,
+  "model_response_sha256": "0062d6daa9069de30353e992e78a6bf5271e14dfedd10712ff74f1a72da842ff",
+  "raw_stream_sha256": "311e677ae66187830446b329e8013d7dc22622695e401c37f6640f5ffe97c551",
+  "raw_stream_git_ignored": true
+}

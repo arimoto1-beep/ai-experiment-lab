@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-11-22",
+  "isolated_auth_volume": {
+    "loggedIn": true,
+    "authMethod": "claude.ai",
+    "subscriptionType": "pro",
+    "status_exit_code": 0
+  },
+  "model_calls_used_for_authentication_check": 0,
+  "trial_1_preserved": true,
+  "trial_2_started_after_check": true
+}

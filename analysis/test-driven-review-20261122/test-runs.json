@@ -1,0 +1,37 @@
+{
+  "runs": [
+    {
+      "run_index": 1,
+      "completed_at_utc": "2026-11-22T13:02:03.952Z",
+      "exit_code": 1,
+      "tests": 91,
+      "passed": 90,
+      "failed": 1,
+      "skipped": 0,
+      "cancelled": 0,
+      "failed_test_names": [
+        "if a target output cannot be written, rejects and changes no existing ledger"
+      ],
+      "tap_output_sha256": "4b7d2d30092c502f311859174b395cf1c48395ce4a3d413786bc51ad481e3c88"
+    },
+    {
+      "run_index": 2,
+      "completed_at_utc": "2026-11-22T13:03:07.701Z",
+      "exit_code": 1,
+      "tests": 93,
+      "passed": 91,
+      "failed": 2,
+      "skipped": 0,
+      "cancelled": 0,
+      "failed_test_names": [
+        "stricter expectation: a failed commit does not leave the prior run submission.json behind",
+        "npm test exits 0"
+      ],
+      "tap_output_sha256": "f7626ca28ee5bee95768d093e9620db3355f9bd5714378aeed4d30c24a61c3f9"
+    }
+  ],
+  "total_executions": 184,
+  "total_passed": 181,
+  "total_failed": 3,
+  "final_unique_tests": 93
+}

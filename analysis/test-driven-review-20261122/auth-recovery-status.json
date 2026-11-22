@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-11-22",
+  "host_claude_code": {
+    "loggedIn": true,
+    "authMethod": "claude.ai",
+    "subscriptionType": "pro"
+  },
+  "isolated_auth_volume": {
+    "loggedIn": false,
+    "authMethod": "none",
+    "status_exit_code": 1
+  },
+  "model_call_used_for_check": false,
+  "trial_1": "preserved_as_invalid_authentication_failure",
+  "trial_2": "not_started_waiting_for_interactive_login"
+}
