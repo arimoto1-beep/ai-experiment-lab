@@ -1,0 +1,12 @@
+[
+  {"id":"Q01","difficulty":"easy","question":"17 + 28 はいくつですか。","answer":45},
+  {"id":"Q02","difficulty":"easy","question":"48 の 4 分の 3 はいくつですか。","answer":36},
+  {"id":"Q03","difficulty":"easy","question":"7人が全員と1回ずつ握手すると、握手は合計何回ですか。","answer":21},
+  {"id":"Q04","difficulty":"medium","question":"5個の数の平均は12です。そのうち20を1個取り除いたとき、残り4個の平均はいくつですか。","answer":10},
+  {"id":"Q05","difficulty":"medium","question":"5台の機械が5分で5個の部品を作ります。同じ速さの100台が100分で作る部品は何個ですか。","answer":2000},
+  {"id":"Q06","difficulty":"medium","question":"1から100までの整数のうち、3の倍数または5の倍数はいくつですか。","answer":47},
+  {"id":"Q07","difficulty":"medium","question":"1から100までの整数のうち、2の倍数または3の倍数だが、両方の倍数ではないものはいくつですか。","answer":51},
+  {"id":"Q08","difficulty":"reasoning","question":"数字0、1、2、3をそれぞれ1回ずつ使って作る4桁の整数のうち、5の倍数はいくつありますか。","answer":6},
+  {"id":"Q09","difficulty":"reasoning","question":"1から100まで番号のある100個の扉は最初すべて閉じています。1回目は全扉、2回目は2の倍数の扉、以後k回目はkの倍数の扉を開閉反転します。100回目まで終えたとき、開いている扉は何個ですか。","answer":10},
+  {"id":"Q10","difficulty":"reasoning","question":"1から1000までの整数のうち、6の倍数または10の倍数だが、15の倍数ではないものはいくつですか。","answer":200}
+]
