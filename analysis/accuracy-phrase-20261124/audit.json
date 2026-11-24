@@ -1,0 +1,16 @@
+{
+  "cases_sha256": "bfafd1db359bddc798f678910d5ba786f56170677b38f7dbc0817e7d325eaba4",
+  "preregistration_sha256": "2a2a817360dfbed6ea11f26a55b7a9e06d9f4a37437f9c8e674ab7b0d0dcee4b",
+  "runner_sha256": "acda381001c4c49658307f454217813f0204930f20cd25d82f53c12f8f404fa6",
+  "cli_image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+  "auth_method": "claude.ai",
+  "trial_count": 40,
+  "unique_sessions": 40,
+  "model_matches": 40,
+  "tool_calls": 0,
+  "raw_records_checked": 40,
+  "prompt_hashes_match": true,
+  "raw_hashes_match": true,
+  "answer_keys_not_mounted_in_cli": true,
+  "stop_reason": null
+}

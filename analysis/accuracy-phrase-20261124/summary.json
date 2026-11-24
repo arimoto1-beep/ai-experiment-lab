@@ -1,0 +1,184 @@
+{
+  "experiment": 13,
+  "backlog_id": "B26",
+  "date_jst": "2026-11-24",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "pricing_verified_on": "2026-11-24",
+  "planned_trials": 40,
+  "completed_trials": 40,
+  "valid_trials": 40,
+  "conditions": {
+    "A": {
+      "valid_trials": 20,
+      "correct": 17,
+      "format_invalid": 2,
+      "wall_seconds_total": 73.848,
+      "wall_seconds_mean": 3.692,
+      "wall_seconds_median": 3.556,
+      "tokens": {
+        "input": 40,
+        "output": 1658,
+        "cache_read": 49477,
+        "cache_write": 7373
+      },
+      "thinking_tokens": 1522,
+      "api_equivalent_usd": 0.002803,
+      "cli_reported_usd": 0.002802,
+      "difficulty": {
+        "easy": {
+          "correct": 6,
+          "trials": 6
+        },
+        "medium": {
+          "correct": 5,
+          "trials": 8
+        },
+        "reasoning": {
+          "correct": 6,
+          "trials": 6
+        }
+      }
+    },
+    "B": {
+      "valid_trials": 20,
+      "correct": 16,
+      "format_invalid": 4,
+      "wall_seconds_total": 75.89,
+      "wall_seconds_mean": 3.795,
+      "wall_seconds_median": 3.712,
+      "tokens": {
+        "input": 40,
+        "output": 2289,
+        "cache_read": 51205,
+        "cache_write": 5865
+      },
+      "thinking_tokens": 1967,
+      "api_equivalent_usd": 0.002834,
+      "cli_reported_usd": 0.002834,
+      "difficulty": {
+        "easy": {
+          "correct": 5,
+          "trials": 6
+        },
+        "medium": {
+          "correct": 5,
+          "trials": 8
+        },
+        "reasoning": {
+          "correct": 6,
+          "trials": 6
+        }
+      }
+    }
+  },
+  "paired_outcomes": {
+    "both_correct": 14,
+    "A_only": 3,
+    "B_only": 2,
+    "both_incorrect": 1
+  },
+  "case_results": {
+    "Q01": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q02": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q03": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        false
+      ]
+    },
+    "Q04": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        false,
+        false
+      ]
+    },
+    "Q05": {
+      "A": [
+        false,
+        false
+      ],
+      "B": [
+        true,
+        false
+      ]
+    },
+    "Q06": {
+      "A": [
+        false,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q07": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q08": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q09": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q10": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    }
+  }
+}

@@ -2,7 +2,11 @@
 
 AIの能力・判断・協調・自律性を実験で検証するプロジェクト
 
-## 第13回実験: Haiku 5.5 の Thinking 切替プリフライト
+## 第13回実験: 「絶対に間違えないで」で正答率は上がるか
+
+Claude Haiku 5.5 / medium で、10問を通常の質問 A と「絶対に間違えないで。」を加えた質問 B で各2回、計40回実行しました。事前に固定した「整数のみ」の採点では A が17/20、B が16/20。形式違反は A が2件、B が4件で、6件とも説明の中に正しい数値を含みました。この問題集合では、強調文による事前定義の正答率改善は確認できませんでした。[問題・条件・公開記録と再現手順](analysis/accuracy-phrase-20261124/README.md)、[結果と考察](analysis/accuracy-phrase-20261124/report.md)を参照してください。
+
+## B01 事前調査: Haiku 5.5 の Thinking 切替プリフライト
 
 Claude Haiku 5.5 の effort を medium に固定し、Thinking の有効・無効を比較する計画を事前登録しました。現在の Claude Code CLI 2.1.299 で独立した切替を確認できなかったため、問題試行は開始せず、正答率・時間・トークン・費用は比較不能と記録しました。[事前登録とプリフライト](analysis/thinking-toggle-20261124/README.md)、[結果](analysis/thinking-toggle-20261124/report.md)を参照してください。今後の実験方針と未解決の疑問は [共通指示](AGENTS.md) と [実験バックログ](BACKLOG.md) にまとめています。
 
