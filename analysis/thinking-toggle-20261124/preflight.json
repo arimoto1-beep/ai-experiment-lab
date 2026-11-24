@@ -1,0 +1,19 @@
+{
+  "experiment": 13,
+  "backlog_id": "B01",
+  "date_jst": "2026-11-24",
+  "local_cli_version": "2.1.299",
+  "subscription_auth_method": "claude.ai",
+  "cli_help_has_thinking_switch": false,
+  "cli_help_has_effort_switch": true,
+  "requested_model": "claude-haiku-5-5",
+  "requested_effort": "medium",
+  "api_supports_disabled_thinking_at_medium": true,
+  "claude_code_documented_max_thinking_tokens_zero_supports_haiku_5_5": false,
+  "independent_toggle_verified_in_current_cli": false,
+  "model_problem_trials_started": 0,
+  "sources": [
+    "https://platform.claude.com/docs/en/build-with-claude/thinking",
+    "https://code.claude.com/docs/en/env-vars"
+  ]
+}

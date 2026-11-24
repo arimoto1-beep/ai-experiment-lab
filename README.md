@@ -2,6 +2,10 @@
 
 AIの能力・判断・協調・自律性を実験で検証するプロジェクト
 
+## 第13回実験: Haiku 5.5 の Thinking 切替プリフライト
+
+Claude Haiku 5.5 の effort を medium に固定し、Thinking の有効・無効を比較する計画を事前登録しました。現在の Claude Code CLI 2.1.299 で独立した切替を確認できなかったため、問題試行は開始せず、正答率・時間・トークン・費用は比較不能と記録しました。[事前登録とプリフライト](analysis/thinking-toggle-20261124/README.md)、[結果](analysis/thinking-toggle-20261124/report.md)を参照してください。今後の実験方針と未解決の疑問は [共通指示](AGENTS.md) と [実験バックログ](BACKLOG.md) にまとめています。
+
 ## 第11回実験: Haiku mediumの3回統合、highの1回、Opusの1回
 
 #7の不合格成果物3件を、Haiku 5.5 mediumの独立3回、Haiku 5.5 highの1回、Opus 5.5 highの1回で読取専用レビューしました。計15レビューで、事前登録した既知14欠陥の発見は順に12、11、10件です。mediumの3回目だけがXの保存経路の欠陥を指摘し、Zの既知2欠陥は3方式とも見落としました。highの1回は既知1件あたりのAPI換算費用が最も低い一方、費用は事前に揃えていません。
