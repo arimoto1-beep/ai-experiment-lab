@@ -1,0 +1,184 @@
+{
+  "experiment": 14,
+  "backlog_id": "B27",
+  "date_jst": "2026-11-25",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "pricing_verified_on": "2026-11-25",
+  "planned_trials": 40,
+  "completed_trials": 40,
+  "valid_trials": 40,
+  "conditions": {
+    "A": {
+      "valid_trials": 20,
+      "correct": 16,
+      "format_invalid": 4,
+      "wall_seconds_total": 71.748,
+      "wall_seconds_mean": 3.587,
+      "wall_seconds_median": 3.562,
+      "tokens": {
+        "input": 40,
+        "output": 1720,
+        "cache_read": 49477,
+        "cache_write": 7373
+      },
+      "thinking_tokens": 1486,
+      "api_equivalent_usd": 0.002833,
+      "cli_reported_usd": 0.002833,
+      "difficulty": {
+        "easy": {
+          "correct": 6,
+          "trials": 6
+        },
+        "medium": {
+          "correct": 5,
+          "trials": 8
+        },
+        "reasoning": {
+          "correct": 5,
+          "trials": 6
+        }
+      }
+    },
+    "B": {
+      "valid_trials": 20,
+      "correct": 15,
+      "format_invalid": 5,
+      "wall_seconds_total": 72.469,
+      "wall_seconds_mean": 3.623,
+      "wall_seconds_median": 3.619,
+      "tokens": {
+        "input": 40,
+        "output": 1526,
+        "cache_read": 51175,
+        "cache_write": 5835
+      },
+      "thinking_tokens": 1275,
+      "api_equivalent_usd": 0.002446,
+      "cli_reported_usd": 0.002446,
+      "difficulty": {
+        "easy": {
+          "correct": 6,
+          "trials": 6
+        },
+        "medium": {
+          "correct": 3,
+          "trials": 8
+        },
+        "reasoning": {
+          "correct": 6,
+          "trials": 6
+        }
+      }
+    }
+  },
+  "paired_outcomes": {
+    "both_correct": 13,
+    "A_only": 3,
+    "B_only": 2,
+    "both_incorrect": 2
+  },
+  "case_results": {
+    "Q01": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q02": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q03": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q04": {
+      "A": [
+        false,
+        true
+      ],
+      "B": [
+        true,
+        false
+      ]
+    },
+    "Q05": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        false,
+        false
+      ]
+    },
+    "Q06": {
+      "A": [
+        false,
+        false
+      ],
+      "B": [
+        false,
+        false
+      ]
+    },
+    "Q07": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q08": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q09": {
+      "A": [
+        false,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    },
+    "Q10": {
+      "A": [
+        true,
+        true
+      ],
+      "B": [
+        true,
+        true
+      ]
+    }
+  }
+}

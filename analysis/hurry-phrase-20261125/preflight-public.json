@@ -1,0 +1,7 @@
+{
+  "cli_image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+  "cli_version": "2.1.302 (Claude Code)",
+  "auth_method": "claude.ai",
+  "model": "claude-haiku-5-5",
+  "effort": "medium"
+}
