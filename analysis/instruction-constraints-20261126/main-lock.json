@@ -1,0 +1,323 @@
+{
+  "selection": {
+    "level": 11,
+    "target_range_met": false,
+    "pilot_by_level": {
+      "8": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      },
+      "11": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      },
+      "14": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      }
+    }
+  },
+  "level": 11,
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "schedule": [
+    {
+      "trial": 1,
+      "case": "Q01",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 2,
+      "case": "Q01",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 3,
+      "case": "Q01",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 4,
+      "case": "Q01",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 5,
+      "case": "Q02",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 6,
+      "case": "Q02",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 7,
+      "case": "Q02",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 8,
+      "case": "Q02",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 9,
+      "case": "Q03",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 10,
+      "case": "Q03",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 11,
+      "case": "Q03",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 12,
+      "case": "Q03",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 13,
+      "case": "Q04",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 14,
+      "case": "Q04",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 15,
+      "case": "Q04",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 16,
+      "case": "Q04",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 17,
+      "case": "Q05",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 18,
+      "case": "Q05",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 19,
+      "case": "Q05",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 20,
+      "case": "Q05",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 21,
+      "case": "Q06",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 22,
+      "case": "Q06",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 23,
+      "case": "Q06",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 24,
+      "case": "Q06",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 25,
+      "case": "Q07",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 26,
+      "case": "Q07",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 27,
+      "case": "Q07",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 28,
+      "case": "Q07",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 29,
+      "case": "Q08",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 30,
+      "case": "Q08",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 31,
+      "case": "Q08",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 32,
+      "case": "Q08",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 33,
+      "case": "Q09",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 34,
+      "case": "Q09",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 35,
+      "case": "Q09",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    },
+    {
+      "trial": 36,
+      "case": "Q09",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 37,
+      "case": "Q10",
+      "level": 11,
+      "rep": 1,
+      "condition": "B"
+    },
+    {
+      "trial": 38,
+      "case": "Q10",
+      "level": 11,
+      "rep": 1,
+      "condition": "A"
+    },
+    {
+      "trial": 39,
+      "case": "Q10",
+      "level": 11,
+      "rep": 2,
+      "condition": "A"
+    },
+    {
+      "trial": 40,
+      "case": "Q10",
+      "level": 11,
+      "rep": 2,
+      "condition": "B"
+    }
+  ],
+  "trial_seconds": 90,
+  "phase_seconds": 1200,
+  "trial_cli_budget_usd": "0.05",
+  "fingerprints": {
+    "protocol.md": "330a3c41f31f1c6c48fa21cd5d145609f084ca75880f715660c4d00b1a165797",
+    "cases.json": "cb1261492132ddbdfb7a02685a35c2adeeffb39f5ff963e73faa441a5a9524ec",
+    "design.py": "d0ca0517cbcebe8ea09cd2b731aee85d68ddceacb9d2339404dbc216b0fcb049",
+    "run.py": "03c13a08aa8974179b91fba3b5eee69f0981c8757ee1c1f9153effdb7e6f8eb6",
+    "analyze.py": "2bb1446f2ea276fa967b36a970e9a1723b7c2ad2f265690ab4e86be6f98d7328",
+    "../../ai_lab/claude_cli.py": "98a83592d0efe3390bef0671ae08b40968baf9c7b53beb3cccffe1ebd9293ff4",
+    "../../ai_lab/review_perspectives.py": "85ed40a6c9f1cda8cc12ab2a1c747c9f953b9626ed66e98875d2c43e77838125",
+    "../../ai_lab/experiment.py": "58f373f541eae46fc51045f75da638dc8c586ba4fd384554910c821af95b6fcf",
+    "../../ai_lab/pricing.py": "7fae8b1d37ba2760be0190e126642492ea830de544642961e908aeac55738247"
+  },
+  "pilot_runs_sha256": "4141f9fd1eab9448f2dd39acb6552cf2020da5cc1cd25c0ed07407216373f4f9"
+}

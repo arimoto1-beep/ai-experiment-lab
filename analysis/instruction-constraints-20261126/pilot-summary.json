@@ -1,0 +1,183 @@
+{
+  "planned": 9,
+  "attempted": 9,
+  "invalid": 0,
+  "unrun": 0,
+  "stop_reason": null,
+  "levels": {
+    "8": {
+      "attempted": 3,
+      "valid": 3,
+      "checks": {
+        "length": 3,
+        "pool": 3,
+        "first": 3,
+        "last": 3,
+        "anchor": 3,
+        "initial": 3,
+        "forbidden": 3,
+        "unique": 3,
+        "format": 3
+      },
+      "other_passed": 21,
+      "other_possible": 21,
+      "all_eight": 3,
+      "all_eight_and_format": 3,
+      "wall_seconds_mean": 24.938,
+      "wall_seconds_total": 74.813,
+      "usage": {
+        "input": {
+          "known": 3,
+          "total": 6
+        },
+        "output": {
+          "known": 3,
+          "total": 15489
+        },
+        "cache_read": {
+          "known": 3,
+          "total": 5183
+        },
+        "cache_write": {
+          "known": 3,
+          "total": 5214
+        }
+      },
+      "thinking_tokens": {
+        "known": 3,
+        "total": 15246
+      },
+      "api_equivalent_usd": {
+        "known": 3,
+        "total": 0.00884
+      },
+      "cli_reported_usd": {
+        "known": 3,
+        "total": 0.00884
+      }
+    },
+    "11": {
+      "attempted": 3,
+      "valid": 3,
+      "checks": {
+        "length": 3,
+        "pool": 3,
+        "first": 3,
+        "last": 3,
+        "anchor": 3,
+        "initial": 3,
+        "forbidden": 3,
+        "unique": 3,
+        "format": 3
+      },
+      "other_passed": 21,
+      "other_possible": 21,
+      "all_eight": 3,
+      "all_eight_and_format": 3,
+      "wall_seconds_mean": 27.254,
+      "wall_seconds_total": 81.761,
+      "usage": {
+        "input": {
+          "known": 3,
+          "total": 6
+        },
+        "output": {
+          "known": 3,
+          "total": 16623
+        },
+        "cache_read": {
+          "known": 3,
+          "total": 6801
+        },
+        "cache_write": {
+          "known": 3,
+          "total": 3596
+        }
+      },
+      "thinking_tokens": {
+        "known": 3,
+        "total": 16303
+      },
+      "api_equivalent_usd": {
+        "known": 3,
+        "total": 0.009099
+      },
+      "cli_reported_usd": {
+        "known": 3,
+        "total": 0.009099
+      }
+    },
+    "14": {
+      "attempted": 3,
+      "valid": 3,
+      "checks": {
+        "length": 3,
+        "pool": 3,
+        "first": 3,
+        "last": 3,
+        "anchor": 3,
+        "initial": 3,
+        "forbidden": 3,
+        "unique": 3,
+        "format": 3
+      },
+      "other_passed": 21,
+      "other_possible": 21,
+      "all_eight": 3,
+      "all_eight_and_format": 3,
+      "wall_seconds_mean": 40.432,
+      "wall_seconds_total": 121.295,
+      "usage": {
+        "input": {
+          "known": 3,
+          "total": 6
+        },
+        "output": {
+          "known": 3,
+          "total": 27581
+        },
+        "cache_read": {
+          "known": 3,
+          "total": 6801
+        },
+        "cache_write": {
+          "known": 3,
+          "total": 3596
+        }
+      },
+      "thinking_tokens": {
+        "known": 3,
+        "total": 27195
+      },
+      "api_equivalent_usd": {
+        "known": 3,
+        "total": 0.014578
+      },
+      "cli_reported_usd": {
+        "known": 3,
+        "total": 0.014578
+      }
+    }
+  },
+  "selection": {
+    "level": 11,
+    "target_range_met": false,
+    "pilot_by_level": {
+      "8": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      },
+      "11": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      },
+      "14": {
+        "valid": 3,
+        "passed": 21,
+        "possible": 21
+      }
+    }
+  }
+}
