@@ -1,0 +1,570 @@
+[
+  {
+    "id": "Q01",
+    "rows": [
+      {
+        "id": "A1",
+        "color": "黄",
+        "quantity": 10
+      },
+      {
+        "id": "B1",
+        "color": "赤",
+        "quantity": 15
+      },
+      {
+        "id": "C1",
+        "color": "黄",
+        "quantity": 19
+      },
+      {
+        "id": "D1",
+        "color": "緑",
+        "quantity": 4
+      },
+      {
+        "id": "E1",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "F1",
+        "color": "赤",
+        "quantity": 8
+      },
+      {
+        "id": "G1",
+        "color": "青",
+        "quantity": 12
+      },
+      {
+        "id": "H1",
+        "color": "緑",
+        "quantity": 9
+      },
+      {
+        "id": "I1",
+        "color": "緑",
+        "quantity": 19
+      },
+      {
+        "id": "J1",
+        "color": "黄",
+        "quantity": 11
+      },
+      {
+        "id": "K1",
+        "color": "黄",
+        "quantity": 12
+      },
+      {
+        "id": "L1",
+        "color": "青",
+        "quantity": 8
+      }
+    ],
+    "answers": {
+      "R": 23,
+      "B": 2,
+      "G": "D1",
+      "Y": 19
+    }
+  },
+  {
+    "id": "Q02",
+    "rows": [
+      {
+        "id": "A2",
+        "color": "緑",
+        "quantity": 16
+      },
+      {
+        "id": "B2",
+        "color": "緑",
+        "quantity": 1
+      },
+      {
+        "id": "C2",
+        "color": "赤",
+        "quantity": 5
+      },
+      {
+        "id": "D2",
+        "color": "黄",
+        "quantity": 1
+      },
+      {
+        "id": "E2",
+        "color": "赤",
+        "quantity": 5
+      },
+      {
+        "id": "F2",
+        "color": "青",
+        "quantity": 7
+      },
+      {
+        "id": "G2",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "H2",
+        "color": "黄",
+        "quantity": 15
+      },
+      {
+        "id": "I2",
+        "color": "緑",
+        "quantity": 1
+      },
+      {
+        "id": "J2",
+        "color": "青",
+        "quantity": 1
+      },
+      {
+        "id": "K2",
+        "color": "赤",
+        "quantity": 3
+      },
+      {
+        "id": "L2",
+        "color": "黄",
+        "quantity": 8
+      }
+    ],
+    "answers": {
+      "R": 13,
+      "B": 1,
+      "G": "A2",
+      "Y": 17
+    }
+  },
+  {
+    "id": "Q03",
+    "rows": [
+      {
+        "id": "A3",
+        "color": "黄",
+        "quantity": 16
+      },
+      {
+        "id": "B3",
+        "color": "青",
+        "quantity": 16
+      },
+      {
+        "id": "C3",
+        "color": "赤",
+        "quantity": 2
+      },
+      {
+        "id": "D3",
+        "color": "緑",
+        "quantity": 14
+      },
+      {
+        "id": "E3",
+        "color": "青",
+        "quantity": 4
+      },
+      {
+        "id": "F3",
+        "color": "赤",
+        "quantity": 9
+      },
+      {
+        "id": "G3",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "H3",
+        "color": "赤",
+        "quantity": 19
+      },
+      {
+        "id": "I3",
+        "color": "緑",
+        "quantity": 9
+      },
+      {
+        "id": "J3",
+        "color": "赤",
+        "quantity": 4
+      },
+      {
+        "id": "K3",
+        "color": "緑",
+        "quantity": 1
+      },
+      {
+        "id": "L3",
+        "color": "青",
+        "quantity": 9
+      }
+    ],
+    "answers": {
+      "R": 34,
+      "B": 2,
+      "G": "D3",
+      "Y": 17
+    }
+  },
+  {
+    "id": "Q04",
+    "rows": [
+      {
+        "id": "A4",
+        "color": "青",
+        "quantity": 12
+      },
+      {
+        "id": "B4",
+        "color": "黄",
+        "quantity": 4
+      },
+      {
+        "id": "C4",
+        "color": "青",
+        "quantity": 17
+      },
+      {
+        "id": "D4",
+        "color": "赤",
+        "quantity": 4
+      },
+      {
+        "id": "E4",
+        "color": "黄",
+        "quantity": 3
+      },
+      {
+        "id": "F4",
+        "color": "緑",
+        "quantity": 13
+      },
+      {
+        "id": "G4",
+        "color": "青",
+        "quantity": 2
+      },
+      {
+        "id": "H4",
+        "color": "緑",
+        "quantity": 13
+      },
+      {
+        "id": "I4",
+        "color": "緑",
+        "quantity": 12
+      },
+      {
+        "id": "J4",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "K4",
+        "color": "赤",
+        "quantity": 6
+      },
+      {
+        "id": "L4",
+        "color": "黄",
+        "quantity": 10
+      }
+    ],
+    "answers": {
+      "R": 10,
+      "B": 2,
+      "G": "I4",
+      "Y": 17
+    }
+  },
+  {
+    "id": "Q05",
+    "rows": [
+      {
+        "id": "A5",
+        "color": "赤",
+        "quantity": 19
+      },
+      {
+        "id": "B5",
+        "color": "緑",
+        "quantity": 6
+      },
+      {
+        "id": "C5",
+        "color": "緑",
+        "quantity": 6
+      },
+      {
+        "id": "D5",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "E5",
+        "color": "青",
+        "quantity": 2
+      },
+      {
+        "id": "F5",
+        "color": "青",
+        "quantity": 17
+      },
+      {
+        "id": "G5",
+        "color": "赤",
+        "quantity": 15
+      },
+      {
+        "id": "H5",
+        "color": "緑",
+        "quantity": 12
+      },
+      {
+        "id": "I5",
+        "color": "緑",
+        "quantity": 7
+      },
+      {
+        "id": "J5",
+        "color": "緑",
+        "quantity": 18
+      },
+      {
+        "id": "K5",
+        "color": "赤",
+        "quantity": 8
+      },
+      {
+        "id": "L5",
+        "color": "赤",
+        "quantity": 6
+      }
+    ],
+    "answers": {
+      "R": 48,
+      "B": 1,
+      "G": "B5,C5,H5,J5",
+      "Y": 17
+    }
+  },
+  {
+    "id": "Q06",
+    "rows": [
+      {
+        "id": "A6",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "B6",
+        "color": "緑",
+        "quantity": 17
+      },
+      {
+        "id": "C6",
+        "color": "赤",
+        "quantity": 1
+      },
+      {
+        "id": "D6",
+        "color": "青",
+        "quantity": 15
+      },
+      {
+        "id": "E6",
+        "color": "赤",
+        "quantity": 18
+      },
+      {
+        "id": "F6",
+        "color": "緑",
+        "quantity": 12
+      },
+      {
+        "id": "G6",
+        "color": "緑",
+        "quantity": 17
+      },
+      {
+        "id": "H6",
+        "color": "黄",
+        "quantity": 19
+      },
+      {
+        "id": "I6",
+        "color": "青",
+        "quantity": 2
+      },
+      {
+        "id": "J6",
+        "color": "赤",
+        "quantity": 19
+      },
+      {
+        "id": "K6",
+        "color": "黄",
+        "quantity": 10
+      },
+      {
+        "id": "L6",
+        "color": "黄",
+        "quantity": 12
+      }
+    ],
+    "answers": {
+      "R": 38,
+      "B": 1,
+      "G": "F6",
+      "Y": 19
+    }
+  },
+  {
+    "id": "Q07",
+    "rows": [
+      {
+        "id": "A7",
+        "color": "緑",
+        "quantity": 15
+      },
+      {
+        "id": "B7",
+        "color": "緑",
+        "quantity": 15
+      },
+      {
+        "id": "C7",
+        "color": "赤",
+        "quantity": 4
+      },
+      {
+        "id": "D7",
+        "color": "緑",
+        "quantity": 7
+      },
+      {
+        "id": "E7",
+        "color": "緑",
+        "quantity": 4
+      },
+      {
+        "id": "F7",
+        "color": "青",
+        "quantity": 5
+      },
+      {
+        "id": "G7",
+        "color": "黄",
+        "quantity": 3
+      },
+      {
+        "id": "H7",
+        "color": "青",
+        "quantity": 1
+      },
+      {
+        "id": "I7",
+        "color": "緑",
+        "quantity": 6
+      },
+      {
+        "id": "J7",
+        "color": "黄",
+        "quantity": 7
+      },
+      {
+        "id": "K7",
+        "color": "赤",
+        "quantity": 14
+      },
+      {
+        "id": "L7",
+        "color": "青",
+        "quantity": 11
+      }
+    ],
+    "answers": {
+      "R": 18,
+      "B": 2,
+      "G": "E7,I7",
+      "Y": 7
+    }
+  },
+  {
+    "id": "Q08",
+    "rows": [
+      {
+        "id": "A8",
+        "color": "黄",
+        "quantity": 17
+      },
+      {
+        "id": "B8",
+        "color": "赤",
+        "quantity": 12
+      },
+      {
+        "id": "C8",
+        "color": "緑",
+        "quantity": 10
+      },
+      {
+        "id": "D8",
+        "color": "青",
+        "quantity": 11
+      },
+      {
+        "id": "E8",
+        "color": "緑",
+        "quantity": 8
+      },
+      {
+        "id": "F8",
+        "color": "黄",
+        "quantity": 5
+      },
+      {
+        "id": "G8",
+        "color": "青",
+        "quantity": 16
+      },
+      {
+        "id": "H8",
+        "color": "黄",
+        "quantity": 18
+      },
+      {
+        "id": "I8",
+        "color": "黄",
+        "quantity": 19
+      },
+      {
+        "id": "J8",
+        "color": "青",
+        "quantity": 16
+      },
+      {
+        "id": "K8",
+        "color": "青",
+        "quantity": 16
+      },
+      {
+        "id": "L8",
+        "color": "赤",
+        "quantity": 16
+      }
+    ],
+    "answers": {
+      "R": 28,
+      "B": 4,
+      "G": "C8,E8",
+      "Y": 19
+    }
+  }
+]
