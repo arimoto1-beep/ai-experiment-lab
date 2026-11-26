@@ -1,0 +1,259 @@
+{
+  "planned": 40,
+  "attempted": 40,
+  "invalid": 0,
+  "unrun": 0,
+  "stop_reason": null,
+  "conditions": {
+    "A": {
+      "attempted": 20,
+      "valid": 20,
+      "checks": {
+        "length": 20,
+        "pool": 20,
+        "first": 20,
+        "last": 20,
+        "anchor": 20,
+        "initial": 19,
+        "forbidden": 20,
+        "unique": 20,
+        "format": 20
+      },
+      "other_passed": 139,
+      "other_possible": 140,
+      "all_eight": 19,
+      "all_eight_and_format": 19,
+      "wall_seconds_mean": 28.838,
+      "wall_seconds_total": 576.76,
+      "usage": {
+        "input": {
+          "known": 20,
+          "total": 40
+        },
+        "output": {
+          "known": 20,
+          "total": 123223
+        },
+        "cache_read": {
+          "known": 20,
+          "total": 57295
+        },
+        "cache_write": {
+          "known": 20,
+          "total": 11955
+        }
+      },
+      "thinking_tokens": {
+        "known": 20,
+        "total": 121117
+      },
+      "api_equivalent_usd": {
+        "known": 20,
+        "total": 0.064582
+      },
+      "cli_reported_usd": {
+        "known": 20,
+        "total": 0.064579
+      }
+    },
+    "B": {
+      "attempted": 20,
+      "valid": 20,
+      "checks": {
+        "length": 20,
+        "pool": 20,
+        "first": 20,
+        "last": 20,
+        "anchor": 20,
+        "initial": 20,
+        "forbidden": 19,
+        "unique": 20,
+        "format": 20
+      },
+      "other_passed": 139,
+      "other_possible": 140,
+      "all_eight": 19,
+      "all_eight_and_format": 19,
+      "wall_seconds_mean": 27.304,
+      "wall_seconds_total": 546.082,
+      "usage": {
+        "input": {
+          "known": 20,
+          "total": 40
+        },
+        "output": {
+          "known": 20,
+          "total": 115365
+        },
+        "cache_read": {
+          "known": 20,
+          "total": 57405
+        },
+        "cache_write": {
+          "known": 20,
+          "total": 12065
+        }
+      },
+      "thinking_tokens": {
+        "known": 20,
+        "total": 113275
+      },
+      "api_equivalent_usd": {
+        "known": 20,
+        "total": 0.060671
+      },
+      "cli_reported_usd": {
+        "known": 20,
+        "total": 0.060674
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case": "Q01",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q01",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q02",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q02",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q03",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q03",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q04",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q04",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q05",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q05",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q06",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q06",
+      "rep": 2,
+      "A": 6,
+      "B": 7,
+      "B_minus_A": 1
+    },
+    {
+      "case": "Q07",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q07",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q08",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q08",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q09",
+      "rep": 1,
+      "A": 7,
+      "B": 6,
+      "B_minus_A": -1
+    },
+    {
+      "case": "Q09",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q10",
+      "rep": 1,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    },
+    {
+      "case": "Q10",
+      "rep": 2,
+      "A": 7,
+      "B": 7,
+      "B_minus_A": 0
+    }
+  ],
+  "pair_counts": {
+    "A_higher": 1,
+    "B_higher": 1,
+    "equal": 18
+  },
+  "paired_B_minus_A_total": 0
+}

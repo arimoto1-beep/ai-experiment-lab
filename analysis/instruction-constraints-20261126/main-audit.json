@@ -1,0 +1,30 @@
+{
+  "fingerprints": {
+    "protocol.md": "330a3c41f31f1c6c48fa21cd5d145609f084ca75880f715660c4d00b1a165797",
+    "cases.json": "cb1261492132ddbdfb7a02685a35c2adeeffb39f5ff963e73faa441a5a9524ec",
+    "design.py": "d0ca0517cbcebe8ea09cd2b731aee85d68ddceacb9d2339404dbc216b0fcb049",
+    "run.py": "03c13a08aa8974179b91fba3b5eee69f0981c8757ee1c1f9153effdb7e6f8eb6",
+    "analyze.py": "2bb1446f2ea276fa967b36a970e9a1723b7c2ad2f265690ab4e86be6f98d7328",
+    "../../ai_lab/claude_cli.py": "98a83592d0efe3390bef0671ae08b40968baf9c7b53beb3cccffe1ebd9293ff4",
+    "../../ai_lab/review_perspectives.py": "85ed40a6c9f1cda8cc12ab2a1c747c9f953b9626ed66e98875d2c43e77838125",
+    "../../ai_lab/experiment.py": "58f373f541eae46fc51045f75da638dc8c586ba4fd384554910c821af95b6fcf",
+    "../../ai_lab/pricing.py": "7fae8b1d37ba2760be0190e126642492ea830de544642961e908aeac55738247"
+  },
+  "preflight": {
+    "image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+    "cli": "2.1.302 (Claude Code)",
+    "auth": "claude.ai",
+    "model": "claude-haiku-5-5",
+    "effort": "medium"
+  },
+  "planned": 40,
+  "attempted": 40,
+  "invalid": 0,
+  "unrun": 0,
+  "stop_reason": null,
+  "unique_sessions": 40,
+  "duplicate_sessions": 0,
+  "tool_calls": 0,
+  "permission_denials": 0,
+  "model_matches": 40
+}
