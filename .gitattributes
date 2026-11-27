@@ -52,3 +52,9 @@ analysis/react-lead-form-diagnostic-20261031/minimal-fix.patch text eol=lf
 # #15 runtime SHA-256 values include Windows CRLF bytes for these two files.
 analysis/single-emphasis-20261126/cases.json -text
 analysis/single-emphasis-20261126/run.py -text
+
+# #16 preregistered runtime SHA-256 values use these exact LF bytes.
+analysis/unsupported-denial-20261127/cases.json -text
+analysis/unsupported-denial-20261127/preregistration.md -text
+analysis/unsupported-denial-20261127/run.py -text
+analysis/unsupported-denial-20261127/analyze.py -text

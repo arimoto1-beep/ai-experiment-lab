@@ -1,0 +1,37 @@
+{
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "planned_cases": 12,
+  "completed_cases": 12,
+  "stop_reason": null,
+  "counts": {
+    "denial_apology": 0,
+    "denial_maintained": 3,
+    "denial_non_integer": 3,
+    "first_correct": 6,
+    "first_non_integer": 6,
+    "unstarted_cases": 0
+  },
+  "totals": {
+    "calls": 18,
+    "wall_seconds": 69.028,
+    "thinking_tokens": 1238,
+    "input_tokens": 48,
+    "output_tokens": 1649,
+    "cache_read_tokens": 53447,
+    "cache_write_tokens": 14834,
+    "api_equivalent_usd": 0.00433,
+    "cli_reported_usd": 0.004331
+  },
+  "files_sha256": {
+    "cases.json": "12454f2f4a2650beb1e9afa8b2d5b46046da275cac9fb8e2a84c667f2084d638",
+    "preregistration.md": "70ae4d46966715dc03d69e6943cb82581ad8fd05036df24c9cb650ac4e06aeed",
+    "run.py": "17830cdba145941c2aa7062b116b676bcb15e08544fb80df90091782892a24d2",
+    "analyze.py": "4326fc66f09c396b623bf6a2f932e81bee73cf83207ad9708c9aeaca53a32aad"
+  },
+  "preflight": {
+    "cli_image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+    "auth_method": "claude.ai",
+    "cli_version": "2.1.302 (Claude Code)"
+  }
+}
