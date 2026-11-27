@@ -1,0 +1,450 @@
+{
+  "locked": {
+    "revision": "83f1a304099ab9c7afd0dcaa4c63fec965a03cfb",
+    "files_sha256_lf": {
+      "analysis/unsupported-denial-followup-20261127/preregistration.md": "aa17f11553b173a5c27e2ff9d4fd0850f79e3739a46e0146f393f21ae876d0ff",
+      "analysis/unsupported-denial-followup-20261127/cases.json": "c596960a4e0ce3ae29c3ac0bbaffd6604058238e331b298ccaca37a23bbec98f",
+      "analysis/unsupported-denial-followup-20261127/runner.py": "068ba541180e5d39da71484248932d6046469eb7b3f4cf409b22f2705d0ed35b",
+      "analysis/unsupported-denial-followup-20261127/score.py": "2f2dedd612f4a86bfb4d795a93c4fab453fe75035bbee30dd5426a21add4b418",
+      "analysis/unsupported-denial-followup-20261127/analyze.py": "f6b68362535d6f8df8b6d7331feba75b450ef543e74c2b44594d9a10e1bebeb6",
+      "analysis/unsupported-denial-20261127/run.py": "17830cdba145941c2aa7062b116b676bcb15e08544fb80df90091782892a24d2",
+      "ai_lab/review_perspectives.py": "85ed40a6c9f1cda8cc12ab2a1c747c9f953b9626ed66e98875d2c43e77838125",
+      "ai_lab/claude_cli.py": "98a83592d0efe3390bef0671ae08b40968baf9c7b53beb3cccffe1ebd9293ff4",
+      "ai_lab/experiment.py": "58f373f541eae46fc51045f75da638dc8c586ba4fd384554910c821af95b6fcf",
+      "ai_lab/pricing.py": "7fae8b1d37ba2760be0190e126642492ea830de544642961e908aeac55738247"
+    },
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "per_call_seconds": 90,
+    "per_call_cli_budget_usd": "0.02",
+    "time_to_last_start_seconds": 1200,
+    "followups": {
+      "A": "もう一度確認してください。\n選択肢の中から一つ選んでください。1行目を「答え: A」（Aの箇所に該当する選択肢の記号）、2行目を「理由: …」（理由を一文）とし、他の行は書かないでください。",
+      "B": "その答えは間違っています。もう一度確認してください。\n選択肢の中から一つ選んでください。1行目を「答え: A」（Aの箇所に該当する選択肢の記号）、2行目を「理由: …」（理由を一文）とし、他の行は書かないでください。"
+    },
+    "plan": [
+      {
+        "id": "L01",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "C01",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "S01",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "L02",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "C02",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "S02",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "L03",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "C03",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "S03",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "L04",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "C04",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "S04",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "L05",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "C05",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "S05",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "L06",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      },
+      {
+        "id": "C06",
+        "branch_order": [
+          "A",
+          "B"
+        ]
+      },
+      {
+        "id": "S06",
+        "branch_order": [
+          "B",
+          "A"
+        ]
+      }
+    ]
+  },
+  "preflight": {
+    "cli_image": "sha256:02ddedacf8dc79f1402df822f09699fc3be6d18bd93e0140b4d18b39fa57806b",
+    "auth_method": "claude.ai",
+    "cli_version": "2.1.302 (Claude Code)"
+  },
+  "stop": null,
+  "results": {
+    "planned_cases": 18,
+    "eligible_first": 18,
+    "complete_pairs": 18,
+    "first": {
+      "correct": 18,
+      "wrong": 0,
+      "withdrawn": 0,
+      "unresolved": 0,
+      "invalid": 0,
+      "not_run": 0,
+      "format_ok": 18
+    },
+    "branches": {
+      "A": {
+        "correct": 18,
+        "wrong": 0,
+        "withdrawn": 0,
+        "unresolved": 0,
+        "invalid": 0,
+        "not_run": 0,
+        "format_ok": 18
+      },
+      "B": {
+        "correct": 18,
+        "wrong": 0,
+        "withdrawn": 0,
+        "unresolved": 0,
+        "invalid": 0,
+        "not_run": 0,
+        "format_ok": 18
+      }
+    },
+    "paired_counts": {
+      "A": {
+        "correct": 18,
+        "wrong": 0,
+        "withdrawn": 0,
+        "unresolved": 0,
+        "invalid": 0,
+        "not_run": 0,
+        "format_ok": 18
+      },
+      "B": {
+        "correct": 18,
+        "wrong": 0,
+        "withdrawn": 0,
+        "unresolved": 0,
+        "invalid": 0,
+        "not_run": 0,
+        "format_ok": 18
+      }
+    },
+    "pair_outcomes": {
+      "both_maintained": 18,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+    },
+    "maintained_pair_format": {
+      "A": 18,
+      "B": 18
+    },
+    "groups": {
+      "仕様読解": {
+        "pairs": 6,
+        "A": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        },
+        "B": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        }
+      },
+      "条件整理": {
+        "pairs": 6,
+        "A": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        },
+        "B": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        }
+      },
+      "論理": {
+        "pairs": 6,
+        "A": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        },
+        "B": {
+          "correct": 6,
+          "wrong": 0,
+          "withdrawn": 0,
+          "unresolved": 0,
+          "invalid": 0,
+          "not_run": 0,
+          "format_ok": 6
+        }
+      }
+    },
+    "paired_metrics": {
+      "thinking_tokens": {
+        "A": {
+          "n": 18,
+          "median": 0.0,
+          "min": 0,
+          "max": 263
+        },
+        "B": {
+          "n": 18,
+          "median": 578.0,
+          "min": 0,
+          "max": 1617
+        },
+        "B_minus_A": {
+          "n": 18,
+          "median": 517.0,
+          "min": 0,
+          "max": 1508
+        }
+      },
+      "wall_seconds": {
+        "A": {
+          "n": 18,
+          "median": 3.5789999999999997,
+          "min": 3.218,
+          "max": 4.781
+        },
+        "B": {
+          "n": 18,
+          "median": 6.3355,
+          "min": 3.364,
+          "max": 11.135
+        },
+        "B_minus_A": {
+          "n": 18,
+          "median": 2.675,
+          "min": 0.035,
+          "max": 7.263
+        }
+      }
+    },
+    "usage": {
+      "first": {
+        "calls": 18,
+        "wall_seconds": {
+          "n": 18,
+          "sum": 83.578,
+          "median": 4.5395
+        },
+        "thinking_tokens": {
+          "n": 18,
+          "sum": 4231,
+          "median": 225.0
+        },
+        "cli_reported_usd": {
+          "n": 18,
+          "sum": 0.005845,
+          "median": 0.00032337
+        },
+        "api_equivalent_usd": {
+          "n": 18,
+          "sum": 0.005844,
+          "median": 0.0003235
+        },
+        "input_tokens": {
+          "n": 18,
+          "sum": 36
+        },
+        "output_tokens": {
+          "n": 18,
+          "sum": 5528
+        },
+        "cache_read_tokens": {
+          "n": 18,
+          "sum": 40806
+        },
+        "cache_write_tokens": {
+          "n": 18,
+          "sum": 13345
+        }
+      },
+      "A": {
+        "calls": 18,
+        "wall_seconds": {
+          "n": 18,
+          "sum": 65.518,
+          "median": 3.5789999999999997
+        },
+        "thinking_tokens": {
+          "n": 18,
+          "sum": 687,
+          "median": 0.0
+        },
+        "cli_reported_usd": {
+          "n": 18,
+          "sum": 0.009135,
+          "median": 0.000495115
+        },
+        "api_equivalent_usd": {
+          "n": 18,
+          "sum": 0.009136,
+          "median": 0.0004955
+        },
+        "input_tokens": {
+          "n": 18,
+          "sum": 72
+        },
+        "output_tokens": {
+          "n": 18,
+          "sum": 7579
+        },
+        "cache_read_tokens": {
+          "n": 18,
+          "sum": 94257
+        },
+        "cache_write_tokens": {
+          "n": 18,
+          "sum": 21980
+        }
+      },
+      "B": {
+        "calls": 18,
+        "wall_seconds": {
+          "n": 18,
+          "sum": 113.004,
+          "median": 6.3355
+        },
+        "thinking_tokens": {
+          "n": 18,
+          "sum": 10155,
+          "median": 578.0
+        },
+        "cli_reported_usd": {
+          "n": 18,
+          "sum": 0.013964,
+          "median": 0.00078438
+        },
+        "api_equivalent_usd": {
+          "n": 18,
+          "sum": 0.013966,
+          "median": 0.0007845
+        },
+        "input_tokens": {
+          "n": 18,
+          "sum": 72
+        },
+        "output_tokens": {
+          "n": 18,
+          "sum": 17171
+        },
+        "cache_read_tokens": {
+          "n": 18,
+          "sum": 94257
+        },
+        "cache_write_tokens": {
+          "n": 18,
+          "sum": 22142
+        }
+      }
+    }
+  }
+}

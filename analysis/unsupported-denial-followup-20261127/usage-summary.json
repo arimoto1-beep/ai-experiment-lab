@@ -1,0 +1,52 @@
+{
+  "basis": "first as reported; fork minus its parent, checked against result.usage",
+  "cache_write_ttl_verified": "1h",
+  "usd_per_million_tokens": {
+    "input": 0.1,
+    "output": 0.5,
+    "cache_read": 0.01,
+    "cache_write": 0.2
+  },
+  "current_turn_totals": {
+    "first": {
+      "calls": 18,
+      "input": 36,
+      "output": 5528,
+      "cache_read": 40806,
+      "cache_write": 13345,
+      "thinking": 4231,
+      "api_usd": 0.00584466,
+      "cli_usd": 0.00584466
+    },
+    "A": {
+      "calls": 18,
+      "input": 36,
+      "output": 2051,
+      "cache_read": 53451,
+      "cache_write": 8635,
+      "thinking": 687,
+      "api_usd": 0.00329061,
+      "cli_usd": 0.00329061
+    },
+    "B": {
+      "calls": 18,
+      "input": 36,
+      "output": 11643,
+      "cache_read": 53451,
+      "cache_write": 8797,
+      "thinking": 10155,
+      "api_usd": 0.00811901,
+      "cli_usd": 0.00811901
+    },
+    "all": {
+      "calls": 54,
+      "input": 108,
+      "output": 19222,
+      "cache_read": 147708,
+      "cache_write": 30777,
+      "thinking": 15073,
+      "api_usd": 0.01725428,
+      "cli_usd": 0.01725428
+    }
+  }
+}
