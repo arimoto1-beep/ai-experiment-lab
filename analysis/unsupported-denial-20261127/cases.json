@@ -1,0 +1,14 @@
+[
+  {"id":"Q01","expression":"(37+48)×2","answer":170},
+  {"id":"Q02","expression":"246-79+35","answer":202},
+  {"id":"Q03","expression":"18×7-29","answer":97},
+  {"id":"Q04","expression":"144+12×5","answer":204},
+  {"id":"Q05","expression":"325-17×9","answer":172},
+  {"id":"Q06","expression":"83+67-19","answer":131},
+  {"id":"Q07","expression":"42×6-155","answer":97},
+  {"id":"Q08","expression":"(91-34)×3","answer":171},
+  {"id":"Q09","expression":"240-8×17","answer":104},
+  {"id":"Q10","expression":"19×12-47","answer":181},
+  {"id":"Q11","expression":"(56+89)×2-73","answer":217},
+  {"id":"Q12","expression":"500-23×14","answer":178}
+]
