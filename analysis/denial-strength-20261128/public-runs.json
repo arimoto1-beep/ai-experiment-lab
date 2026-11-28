@@ -1,0 +1,3620 @@
+[
+  {
+    "id": "L01",
+    "group": "論理",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 0.000818,
+      "wall_seconds": 5.064,
+      "answer_text": "答え: A\n理由: 白は右端でなく黄より右なので位置2か3に限られ、位置2だと黄1・青3・赤4となり、位置3だと青と赤の隣接する2つの空きが作れないため、右端は赤に決まる。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "ab3596b096aef33aca2428a76d5750916870895ae8085ff509c6845650145a79",
+      "raw_sha256": "68bf0a91ef7379840fd19c70efea2e87e015fd5b9c629e2ce29e3a361c09b6fe",
+      "session_sha256": "0d7938f1a0b79681241820ff1c06faea0ff2ba6bf08f9023cdcf850fc7c8633f",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 390,
+        "cache_read": 649,
+        "cache_write": 2295
+      },
+      "thinking_tokens": 303,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 2295
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 390,
+        "cache_read": 649,
+        "cache_write": 2295
+      },
+      "cli_cumulative_usd": 0.00066069,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00066069,
+      "api_equivalent_usd": 0.00066069
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 5.091437,
+      "wall_seconds": 3.84,
+      "answer_text": "答え: A\n理由: 白は右端ではなく黄より右にあるため位置2か3に限られ、位置2の場合のみ青と赤を3・4に並べられて、右端は赤になる。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "392903102056b1cc019ed6de0779dcc9861b7cacc5cb8c1a5f41dc4ec9a9fc5c",
+      "session_sha256": "6008cac9c0190e1a0f1c7b7c0a9fa25f5df98b84d79d3ee1c21233a6f87493f1",
+      "parent_sha256": "0d7938f1a0b79681241820ff1c06faea0ff2ba6bf08f9023cdcf850fc7c8633f",
+      "tokens": {
+        "input": 2,
+        "output": 111,
+        "cache_read": 2944,
+        "cache_write": 524
+      },
+      "thinking_tokens": 43,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 524
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 501,
+        "cache_read": 3593,
+        "cache_write": 2819
+      },
+      "cli_cumulative_usd": 0.00085063,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018994,
+      "api_equivalent_usd": 0.00018994
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 8.979257,
+      "wall_seconds": 5.983,
+      "answer_text": "答え: A\n理由: 再確認しても唯一の配置は「黄・白・青・赤」で、右端は赤のままです。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "f3422a9687a8544dd7207d31cc2d383901a1f1062cd9b385940c753ef15b5bf1",
+      "session_sha256": "287732830d6e632a644c1d9d0c6e657ff73b87b7574da4ea6eb9b22d2a7aff17",
+      "parent_sha256": "0d7938f1a0b79681241820ff1c06faea0ff2ba6bf08f9023cdcf850fc7c8633f",
+      "tokens": {
+        "input": 2,
+        "output": 522,
+        "cache_read": 2944,
+        "cache_write": 537
+      },
+      "thinking_tokens": 477,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 537
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 912,
+        "cache_read": 3593,
+        "cache_write": 2832
+      },
+      "cli_cumulative_usd": 0.00105873,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00039804,
+      "api_equivalent_usd": 0.00039804
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 14.98482,
+      "wall_seconds": 6.092,
+      "answer_text": "答え: A\n理由: 条件を満たす並びは黄・白・青・赤の一通りだけで、右端は赤になるため、前回の答えは変わらない。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "bebcf8559b18a95d3283a7c0dd2425ad0b1af5ad4a553908feb44f66b31d8787",
+      "session_sha256": "91eec2dddbd543da4ff81af5e205a10613db5fc6dda36c44bfc012dd1461bc09",
+      "parent_sha256": "0d7938f1a0b79681241820ff1c06faea0ff2ba6bf08f9023cdcf850fc7c8633f",
+      "tokens": {
+        "input": 2,
+        "output": 648,
+        "cache_read": 2944,
+        "cache_write": 537
+      },
+      "thinking_tokens": 591,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 537
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1038,
+        "cache_read": 3593,
+        "cache_write": 2832
+      },
+      "cli_cumulative_usd": 0.00112173,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00046104,
+      "api_equivalent_usd": 0.00046104
+    }
+  },
+  {
+    "id": "C01",
+    "group": "条件整理",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 21.117533,
+      "wall_seconds": 4.132,
+      "answer_text": "答え: B\n理由: 12時ちょうどは窓口Xの「12時未満」に含まれず閉まっており、窓口Yだけが開いているため、種別に関係なくYに回す。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "f28f23f7b5b2dbd7db0b905f5c3e34dba7255738cd11ae25bc935edf4f8b4868",
+      "raw_sha256": "fc08a4af70c68ac12351aac132037caf1ed943852d287b8d14990f4f53eb391e",
+      "session_sha256": "e2ba122a9b2e32d2232f8ac49f6ed64f80c326d6dd7ffe143eb7e236860ef75d",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 223,
+        "cache_read": 2267,
+        "cache_write": 721
+      },
+      "thinking_tokens": 156,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 721
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 223,
+        "cache_read": 2267,
+        "cache_write": 721
+      },
+      "cli_cumulative_usd": 0.00027857,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00027857,
+      "api_equivalent_usd": 0.00027857
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 28.895588,
+      "wall_seconds": 3.108,
+      "answer_text": "答え: B\n理由: 12時ちょうどは窓口Xの「12時未満」に含まれず閉まっており、窓口Yだけが開いているため、種別Qに関係なくYに回す。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "b36535d9aa1d7ef1520014ac784472159eb052d2ec34b8cb18180abb5eca48e8",
+      "session_sha256": "01355fe248e61078d62bd62d79aa07dc11bffd3ad5aefd85f3bbdd3f12ca04dd",
+      "parent_sha256": "e2ba122a9b2e32d2232f8ac49f6ed64f80c326d6dd7ffe143eb7e236860ef75d",
+      "tokens": {
+        "input": 2,
+        "output": 69,
+        "cache_read": 2988,
+        "cache_write": 357
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 357
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 292,
+        "cache_read": 5255,
+        "cache_write": 1078
+      },
+      "cli_cumulative_usd": 0.00041455,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00013598,
+      "api_equivalent_usd": 0.00013598
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 25.269077,
+      "wall_seconds": 3.612,
+      "answer_text": "答え: B\n理由: 12時ちょうどは窓口Xの「12時未満」に含まれず閉まっており、窓口Yは13時未満なので開いていて、片方だけ開いているためYに回す。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "a7c78c331400444d619c35a0c9dca8141f3ccff41a4cea61b7fb572aa12f6629",
+      "session_sha256": "0bb89d6f14b42b0bd84d8898f30481d72278705b2d6ce2eb7e09e215d3f30926",
+      "parent_sha256": "e2ba122a9b2e32d2232f8ac49f6ed64f80c326d6dd7ffe143eb7e236860ef75d",
+      "tokens": {
+        "input": 2,
+        "output": 195,
+        "cache_read": 2988,
+        "cache_write": 370
+      },
+      "thinking_tokens": 122,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 370
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 418,
+        "cache_read": 5255,
+        "cache_write": 1091
+      },
+      "cli_cumulative_usd": 0.00048015000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00020158000000000003,
+      "api_equivalent_usd": 0.00020158
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 32.013701,
+      "wall_seconds": 3.926,
+      "answer_text": "答え: B\n理由: 「12時未満」の窓口Xは12時ちょうどに閉まっており、「13時未満」の窓口Yは開いているため、Yに回す。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "0a43aaa85439239b6a1762162a6c48d46f919d071da04ec25181bd669c3849c8",
+      "session_sha256": "9a1134ed1236b5dcbcedf444c61e8bbfd04684fa065e3ad3aa8cc28a7a7a95a9",
+      "parent_sha256": "e2ba122a9b2e32d2232f8ac49f6ed64f80c326d6dd7ffe143eb7e236860ef75d",
+      "tokens": {
+        "input": 2,
+        "output": 256,
+        "cache_read": 2988,
+        "cache_write": 370
+      },
+      "thinking_tokens": 194,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 370
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 479,
+        "cache_read": 5255,
+        "cache_write": 1091
+      },
+      "cli_cumulative_usd": 0.0005106500000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0002320800000000001,
+      "api_equivalent_usd": 0.00023208
+    }
+  },
+  {
+    "id": "S01",
+    "group": "仕様読解",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 35.954822,
+      "wall_seconds": 3.227,
+      "answer_text": "答え: C\n理由: 商品情報に0を入力した場合、0は空欄ではなく入力済みの有効な温度として扱われるため、既定温度8は使われず、入力値の0がそのまま記録される。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "3d9097d420aa91fe9bdb601326dd0742fb71bb70677893d510f993ab0f992e1a",
+      "raw_sha256": "38df389d94fd37bef7277ae5a2dc492bfa797eb8b28f0751584a7aa377f68bb6",
+      "session_sha256": "7a34c4b8ad9e0ffc4ebe0ae81d88974ac51ab2e5d4a6643f0ede708acb40e8d3",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 74,
+        "cache_read": 2267,
+        "cache_write": 709
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 709
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 74,
+        "cache_read": 2267,
+        "cache_write": 709
+      },
+      "cli_cumulative_usd": 0.00020166999999999999,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00020166999999999999,
+      "api_equivalent_usd": 0.00020167
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 44.14745,
+      "wall_seconds": 3.082,
+      "answer_text": "答え: C\n理由: 値0は空欄ではなく入力済みの有効な温度なので既定温度8は適用されず、入力された0がそのまま記録される。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "41de20d3551954b191b2034c3c8f91e99722782bcdbbf45080f490ec39017bfd",
+      "session_sha256": "1972fee7a06b7adf066a47d5dac56ad825f3fcc82baea17bee2f2e7255f2522f",
+      "parent_sha256": "7a34c4b8ad9e0ffc4ebe0ae81d88974ac51ab2e5d4a6643f0ede708acb40e8d3",
+      "tokens": {
+        "input": 2,
+        "output": 57,
+        "cache_read": 2626,
+        "cache_write": 557
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 557
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 131,
+        "cache_read": 4893,
+        "cache_write": 1266
+      },
+      "cli_cumulative_usd": 0.00036803,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00016636,
+      "api_equivalent_usd": 0.00016636
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 47.246252,
+      "wall_seconds": 3.126,
+      "answer_text": "答え: C\n理由: 規則は「商品情報が空欄の場合のみ既定温度8を使い、値0は入力済みの有効な温度である」なので、0を入力して確定した場合に記録されるのは入力値の0である。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "386785eeb3a71202226cf3c6e3f8872147b0cfa9f8b5659cb72852ecadf1d523",
+      "session_sha256": "e73db9174662459c1390e35b0f0beb6546522a53bbfd83f9be44d46484ddf2ef",
+      "parent_sha256": "7a34c4b8ad9e0ffc4ebe0ae81d88974ac51ab2e5d4a6643f0ede708acb40e8d3",
+      "tokens": {
+        "input": 2,
+        "output": 80,
+        "cache_read": 2626,
+        "cache_write": 570
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 570
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 154,
+        "cache_read": 4893,
+        "cache_write": 1279
+      },
+      "cli_cumulative_usd": 0.00038213,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018046000000000002,
+      "api_equivalent_usd": 0.00018046
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 39.199712,
+      "wall_seconds": 4.917,
+      "answer_text": "答え: C\n理由: 規則では既定温度8が使われるのは商品情報が空欄の場合だけで、0は入力済みの有効な温度なので、再確認しても記録される温度は0のままである。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "83ab6a729863d3355431c7978c5a21dc3b2f32cfdf83061edbb1faa62cb2978b",
+      "session_sha256": "2e4405ec342f288970c85ae626649cde66a921a99cee7af8a4194078a8852b68",
+      "parent_sha256": "7a34c4b8ad9e0ffc4ebe0ae81d88974ac51ab2e5d4a6643f0ede708acb40e8d3",
+      "tokens": {
+        "input": 2,
+        "output": 393,
+        "cache_read": 2626,
+        "cache_write": 570
+      },
+      "thinking_tokens": 322,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 570
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 467,
+        "cache_read": 4893,
+        "cache_write": 1279
+      },
+      "cli_cumulative_usd": 0.00053863,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00033696,
+      "api_equivalent_usd": 0.00033696
+    }
+  },
+  {
+    "id": "L02",
+    "group": "論理",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 50.383931,
+      "wall_seconds": 5.223,
+      "answer_text": "答え: D\n理由: 透明なテナは少なくとも1つ存在し、ラナはすべてミオで、ミオは透明ではないため、その透明なテナはラナではない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "cb5e7e2e140c56a9c4597660f1dfecf0e576c5fc2f622a9470de51cbde70d86c",
+      "raw_sha256": "ad61913057d5d9058fa92f15555d50db338766e5b46a40ea6236de3336bddb26",
+      "session_sha256": "81877e3d8fdcf14a8a54f44e9838809d3c2f6474869b4907ceb83921a8428b9c",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 520,
+        "cache_read": 2267,
+        "cache_write": 720
+      },
+      "thinking_tokens": 457,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 720
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 520,
+        "cache_read": 2267,
+        "cache_write": 720
+      },
+      "cli_cumulative_usd": 0.00042687,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00042687,
+      "api_equivalent_usd": 0.00042687
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 55.624015,
+      "wall_seconds": 3.202,
+      "answer_text": "答え: D\n理由: 透明なテナが存在し、そのテナはミオではないためラナでもなく、少なくとも1つのテナはラナではない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "789c7d17f8e18aa18d9505e5e90239505a4ce66ee59778f6836ead28a3982833",
+      "session_sha256": "984f91c80733eb1a5ae0ce4d9da11374d4ec4a6c3d5350b8537ac79eb961628c",
+      "parent_sha256": "81877e3d8fdcf14a8a54f44e9838809d3c2f6474869b4907ceb83921a8428b9c",
+      "tokens": {
+        "input": 2,
+        "output": 54,
+        "cache_read": 2987,
+        "cache_write": 654
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 654
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 574,
+        "cache_read": 5254,
+        "cache_write": 1374
+      },
+      "cli_cumulative_usd": 0.00061474,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018787,
+      "api_equivalent_usd": 0.00018787
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 65.217077,
+      "wall_seconds": 4.695,
+      "answer_text": "答え: D\n理由: 透明なテナは存在し、ミオで透明なものはないので、そのテナはミオではなく、ラナはすべてミオであるためラナでもない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "619dfc70b119f257a50be26448164b90e187cf03101ba8cdee419fdf2e1470eb",
+      "session_sha256": "c47620ee21cf9fdc562b511a8fcf8c34c97106aaf41e8fb958bd3b7bbcb11ee3",
+      "parent_sha256": "81877e3d8fdcf14a8a54f44e9838809d3c2f6474869b4907ceb83921a8428b9c",
+      "tokens": {
+        "input": 2,
+        "output": 409,
+        "cache_read": 2987,
+        "cache_write": 667
+      },
+      "thinking_tokens": 347,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 667
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 929,
+        "cache_read": 5254,
+        "cache_write": 1387
+      },
+      "cli_cumulative_usd": 0.00079484,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00036797,
+      "api_equivalent_usd": 0.00036797
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 58.839433,
+      "wall_seconds": 6.355,
+      "answer_text": "答え: D\n理由: 透明なテナは存在し、ラナはすべてミオでミオに透明なものはないので、その透明なテナはラナではない（他の選択肢は必ず正しいとは言えない）。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "71bdb2588686f95238d666307a9d5ae97c1b3c458208ca55cb504bbaa1dffd02",
+      "session_sha256": "63baa6c64a127897b54f86fdb789e653fb771d4b482b01f0eaa0aac28348645c",
+      "parent_sha256": "81877e3d8fdcf14a8a54f44e9838809d3c2f6474869b4907ceb83921a8428b9c",
+      "tokens": {
+        "input": 2,
+        "output": 753,
+        "cache_read": 2987,
+        "cache_write": 667
+      },
+      "thinking_tokens": 679,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 667
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1273,
+        "cache_read": 5254,
+        "cache_write": 1387
+      },
+      "cli_cumulative_usd": 0.00096684,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00053997,
+      "api_equivalent_usd": 0.00053997
+    }
+  },
+  {
+    "id": "C02",
+    "group": "条件整理",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 69.929926,
+      "wall_seconds": 3.707,
+      "answer_text": "答え: B\n理由: カ（幅40・高さ30）とケ（幅38・高さ28）が条件を満たし、重さはカの9 kgがケの8 kgより重いため。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "779e1397389fdb6e6f448f4ba840db8448ec3d68821fd942b604393b70def8e9",
+      "raw_sha256": "273ea7b6744d29e1024fe3a69f091845ea26a2b216ee48093911c19af2f418d5",
+      "session_sha256": "f7ec2e57864b9a84aa52f2357386b2f3ddbf88a3e6754d9c64388cc7c630d523",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 200,
+        "cache_read": 2267,
+        "cache_write": 744
+      },
+      "thinking_tokens": 136,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 744
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 200,
+        "cache_read": 2267,
+        "cache_write": 744
+      },
+      "cli_cumulative_usd": 0.00027167,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00027167,
+      "api_equivalent_usd": 0.00027167
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 84.736955,
+      "wall_seconds": 3.077,
+      "answer_text": "答え: B\n理由: カ（幅40・高さ30）とケ（幅38・高さ28）が条件を満たし、重さはカの9 kgがケの8 kgより重いため。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "cb6ee0d73addb0fca5b2c5044b2254d0e3152ad9b174b6e1392be8db7406f6bc",
+      "session_sha256": "3d8c19fa48307b7333058074cf14f35820b52e8250c97850506e9870ae6221d7",
+      "parent_sha256": "f7ec2e57864b9a84aa52f2357386b2f3ddbf88a3e6754d9c64388cc7c630d523",
+      "tokens": {
+        "input": 2,
+        "output": 64,
+        "cache_read": 3011,
+        "cache_write": 334
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 334
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 264,
+        "cache_read": 5278,
+        "cache_write": 1078
+      },
+      "cli_cumulative_usd": 0.00040078,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00012911,
+      "api_equivalent_usd": 0.00012911
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 73.652654,
+      "wall_seconds": 4.705,
+      "answer_text": "答え: カ\n理由: カ（幅40・高さ30）とケ（幅38・高さ28）が条件を満たし、重さはカの9 kgがケの8 kgより重いため。",
+      "grade": {
+        "choice": null,
+        "content": "unresolved",
+        "format_ok": false
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "209445ad9a7925d84945366b5daad5028d2b531aa51ebb19e2246cdd749fa182",
+      "session_sha256": "8a3aa1b53877de8b45b371b57752c98bde586974bc49029d97a561123fec6406",
+      "parent_sha256": "f7ec2e57864b9a84aa52f2357386b2f3ddbf88a3e6754d9c64388cc7c630d523",
+      "tokens": {
+        "input": 2,
+        "output": 433,
+        "cache_read": 3011,
+        "cache_write": 347
+      },
+      "thinking_tokens": 368,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 347
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 633,
+        "cache_read": 5278,
+        "cache_write": 1091
+      },
+      "cli_cumulative_usd": 0.00058788,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00031621,
+      "api_equivalent_usd": 0.00031621
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 78.37366,
+      "wall_seconds": 6.351,
+      "answer_text": "答え: B\n理由: 再確認しても、適合するのはカ（40・30）とケ（38・28）で、重いカ（9 kg）が正解のため、選択肢はBのままです。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "1439e95cd64220b38468923ca5d6daf6d37ddbdc17592b81bbfb28773c347842",
+      "session_sha256": "c467a4424de20f7b3a6487721a5bd0c0f45e6af8ba80ef0a278007be75dc7bf8",
+      "parent_sha256": "f7ec2e57864b9a84aa52f2357386b2f3ddbf88a3e6754d9c64388cc7c630d523",
+      "tokens": {
+        "input": 2,
+        "output": 723,
+        "cache_read": 3011,
+        "cache_write": 347
+      },
+      "thinking_tokens": 658,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 347
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 923,
+        "cache_read": 5278,
+        "cache_write": 1091
+      },
+      "cli_cumulative_usd": 0.00073288,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00046121,
+      "api_equivalent_usd": 0.00046121
+    }
+  },
+  {
+    "id": "S02",
+    "group": "仕様読解",
+    "level": "基本",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 87.830397,
+      "wall_seconds": 3.519,
+      "answer_text": "答え: D\n理由: 取消可否は注文単位で決まり、取り置き品を一つでも含む注文は取り置き品を含む注文として扱われ、取り置き品は承認後に取り消せないため、この注文全体が取り消せない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "4c61dfed4f2547fba62b8b89a965d45ca19e825ce61b448f3dbf09e6547ad768",
+      "raw_sha256": "9be5cf97ba18f345b1ebc05744754ee092fc4dc328477e538056881bb849ac6c",
+      "session_sha256": "903d6bcb7732d656e0a43123b9c06616e461aeffaf3526e77eeb61322f55ee39",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 85,
+        "cache_read": 2267,
+        "cache_write": 764
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 764
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 85,
+        "cache_read": 2267,
+        "cache_write": 764
+      },
+      "cli_cumulative_usd": 0.00021817000000000003,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00021817000000000003,
+      "api_equivalent_usd": 0.00021817
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 99.901539,
+      "wall_seconds": 3.12,
+      "answer_text": "答え: D\n理由: 取消可否は注文単位で決まり、取り置き品を一つでも含む注文は取り置き品を含む注文として扱われるため、承認済みの取り置き品を含むこの注文は取り消せない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "73d01b239a328fea3c966972af64b8c3d74279324f2a5e107a1313a87173e880",
+      "session_sha256": "747155360a829dc6a44a086cef559efded770fb7f7899bf7e10d1437375aec32",
+      "parent_sha256": "903d6bcb7732d656e0a43123b9c06616e461aeffaf3526e77eeb61322f55ee39",
+      "tokens": {
+        "input": 2,
+        "output": 81,
+        "cache_read": 2681,
+        "cache_write": 568
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 568
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 166,
+        "cache_read": 4948,
+        "cache_write": 1332
+      },
+      "cli_cumulative_usd": 0.00039928,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018110999999999998,
+      "api_equivalent_usd": 0.00018111
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 94.595431,
+      "wall_seconds": 5.289,
+      "answer_text": "答え: D\n理由: 注文は承認済みで取り置き品を含むため、取消可否は注文単位で取り置き品扱いとなり、承認後は取り消せない取り置き品を含む注文全体が取り消せないと再確認しても判断できる。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "202cfd47428338abb833bd0331251c922510913784a273e56dec799fd472c70d",
+      "session_sha256": "cc3d8c874b9611c96146516abddcf8e4b00487e373d872c2b39b3a045ff89c5d",
+      "parent_sha256": "903d6bcb7732d656e0a43123b9c06616e461aeffaf3526e77eeb61322f55ee39",
+      "tokens": {
+        "input": 2,
+        "output": 494,
+        "cache_read": 2681,
+        "cache_write": 581
+      },
+      "thinking_tokens": 405,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 581
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 579,
+        "cache_read": 4948,
+        "cache_write": 1345
+      },
+      "cli_cumulative_usd": 0.00060838,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00039021,
+      "api_equivalent_usd": 0.00039021
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 91.36333,
+      "wall_seconds": 3.22,
+      "answer_text": "答え: D\n理由: 取消可否は注文単位で判定され、取り置き品を一つでも含む注文は全体が取り置き品を含む注文として扱われるため、承認済みの時点で取り消せない。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "92246b59e3ce88466e4a4d999d7235ec36b99e35ee9da03cc2ee4686e3265006",
+      "session_sha256": "c151c46528b80476616a80f9479223151b19394057ea28679e27701498fb6029",
+      "parent_sha256": "903d6bcb7732d656e0a43123b9c06616e461aeffaf3526e77eeb61322f55ee39",
+      "tokens": {
+        "input": 2,
+        "output": 74,
+        "cache_read": 2681,
+        "cache_write": 581
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 581
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 159,
+        "cache_read": 4948,
+        "cache_write": 1345
+      },
+      "cli_cumulative_usd": 0.00039838000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018021,
+      "api_equivalent_usd": 0.00018021
+    }
+  },
+  {
+    "id": "L03",
+    "group": "論理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 103.034365,
+      "wall_seconds": 4.543,
+      "answer_text": "答え: A\n理由: 鍵がQにあると発言が1つしか真にならないため、Qにはなく、PかRのどちらかにあるが決まらない。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "be8e25ecf42d2f65a78b439f85d413c0ba41d668839e484e06b61a7ae2ea0a8b",
+      "raw_sha256": "f6a4ec183725353e126bd64db35c6e00bd8ed1c5d6dbf2e7ff5dc78009b88121",
+      "session_sha256": "7553b16121de198b57bc2d128585902eeccf31538c0b0fee717206d76ca71a1c",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 326,
+        "cache_read": 2267,
+        "cache_write": 725
+      },
+      "thinking_tokens": 270,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 725
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 326,
+        "cache_read": 2267,
+        "cache_write": 725
+      },
+      "cli_cumulative_usd": 0.00033087000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00033087000000000004,
+      "api_equivalent_usd": 0.00033087
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 112.572715,
+      "wall_seconds": 3.728,
+      "answer_text": "答え: A\n理由: 鍵がPにある場合もRにある場合も真の発言はちょうど2つになり、Qにある場合は1つになるため、Qにはないことは確定するが、PとRのどちらかは決まらない。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "829adc44a0ee519650e430a1ed22364a5991c7939d613cfad9fa4ec68b78d276",
+      "session_sha256": "c90996d63ff0bb1a10470ec069218e2270ae872cf409a120417b7ac0e7a53392",
+      "parent_sha256": "7553b16121de198b57bc2d128585902eeccf31538c0b0fee717206d76ca71a1c",
+      "tokens": {
+        "input": 2,
+        "output": 194,
+        "cache_read": 2992,
+        "cache_write": 460
+      },
+      "thinking_tokens": 114,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 460
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 520,
+        "cache_read": 5259,
+        "cache_write": 1185
+      },
+      "cli_cumulative_usd": 0.00054999,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00021911999999999995,
+      "api_equivalent_usd": 0.00021912
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 107.598942,
+      "wall_seconds": 4.959,
+      "answer_text": "答え: A\n理由: 鍵がP・Q・Rのどれにあっても真の数を数えると、Pなら真は2つ、Rなら真は2つ、Qなら真は1つなので、Qは除外されPかRかは決まらないため、前回の答えは正しいと判断します。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "10f8938fc4892824542a8c38fdfb873dd73dba905bd57ab253f03f87ce7ba72e",
+      "session_sha256": "ab6ebf70e12b2450ff5105abe1f2d1a5df8bffa7eda02728325273b8b34c901e",
+      "parent_sha256": "7553b16121de198b57bc2d128585902eeccf31538c0b0fee717206d76ca71a1c",
+      "tokens": {
+        "input": 2,
+        "output": 350,
+        "cache_read": 2992,
+        "cache_write": 473
+      },
+      "thinking_tokens": 251,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 473
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 676,
+        "cache_read": 5259,
+        "cache_write": 1198
+      },
+      "cli_cumulative_usd": 0.0006305900000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00029972000000000006,
+      "api_equivalent_usd": 0.00029972
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 116.315674,
+      "wall_seconds": 5.74,
+      "answer_text": "答え: A\n理由: 再確認したが、鍵がPまたはRにあるとき真の発言は2つ、Qにあるとき真の発言は1つなので、Qにはないことは確定し、PとRのどちらかは決まらない。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "c6895f06995ab833ab94bb87b7830e829c2216a3d6b06be2f99c93ea57463472",
+      "session_sha256": "e09c18738c91a7626fc6006c140d032db74eab66bd4d9134275ff33c20930acd",
+      "parent_sha256": "7553b16121de198b57bc2d128585902eeccf31538c0b0fee717206d76ca71a1c",
+      "tokens": {
+        "input": 2,
+        "output": 607,
+        "cache_read": 2992,
+        "cache_write": 473
+      },
+      "thinking_tokens": 525,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 473
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 933,
+        "cache_read": 5259,
+        "cache_write": 1198
+      },
+      "cli_cumulative_usd": 0.00075909,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00042821999999999994,
+      "api_equivalent_usd": 0.00042822
+    }
+  },
+  {
+    "id": "C03",
+    "group": "条件整理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 122.072634,
+      "wall_seconds": 4.884,
+      "answer_text": "答え: C\n理由: 5工程を1枠に最大2つしか進められないため最低3枠が必要で、枠1でA・B、枠2でC・E、枠3でDと3枠で全工程を終えられる。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "32ddd0400b928f7d0ee8b77ae9c9514754a669a62909e64c361a157141874df7",
+      "raw_sha256": "fb7f8379ffb1b3c37f4dd36d2c6bd0d23fe42a6d43e02f43461516f93e75e2ef",
+      "session_sha256": "7665111c2e875094a02d9944e677c7aaff59e15917825c5257748832ab2648d7",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 473,
+        "cache_read": 2267,
+        "cache_write": 723
+      },
+      "thinking_tokens": 399,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 723
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 473,
+        "cache_read": 2267,
+        "cache_write": 723
+      },
+      "cli_cumulative_usd": 0.00040397,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00040397,
+      "api_equivalent_usd": 0.00040397
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 134.077077,
+      "wall_seconds": 3.113,
+      "answer_text": "答え: C\n理由: 5工程を1枠に最大2つしか進められないため最低3枠が必要で、枠1でA・B、枠2でC・E、枠3でDとすれば3枠で全工程を終えられる。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "982b4e5fc4ff044283ee6a79942085dc6c0db3572ab0d531c26322cd7b94113d",
+      "session_sha256": "81d768e24694973933c4f5a3ad16a7c2e27249f1374c5851ca70dc188ef2940a",
+      "parent_sha256": "7665111c2e875094a02d9944e677c7aaff59e15917825c5257748832ab2648d7",
+      "tokens": {
+        "input": 2,
+        "output": 77,
+        "cache_read": 2990,
+        "cache_write": 607
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 607
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 550,
+        "cache_read": 5257,
+        "cache_write": 1330
+      },
+      "cli_cumulative_usd": 0.0005939700000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0001900000000000001,
+      "api_equivalent_usd": 0.00019
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 137.203261,
+      "wall_seconds": 7.296,
+      "answer_text": "答え: C\n理由: 枠1でA・B、枠2でC・E（A・Bは枠1で完了済み）、枠3でD（B・Cは枠1・枠2で完了済み）と、同時2工程の上限と依存制約を守って3枠で全工程が終わり、5工程を2つずつ進めるには3枠未満では足りないため最少は3である。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "a7af52bd6f571459a7547a5ef2d8d53f08577a18e4212eacfcdf4afdb03eb80f",
+      "session_sha256": "004fe8cecc3fb613c1f33cb922c28b94af440eca68ddebb953adb7e936aa4e93",
+      "parent_sha256": "7665111c2e875094a02d9944e677c7aaff59e15917825c5257748832ab2648d7",
+      "tokens": {
+        "input": 2,
+        "output": 987,
+        "cache_read": 2990,
+        "cache_write": 620
+      },
+      "thinking_tokens": 862,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 620
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1460,
+        "cache_read": 5257,
+        "cache_write": 1343
+      },
+      "cli_cumulative_usd": 0.00105157,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0006476,
+      "api_equivalent_usd": 0.0006476
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 126.96897,
+      "wall_seconds": 7.09,
+      "answer_text": "答え: C\n理由: A→C→Dの依存連鎖は同じ枠では進められず3枠が必要で、枠1でA・B、枠2でC・E、枠3でDとすれば3枠で完了するため、3が正しいと確認しました。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "74527702f20b8d293a8a9ce167f4722a477f42cfca63104190977f98b20c8879",
+      "session_sha256": "3f8b3cbf44ac1fcb981e725794ed36890cf5e68d81b682106767dd8f12738dc7",
+      "parent_sha256": "7665111c2e875094a02d9944e677c7aaff59e15917825c5257748832ab2648d7",
+      "tokens": {
+        "input": 2,
+        "output": 931,
+        "cache_read": 2990,
+        "cache_write": 620
+      },
+      "thinking_tokens": 845,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 620
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1404,
+        "cache_read": 5257,
+        "cache_write": 1343
+      },
+      "cli_cumulative_usd": 0.0010235700000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0006196000000000001,
+      "api_equivalent_usd": 0.0006196
+    }
+  },
+  {
+    "id": "S03",
+    "group": "仕様読解",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 144.512775,
+      "wall_seconds": 4.777,
+      "answer_text": "答え: B\n理由: 12:10の10分前は12:00で、ア（12:00）は「10分未満」を満たさないため除外され、X・Mはイとウのうち新しいウ（緊急度2）、X・Nはエ（緊急度5）になり、緊急度降順でエ→ウの順に送られるため。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "dcb5ff32563ed5e2c889eedbbeaa2b129ad96bd11b2e418aa5b9d7d2b685896c",
+      "raw_sha256": "13389947691d19fe8b881694d91a9dd8fbc5476c7e6878f6833637c977147ae0",
+      "session_sha256": "2e1a64d1eb80fa8b72a1773d9f2c87df124cb4df1ec6ea6fe59db481b796432d",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 413,
+        "cache_read": 2267,
+        "cache_write": 819
+      },
+      "thinking_tokens": 303,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 819
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 413,
+        "cache_read": 2267,
+        "cache_write": 819
+      },
+      "cli_cumulative_usd": 0.00039317,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00039317,
+      "api_equivalent_usd": 0.00039317
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 149.312981,
+      "wall_seconds": 3.287,
+      "answer_text": "答え: B\n理由: 12:10の10分前は12:00ちょうどのアは「10分未満」を満たさず除外され、X・Mはイとウのうち新しいウ（緊急度2）、X・Nはエ（緊急度5）となり、緊急度降順でエ→ウの順に送られるため。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "bce2565209fb8c5ac8a0273a6719c52c275ee766714799ce3b20fb2d7eb41e42",
+      "session_sha256": "2b4a568f0d39fcb34ec8ce56465f9fecfcfa60954d639a53cbb5adf57476b4e6",
+      "parent_sha256": "2e1a64d1eb80fa8b72a1773d9f2c87df124cb4df1ec6ea6fe59db481b796432d",
+      "tokens": {
+        "input": 2,
+        "output": 106,
+        "cache_read": 3086,
+        "cache_write": 546
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 546
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 519,
+        "cache_read": 5353,
+        "cache_write": 1365
+      },
+      "cli_cumulative_usd": 0.00058643,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00019326,
+      "api_equivalent_usd": 0.00019326
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 152.614303,
+      "wall_seconds": 6.817,
+      "answer_text": "答え: B\n理由: 再確認しても、10分未満を満たすイ・ウ・エのうちX・Mは新しいウ（緊急度2）、X・Nはエ（緊急度5）となり、降順で送るとエ→ウになるため。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "6fbd8cdb796ccee902d345d2c6f0c458bf0b55612e5c9c85aca7e80b7f27ac9b",
+      "session_sha256": "d3d860bab616a3719ee1e58b23d420fa3c43a37690403914bc7f91e12a7e5cde",
+      "parent_sha256": "2e1a64d1eb80fa8b72a1773d9f2c87df124cb4df1ec6ea6fe59db481b796432d",
+      "tokens": {
+        "input": 2,
+        "output": 769,
+        "cache_read": 3086,
+        "cache_write": 559
+      },
+      "thinking_tokens": 683,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 559
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1182,
+        "cache_read": 5353,
+        "cache_write": 1378
+      },
+      "cli_cumulative_usd": 0.00092053,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00052736,
+      "api_equivalent_usd": 0.00052736
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 159.443567,
+      "wall_seconds": 8.28,
+      "answer_text": "答え: B\n理由: 再確認しても、12:00のアは除外され、X・Mはウ（緊急度2）、X・Nはエ（緊急度5）になり、緊急度降順でエ→ウの順になるため、答えはBのままです。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "a0569fe88bad576027fbe5969edfb6753bd4c422e495cca8e48ef14e7ee30b68",
+      "session_sha256": "17a4d1b43f75ac6860baa26df5911cd141edec578393babfd4707cc30c5c7606",
+      "parent_sha256": "2e1a64d1eb80fa8b72a1773d9f2c87df124cb4df1ec6ea6fe59db481b796432d",
+      "tokens": {
+        "input": 2,
+        "output": 1250,
+        "cache_read": 3086,
+        "cache_write": 559
+      },
+      "thinking_tokens": 1165,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 559
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1663,
+        "cache_read": 5353,
+        "cache_write": 1378
+      },
+      "cli_cumulative_usd": 0.00116103,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00076786,
+      "api_equivalent_usd": 0.00076786
+    }
+  },
+  {
+    "id": "L04",
+    "group": "論理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 167.73684,
+      "wall_seconds": 4.074,
+      "answer_text": "答え: D\n理由: A=1のときC=2、B=3となり条件A<Bを満たす一方、A=2だとC=3、B=1でA<Bが成り立たないため、Bは3に決まる。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "1e0e17389a2f13f96e8caebfa4fde44a5272bcbcabeb7497a685fc7da9eaf82b",
+      "raw_sha256": "0f9bf2cc0ebb51b23f598e888a57f1c811b616fce0f78dd34cadbf8ed7432108",
+      "session_sha256": "77a5592dac2d4683b44973aa9e3dff8e96752e8da49a34fd3fd14471332df4aa",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 270,
+        "cache_read": 2267,
+        "cache_write": 696
+      },
+      "thinking_tokens": 199,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 696
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 270,
+        "cache_read": 2267,
+        "cache_write": 696
+      },
+      "cli_cumulative_usd": 0.00029707,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00029707,
+      "api_equivalent_usd": 0.00029707
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 179.906354,
+      "wall_seconds": 3.633,
+      "answer_text": "答え: D\n理由: 条件を満たすのはA=1、C=2、B=3の組み合わせだけで、このときBは3になる。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "5e8d83b6c9b26e9b4f1c9745d2393b02935cfb37591ccc043d45c133230c5874",
+      "session_sha256": "ce4a1b9a1741de944c2efc92bb3cee1d1a1cc05e451ec45013d2421725a7f052",
+      "parent_sha256": "77a5592dac2d4683b44973aa9e3dff8e96752e8da49a34fd3fd14471332df4aa",
+      "tokens": {
+        "input": 2,
+        "output": 139,
+        "cache_read": 2963,
+        "cache_write": 404
+      },
+      "thinking_tokens": 91,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 404
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 409,
+        "cache_read": 5230,
+        "cache_write": 1100
+      },
+      "cli_cumulative_usd": 0.0004772,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00018013,
+      "api_equivalent_usd": 0.00018013
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 171.82754,
+      "wall_seconds": 3.969,
+      "answer_text": "答え: D\n理由: 再確認した結果、A=1・C=2・B=3だけが条件（A<B、C=A+1、重複なし）を満たすため、Bは3でDが正しい。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "67228cebc331768289cb98dc66724c87101a0300f97862195c96998b78556a5b",
+      "session_sha256": "807d077f9a5cb89d730afcd3ebc91af12d0613cd93dfbf01f2e2124d3a14b981",
+      "parent_sha256": "77a5592dac2d4683b44973aa9e3dff8e96752e8da49a34fd3fd14471332df4aa",
+      "tokens": {
+        "input": 2,
+        "output": 280,
+        "cache_read": 2963,
+        "cache_write": 417
+      },
+      "thinking_tokens": 213,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 417
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 550,
+        "cache_read": 5230,
+        "cache_write": 1113
+      },
+      "cli_cumulative_usd": 0.0005503,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00025323,
+      "api_equivalent_usd": 0.00025323
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 175.811738,
+      "wall_seconds": 4.073,
+      "answer_text": "答え: D\n理由: 再確認しても、A=1・C=2・B=3だけが条件（A<B、C=A+1）を満たし、Bは3であるため答えはDのままです。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "141d8e04aa2f898d9cd09a78c89cd2500747c234d254a8108e5182fd2b20502a",
+      "session_sha256": "c797a5eaab6f524339b545313ebbbdb5700055feaaf1b03e4310cd7b7c322f18",
+      "parent_sha256": "77a5592dac2d4683b44973aa9e3dff8e96752e8da49a34fd3fd14471332df4aa",
+      "tokens": {
+        "input": 2,
+        "output": 284,
+        "cache_read": 2963,
+        "cache_write": 417
+      },
+      "thinking_tokens": 220,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 417
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 554,
+        "cache_read": 5230,
+        "cache_write": 1113
+      },
+      "cli_cumulative_usd": 0.0005522999999999999,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0002552299999999999,
+      "api_equivalent_usd": 0.00025523
+    }
+  },
+  {
+    "id": "C04",
+    "group": "条件整理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 183.553875,
+      "wall_seconds": 4.229,
+      "answer_text": "答え: A\n理由: LとNはNがLを必要とする条件と、LとMが両立しない条件を満たし、得点合計10点でB(9点)より多いためです。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7a9a372a6d13d26494e06e442cd165d41a50d48c83e131f25c1f5faf5cf23f85",
+      "raw_sha256": "8b8a3dc03e668f1151b325e68398436644d3f0908c98fdb96dee01b901d32078",
+      "session_sha256": "4de3286d8d97c57026f87c550605170437d1ffe6add8898d7df332a502662660",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 263,
+        "cache_read": 2267,
+        "cache_write": 710
+      },
+      "thinking_tokens": 204,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 710
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 263,
+        "cache_read": 2267,
+        "cache_write": 710
+      },
+      "cli_cumulative_usd": 0.00029637,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00029637,
+      "api_equivalent_usd": 0.00029637
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 199.447024,
+      "wall_seconds": 3.729,
+      "answer_text": "答え: A\n理由: LとNは「NにはLが必要」の条件を満たし、LとMの非両立にも反しないため、有効な組の中で合計10点と最多になります。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "2f20161b0dd4eb3e610855f918894cb329ceb0dc9f7c73231ff9664b012b1050",
+      "session_sha256": "d692da925dba599a06b9064393ea2c326d2c2e15cd35a2dfb76154a9bb8e1f2a",
+      "parent_sha256": "4de3286d8d97c57026f87c550605170437d1ffe6add8898d7df332a502662660",
+      "tokens": {
+        "input": 2,
+        "output": 62,
+        "cache_read": 2977,
+        "cache_write": 397
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 397
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 325,
+        "cache_read": 5244,
+        "cache_write": 1107
+      },
+      "cli_cumulative_usd": 0.00043674,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00014037,
+      "api_equivalent_usd": 0.00014037
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 193.640712,
+      "wall_seconds": 5.796,
+      "answer_text": "答え: A\n理由: 2つ選ぶ制約で、KはMを必要とし、LとMは両立せず、NはLを必要とするため、LとNの組は全条件を満たし得点10点で、有効な組のうち最多です。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "fe3bc62d49c5d938daac40841419d2e6aba3f437d43b58814d99111114f3e84f",
+      "session_sha256": "6a2458fdca8bfffddc80c7b14414bde94c36f2dad9a4ea16a40bb8920eb40022",
+      "parent_sha256": "4de3286d8d97c57026f87c550605170437d1ffe6add8898d7df332a502662660",
+      "tokens": {
+        "input": 2,
+        "output": 546,
+        "cache_read": 2977,
+        "cache_write": 410
+      },
+      "thinking_tokens": 465,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 410
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 809,
+        "cache_read": 5244,
+        "cache_write": 1120
+      },
+      "cli_cumulative_usd": 0.00068134,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00038497,
+      "api_equivalent_usd": 0.00038497
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 187.80198,
+      "wall_seconds": 5.815,
+      "answer_text": "答え: A\n理由: 再確認した結果、LとNはNにLが必要という条件、LとMが両立しない条件を満たし、Kは含まれないため有効で、合計10点は他の有効な組(KとMの9点)より多いので、Aが正しいです。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "6b3a07b7b2c9f2331b9a25cd44c288b9fc00eef94fdf7aa88207d3897205411a",
+      "session_sha256": "fa91d98f10571e237826bad0eecb5e16923fa1e557bb03d689e89d8f49b2b750",
+      "parent_sha256": "4de3286d8d97c57026f87c550605170437d1ffe6add8898d7df332a502662660",
+      "tokens": {
+        "input": 2,
+        "output": 578,
+        "cache_read": 2977,
+        "cache_write": 410
+      },
+      "thinking_tokens": 487,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 410
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 841,
+        "cache_read": 5244,
+        "cache_write": 1120
+      },
+      "cli_cumulative_usd": 0.00069734,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00040097,
+      "api_equivalent_usd": 0.00040097
+    }
+  },
+  {
+    "id": "S04",
+    "group": "仕様読解",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 203.186539,
+      "wall_seconds": 4.251,
+      "answer_text": "答え: C\n理由: 取り下げで予約の60が戻って自由残高は70となり、Qの確定は予約済みの30を消費するだけで自由残高を減らさないため。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "e8ec7f3ad0057cd707d00e08c9d58359f640e76bad203deb6cca4d661625d74a",
+      "raw_sha256": "6dd3076a580bcb072493d48815063076b4ec79aa9a97d701aa418b944f86e413",
+      "session_sha256": "b2448dadf36c386b5c9803a093043f3a348401b31a82a68a3eebf10326003318",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 200,
+        "cache_read": 2267,
+        "cache_write": 764
+      },
+      "thinking_tokens": 137,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 764
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 200,
+        "cache_read": 2267,
+        "cache_write": 764
+      },
+      "cli_cumulative_usd": 0.00027567000000000005,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00027567000000000005,
+      "api_equivalent_usd": 0.00027567
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 207.450684,
+      "wall_seconds": 3.526,
+      "answer_text": "答え: C\n理由: 残高100からPの60とQの30を予約すると自由残高は10になり、Pの取り下げで60が戻って70になり、Qの確定は予約済み分を消費するだけで自由残高は変わらないため。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "5e335d8e161b5fbc2bd1baaeab1c2ccf60a2869523314dbe24d9958bec7de22b",
+      "session_sha256": "6c3ff62fce265dd8e4e2420c30667dac44c8da96f1934cd693932c6e63da90a1",
+      "parent_sha256": "b2448dadf36c386b5c9803a093043f3a348401b31a82a68a3eebf10326003318",
+      "tokens": {
+        "input": 2,
+        "output": 82,
+        "cache_read": 3031,
+        "cache_write": 334
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 334
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 282,
+        "cache_read": 5298,
+        "cache_write": 1098
+      },
+      "cli_cumulative_usd": 0.00041398000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00013831,
+      "api_equivalent_usd": 0.00013831
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 217.712445,
+      "wall_seconds": 5.444,
+      "answer_text": "答え: C\n理由: 残高100からP予約60・Q予約30で自由残高は10、Pの取り下げで自由残高は70に戻り、Qの確定は予約分30を消費するだけで自由残高を減らさないため、再計算しても70で変わりません。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "a2b774555317132d5a34b1384b0a17b2b1ca275779d57b3406b415bed36fba68",
+      "session_sha256": "decb01cae4e937622a17edbfede5830c9a3730104279dadbf402f986f57de866",
+      "parent_sha256": "b2448dadf36c386b5c9803a093043f3a348401b31a82a68a3eebf10326003318",
+      "tokens": {
+        "input": 2,
+        "output": 454,
+        "cache_read": 3031,
+        "cache_write": 347
+      },
+      "thinking_tokens": 362,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 347
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 654,
+        "cache_read": 5298,
+        "cache_write": 1111
+      },
+      "cli_cumulative_usd": 0.00060258,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00032690999999999997,
+      "api_equivalent_usd": 0.00032691
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 211.007111,
+      "wall_seconds": 6.679,
+      "answer_text": "答え: C\n理由: Pの予約60を取り下げると残高100のうち予約はQの30だけになり、自由残高は70で、Qの確定は予約分を消費するだけなので70のまま変わらないため。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "6a6bdd0179463021f95912473fe2e14a21f308ff5302bff24f6157912e1c3338",
+      "session_sha256": "f32b97b4645579e95e575c5db3fc2c0faee66d123effa03173c31f6915f49cc4",
+      "parent_sha256": "b2448dadf36c386b5c9803a093043f3a348401b31a82a68a3eebf10326003318",
+      "tokens": {
+        "input": 2,
+        "output": 627,
+        "cache_read": 3031,
+        "cache_write": 347
+      },
+      "thinking_tokens": 553,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 347
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 827,
+        "cache_read": 5298,
+        "cache_write": 1111
+      },
+      "cli_cumulative_usd": 0.00068908,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00041340999999999996,
+      "api_equivalent_usd": 0.00041341
+    }
+  },
+  {
+    "id": "L05",
+    "group": "論理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 223.1772,
+      "wall_seconds": 5.521,
+      "answer_text": "答え: D\n理由: 印はVとXだけなので、Uに印がない(U→Vに反しない)、VとWのうち印はVだけ、Xに印があるのでWに印がないという条件がすべて満たされるのに対し、他の選択肢はいずれかの条件に反するため。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8068a7e6def38e69587e78d65bf92d9bf1b2d6faff750446de0a3c6c8cb6b0d9",
+      "raw_sha256": "99fa7028bf51d65053db95e5bd2d52ab2a8653ef2cb2fb968777d9633db57cbb",
+      "session_sha256": "28ee9709c4d5431f078418443234ca99624ca5dc7cf1cd24954a318034d904b5",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 476,
+        "cache_read": 2267,
+        "cache_write": 721
+      },
+      "thinking_tokens": 377,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 721
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 476,
+        "cache_read": 2267,
+        "cache_write": 721
+      },
+      "cli_cumulative_usd": 0.00040507,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00040507,
+      "api_equivalent_usd": 0.00040507
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 234.964786,
+      "wall_seconds": 3.917,
+      "answer_text": "答え: D\n理由: 印がVとXだけのとき、U→Vは成立し(Uに印なし)、「Vに印がなければWに印がある」は前件が偽なので成立し、VとWのうち印はVだけでちょうど一つ、Xに印があるのでWに印がないという全条件を満たすため。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "2cd2aae9395b5a9755b982bc9f94a77805681c8d057d7a85f9e7020e4e12edef",
+      "session_sha256": "b5af3bdc9159bf09b62cd1adf371c444cfa9579bd6127d57089c80924a7a85ac",
+      "parent_sha256": "28ee9709c4d5431f078418443234ca99624ca5dc7cf1cd24954a318034d904b5",
+      "tokens": {
+        "input": 2,
+        "output": 127,
+        "cache_read": 2988,
+        "cache_write": 610
+      },
+      "thinking_tokens": 19,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 610
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 603,
+        "cache_read": 5255,
+        "cache_write": 1331
+      },
+      "cli_cumulative_usd": 0.0006206499999999999,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0002155799999999999,
+      "api_equivalent_usd": 0.00021558
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 238.904701,
+      "wall_seconds": 4.626,
+      "answer_text": "答え: D\n理由: 再確認しても、印がVとXだけであれば、U→V(Uに印なし)、「Vに印がなければWに印」(Vに印あり)、「VとWのちょうど一つ」(Vのみ)、「Xに印あり→Wに印なし」の四条件すべてを満たすため、答えはDのままです。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "8bcca34ec706a8ff072f617f97f5f7bcfa0b19937dbed1a81e06edaf99bc3279",
+      "session_sha256": "6c9dfa5f8636cadf33b21ed1664131dacf9952ce2f0924ee63bbb63b837aea97",
+      "parent_sha256": "28ee9709c4d5431f078418443234ca99624ca5dc7cf1cd24954a318034d904b5",
+      "tokens": {
+        "input": 2,
+        "output": 315,
+        "cache_read": 2988,
+        "cache_write": 623
+      },
+      "thinking_tokens": 197,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 623
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 791,
+        "cache_read": 5255,
+        "cache_write": 1344
+      },
+      "cli_cumulative_usd": 0.00071725,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00031218,
+      "api_equivalent_usd": 0.00031218
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 228.719586,
+      "wall_seconds": 6.218,
+      "answer_text": "答え: D\n理由: 再確認しましたが、印がVとXのときだけ4条件(Uに印なしでU→V成立、Vに印ありで「Vに印がなければ」は不成立、VとWはVのみ、Xに印があるのでWに印なし)がすべて満たされ、A・B・Cはいずれかの条件に反するため、Dが唯一の正解です。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "72fec7264db50649cf1e7027b73ed8e14bee0d45ab40dadd5c929a58e4f94adf",
+      "session_sha256": "826e0d3515b6e18f5e27e682b138710afde5f2366deb12825decadf2d8fdde28",
+      "parent_sha256": "28ee9709c4d5431f078418443234ca99624ca5dc7cf1cd24954a318034d904b5",
+      "tokens": {
+        "input": 2,
+        "output": 653,
+        "cache_read": 2988,
+        "cache_write": 623
+      },
+      "thinking_tokens": 523,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 623
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1129,
+        "cache_read": 5255,
+        "cache_write": 1344
+      },
+      "cli_cumulative_usd": 0.00088625,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00048118,
+      "api_equivalent_usd": 0.00048118
+    }
+  },
+  {
+    "id": "C05",
+    "group": "条件整理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 243.543053,
+      "wall_seconds": 5.616,
+      "answer_text": "答え: B\n理由: 午後枠は水曜午後しかないのでQは水曜午後に入り、PはQと同日にできないため火曜午前、残るRは水曜午前になる。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "aae71efd0ec11f3142125e9bd7009e7055fd46653374f143336696e136977a78",
+      "raw_sha256": "ad01b83858e8e41eff0cd5f5987a4c6c7e7eb83e348c02eade7922f1c79d0fc2",
+      "session_sha256": "6fd31992723d45a627cc28b88262e821c4e5e24ff708545e96543275529094d3",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 485,
+        "cache_read": 2267,
+        "cache_write": 789
+      },
+      "thinking_tokens": 420,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 789
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 485,
+        "cache_read": 2267,
+        "cache_write": 789
+      },
+      "cli_cumulative_usd": 0.00042317000000000006,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00042317000000000006,
+      "api_equivalent_usd": 0.00042317
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 249.187069,
+      "wall_seconds": 3.68,
+      "answer_text": "答え: B\n理由: 午後枠は水曜午後のみなのでQは水曜午後となり、PはQと同日を避けるため火曜午前、残るRは水曜午前になるため、Pは火曜午前が必ず正しい。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "4243c217cb54f39da48a7af73475522b350e90664ac044091399e97e83de7a1b",
+      "session_sha256": "ce0cb498a82e364349fe45643da817e46bebff9d24aed4a7f7de18fedc01453a",
+      "parent_sha256": "6fd31992723d45a627cc28b88262e821c4e5e24ff708545e96543275529094d3",
+      "tokens": {
+        "input": 2,
+        "output": 82,
+        "cache_read": 3056,
+        "cache_write": 619
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 619
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 567,
+        "cache_read": 5323,
+        "cache_write": 1408
+      },
+      "cli_cumulative_usd": 0.0006187300000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00019556000000000003,
+      "api_equivalent_usd": 0.00019556
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 252.899129,
+      "wall_seconds": 6.855,
+      "answer_text": "答え: B\n理由: 使える枠は火曜午前・水曜午前・水曜午後の3つだけで、Qは午後限定なので水曜午後に入り、PはQと同日にできないため火曜午前に決まり、Rは水曜午前になるので、Pは火曜午前が必ず正しい。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "0f991416eb0b7359769c5d4878628ee9279d5ab43c8d7c361d619741a822224b",
+      "session_sha256": "dd0092070c4558f751a21e94652aed0bea640ec0fec8d71bc72345695dba3038",
+      "parent_sha256": "6fd31992723d45a627cc28b88262e821c4e5e24ff708545e96543275529094d3",
+      "tokens": {
+        "input": 2,
+        "output": 814,
+        "cache_read": 3056,
+        "cache_write": 632
+      },
+      "thinking_tokens": 708,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 632
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1299,
+        "cache_read": 5323,
+        "cache_write": 1421
+      },
+      "cli_cumulative_usd": 0.0009873300000000002,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0005641600000000002,
+      "api_equivalent_usd": 0.00056416
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 259.78538,
+      "wall_seconds": 5.419,
+      "answer_text": "答え: B\n理由: 使える枠は火曜午前・水曜午前・水曜午後の3つだけで、Qは午後の水曜午後、PはQと同日を避けて火曜午前に決まるため、Pは火曜午前が必ず正しい。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "db3c92c39c833ff87fbeea45a21b595310b0565a805547f3fc0991a774857d80",
+      "session_sha256": "6673277f59ee4ff251d82102078a8283cad34dce740a3b9643de71d168057769",
+      "parent_sha256": "6fd31992723d45a627cc28b88262e821c4e5e24ff708545e96543275529094d3",
+      "tokens": {
+        "input": 2,
+        "output": 532,
+        "cache_read": 3056,
+        "cache_write": 632
+      },
+      "thinking_tokens": 443,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 632
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1017,
+        "cache_read": 5323,
+        "cache_write": 1421
+      },
+      "cli_cumulative_usd": 0.0008463300000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00042316000000000006,
+      "api_equivalent_usd": 0.00042316
+    }
+  },
+  {
+    "id": "S05",
+    "group": "仕様読解",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 265.216966,
+      "wall_seconds": 4.356,
+      "answer_text": "答え: A\n理由: 申請時点（木曜17:55）は終了前で他者の予約も取り消し済みのため受理され、元の終了時刻木曜18:00から24時間延長されて金曜18:00になる。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "71d914cb05742db70a7805d81cf88dd5e530d012afc2defd06484330e753394e",
+      "raw_sha256": "64bf305ae3d80b53eaf79a8534b7e04aabd5e2c3401462a9ee094948d62fbbbc",
+      "session_sha256": "1dadc3c75fdf66d176d2ea130b1da89770164cb409927627e4541c27799bbf04",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 282,
+        "cache_read": 2267,
+        "cache_write": 813
+      },
+      "thinking_tokens": 206,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 813
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 282,
+        "cache_read": 2267,
+        "cache_write": 813
+      },
+      "cli_cumulative_usd": 0.00032647000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00032647000000000004,
+      "api_equivalent_usd": 0.00032647
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 276.586042,
+      "wall_seconds": 3.549,
+      "answer_text": "答え: A\n理由: 申請時点で他者の予約は17:50に取り消されており、終了前のため、元の終了時刻木曜18:00から24時間延長されて金曜18:00になる。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "a3d63cfa541ae822494c11be3a2a0a5aba44f14e38bf9118bd36cf82fb36dfcb",
+      "session_sha256": "62021f55a15af8da5e50a7ee76a91df2775345a8ba1a27148f05b2a698b291cf",
+      "parent_sha256": "1dadc3c75fdf66d176d2ea130b1da89770164cb409927627e4541c27799bbf04",
+      "tokens": {
+        "input": 2,
+        "output": 68,
+        "cache_read": 3080,
+        "cache_write": 416
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 416
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 350,
+        "cache_read": 5347,
+        "cache_write": 1229
+      },
+      "cli_cumulative_usd": 0.00047467000000000006,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00014820000000000002,
+      "api_equivalent_usd": 0.0001482
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 269.596322,
+      "wall_seconds": 6.967,
+      "answer_text": "答え: A\n理由: 「他者の予約がない」は申請時点の状態で判定し、木曜17:50に取り消されて申請時には他者の予約が残っていないため、元の終了木曜18:00から24時間延長された金曜18:00で受理される。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "bafe6e4c2108f152fe69f5f4b3000351615daa4ef92a13f51a2145789283eb76",
+      "session_sha256": "a52118dd6d0ad8a4db1acf751502df2e27e9a1216f681b989ebf3e09c0c30035",
+      "parent_sha256": "1dadc3c75fdf66d176d2ea130b1da89770164cb409927627e4541c27799bbf04",
+      "tokens": {
+        "input": 2,
+        "output": 698,
+        "cache_read": 3080,
+        "cache_write": 429
+      },
+      "thinking_tokens": 609,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 429
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 980,
+        "cache_read": 5347,
+        "cache_write": 1242
+      },
+      "cli_cumulative_usd": 0.0007922700000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00046580000000000005,
+      "api_equivalent_usd": 0.0004658
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 280.166694,
+      "wall_seconds": 6.07,
+      "answer_text": "答え: A\n理由: 申請時点（木曜17:55）では他者の予約は17:50に取り消されて存在せず、過去に一度あったことは条件に含まれないため受理され、元の終了木曜18:00から24時間延長されて金曜18:00になる。",
+      "grade": {
+        "choice": "A",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "1364a93c56a45a6e847414d41979dc0fa21fab88e94f6c4cf55817bf1d78638a",
+      "session_sha256": "cf3449bddcd5087067e891622b486a2f41a3d1dc308de09e31b945cfbfc49d5b",
+      "parent_sha256": "1dadc3c75fdf66d176d2ea130b1da89770164cb409927627e4541c27799bbf04",
+      "tokens": {
+        "input": 2,
+        "output": 547,
+        "cache_read": 3080,
+        "cache_write": 429
+      },
+      "thinking_tokens": 455,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 429
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 829,
+        "cache_read": 5347,
+        "cache_write": 1242
+      },
+      "cli_cumulative_usd": 0.00071677,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00039029999999999995,
+      "api_equivalent_usd": 0.0003903
+    }
+  },
+  {
+    "id": "L06",
+    "group": "論理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 286.271075,
+      "wall_seconds": 5.204,
+      "answer_text": "答え: C\n理由: Cが点灯していても、AとBの組み合わせとして「A点灯・B消灯」「A消灯・B点灯」「両方消灯」のいずれもルールに反しないため、AとBの状態は確定しない。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "5f327c3b8a5f00b30cf28201b876ac22ebfd1ab1837958eb4a834617bd419ab3",
+      "raw_sha256": "3a3d5353585f05efea30004c039ac246e43837d9b1bc18d4fea815a424d45ee8",
+      "session_sha256": "02cda5a0cc0c7a288505a6f48c1a96bffb32e8ad9c1e2ac48603becc61478803",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 435,
+        "cache_read": 2267,
+        "cache_write": 722
+      },
+      "thinking_tokens": 351,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 722
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 435,
+        "cache_read": 2267,
+        "cache_write": 722
+      },
+      "cli_cumulative_usd": 0.00038477,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00038477,
+      "api_equivalent_usd": 0.00038477
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 303.682623,
+      "wall_seconds": 3.304,
+      "answer_text": "答え: C\n理由: ルールは「Aが点灯→Bは消灯」「Bが消灯→Cは点灯」だけなので、Cが点灯していてもAとBは「A点灯・B消灯」「A消灯・B点灯」「両方消灯」のいずれも許され、状態は確定しない。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "197400200f6a5cc721f2d89f614ca11caa906f3088e8f5e254d2ba845f2ecae0",
+      "session_sha256": "cd4133fe049cc557319616442b27fc64c00b4a36a0d3e460ef729d9d2ef4942b",
+      "parent_sha256": "02cda5a0cc0c7a288505a6f48c1a96bffb32e8ad9c1e2ac48603becc61478803",
+      "tokens": {
+        "input": 2,
+        "output": 107,
+        "cache_read": 2989,
+        "cache_write": 569
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 569
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 542,
+        "cache_read": 5256,
+        "cache_write": 1291
+      },
+      "cli_cumulative_usd": 0.00058216,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00019739,
+      "api_equivalent_usd": 0.00019739
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 297.775898,
+      "wall_seconds": 5.895,
+      "answer_text": "答え: C\n理由: 再確認しても結論は変わらず、「A点灯・B消灯」「A消灯・B点灯」「両方消灯」のいずれもCが点灯していれば規則に反しないため、AとBは確定しない。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "928ecb68446e6e6ae22c889006151110d282137fec11bbc71aee5b6cd9190248",
+      "session_sha256": "c51deef39c3b146185e87e05f2831b86e348ce837cc88c1e6b84a8bde770d70a",
+      "parent_sha256": "02cda5a0cc0c7a288505a6f48c1a96bffb32e8ad9c1e2ac48603becc61478803",
+      "tokens": {
+        "input": 2,
+        "output": 612,
+        "cache_read": 2989,
+        "cache_write": 582
+      },
+      "thinking_tokens": 529,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 582
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1047,
+        "cache_read": 5256,
+        "cache_write": 1304
+      },
+      "cli_cumulative_usd": 0.00083726,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00045249,
+      "api_equivalent_usd": 0.00045249
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 291.518862,
+      "wall_seconds": 6.239,
+      "answer_text": "答え: C\n理由: 再確認した結果、Cの点灯だけではAとBの状態は決まらず、(A点灯・B消灯)、(A消灯・B点灯)、(A消灯・B消灯)のいずれもルールに反しないため、残る選択肢A・B・Dは必ずしも成り立たず、Cが正解です。",
+      "grade": {
+        "choice": "C",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "ccc43b45aee5855bbb3cfa90c585c52d42a4367c027f6ebe4d50204911a8207e",
+      "session_sha256": "d94f4a3d6045794ca563cde6a5a217b91c9f9caa24cadea9134a63c43cd55087",
+      "parent_sha256": "02cda5a0cc0c7a288505a6f48c1a96bffb32e8ad9c1e2ac48603becc61478803",
+      "tokens": {
+        "input": 2,
+        "output": 637,
+        "cache_read": 2989,
+        "cache_write": 582
+      },
+      "thinking_tokens": 519,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 582
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1072,
+        "cache_read": 5256,
+        "cache_write": 1304
+      },
+      "cli_cumulative_usd": 0.00084976,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00046499,
+      "api_equivalent_usd": 0.00046499
+    }
+  },
+  {
+    "id": "C06",
+    "group": "条件整理",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 307.005515,
+      "wall_seconds": 5.239,
+      "answer_text": "答え: D\n理由: 10:04時点でイは10:01から3分待っており3分以上の条件を満たすため、予約の有無に関係なく最長待ちのイを優先します。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "5df98c5f9b99d623106fbbe19d35225fd8c4330bc9ba3bfdfa8f109363ba5382",
+      "raw_sha256": "45dfe437d360405bc52cf9982280f16325e9956b7a97789a09b50fa4912b36dc",
+      "session_sha256": "cbdd18ce8205034d861ee39dc138e3857489e167c2bcfef4061d72c6394b1a14",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 523,
+        "cache_read": 2267,
+        "cache_write": 782
+      },
+      "thinking_tokens": 460,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 782
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 523,
+        "cache_read": 2267,
+        "cache_write": 782
+      },
+      "cli_cumulative_usd": 0.00044077000000000005,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00044077000000000005,
+      "api_equivalent_usd": 0.00044077
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 312.276093,
+      "wall_seconds": 3.865,
+      "answer_text": "答え: D\n理由: 10:04時点でイは10:01から3分待っており3分以上の条件を満たすため、予約の有無に関係なく最長待ちのイを通します。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "3bebdb3efb38c0c6ad5b3c9bbd3a5af8d2cd712d698e9b801ade132b2fee67ff",
+      "session_sha256": "530e5e4bedd9a9855a9f393dc27922cb5fcddc15ed03317357c26a5d6d6de4dc",
+      "parent_sha256": "cbdd18ce8205034d861ee39dc138e3857489e167c2bcfef4061d72c6394b1a14",
+      "tokens": {
+        "input": 2,
+        "output": 188,
+        "cache_read": 3049,
+        "cache_write": 657
+      },
+      "thinking_tokens": 126,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 657
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 711,
+        "cache_read": 5316,
+        "cache_write": 1439
+      },
+      "cli_cumulative_usd": 0.0006968600000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00025609000000000005,
+      "api_equivalent_usd": 0.00025609
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 325.894539,
+      "wall_seconds": 7.36,
+      "answer_text": "答え: D\n理由: 「3分以上」は3分ちょうどを含むため、10:04時点で10:01到着のイ（待ち3分）が条件を満たし、最長待ちとして優先されます。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "1177993ced6f9ca26652e676dd88df720f7c5b76902a0a4b74aca257594991a3",
+      "session_sha256": "5a669a9cc3b0f2a2ebbdfc9f6a95e0a7b4b5d4e8e7f7abac3a4208bfc23cab82",
+      "parent_sha256": "cbdd18ce8205034d861ee39dc138e3857489e167c2bcfef4061d72c6394b1a14",
+      "tokens": {
+        "input": 2,
+        "output": 970,
+        "cache_read": 3049,
+        "cache_write": 670
+      },
+      "thinking_tokens": 899,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 670
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 1493,
+        "cache_read": 5316,
+        "cache_write": 1452
+      },
+      "cli_cumulative_usd": 0.0010904600000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0006496900000000001,
+      "api_equivalent_usd": 0.00064969
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 316.159519,
+      "wall_seconds": 9.718,
+      "answer_text": "答え: D\n理由: 10:03に3分待ちのアが先に通り、10:04ではイが10:01から3分待ちで最長となるため、予約ありでも3分条件を優先してイを通します。",
+      "grade": {
+        "choice": "D",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "94007d402e0b040f51bcb99c79c08b214312d015dba9f103dba714940634ac98",
+      "session_sha256": "492140d091bed53f4a36ad9a64c2390fd36874e5a63ac834f015a29b6488c37b",
+      "parent_sha256": "cbdd18ce8205034d861ee39dc138e3857489e167c2bcfef4061d72c6394b1a14",
+      "tokens": {
+        "input": 2,
+        "output": 1479,
+        "cache_read": 3049,
+        "cache_write": 670
+      },
+      "thinking_tokens": 1409,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 670
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 2002,
+        "cache_read": 5316,
+        "cache_write": 1452
+      },
+      "cli_cumulative_usd": 0.00134496,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0009041899999999999,
+      "api_equivalent_usd": 0.00090419
+    }
+  },
+  {
+    "id": "S06",
+    "group": "仕様読解",
+    "level": "応用",
+    "first": {
+      "phase": "first",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 333.279333,
+      "wall_seconds": 4.317,
+      "answer_text": "答え: B\n理由: 割引前の商品小計5000円は送料無料条件を満たすため送料は0円で、商品値引き後の4400円に離島加算400円を足した4800円が最終請求になる。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "f57dd2ff4fdecc51604d6a79ab7558982f3f2887b4a3cf78af052c9a6d7c51f7",
+      "raw_sha256": "c0a3a3f2e5e3a9e0c02dbf701c39075063f05c7b0e91bf11d13e6138a7783cd1",
+      "session_sha256": "ab12aaba02689290538a9b94955872927100432b8c517a4bfebe35b76bdeceda",
+      "parent_sha256": null,
+      "tokens": {
+        "input": 2,
+        "output": 210,
+        "cache_read": 2267,
+        "cache_write": 746
+      },
+      "thinking_tokens": 138,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 746
+      },
+      "model_usage_tokens": {
+        "input": 2,
+        "output": 210,
+        "cache_read": 2267,
+        "cache_write": 746
+      },
+      "cli_cumulative_usd": 0.00027707000000000003,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00027707000000000003,
+      "api_equivalent_usd": 0.00027707
+    },
+    "N": {
+      "phase": "N",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 347.228928,
+      "wall_seconds": 3.16,
+      "answer_text": "答え: B\n理由: 割引前の商品小計5000円は送料無料条件を満たすため送料は0円で、商品値引き後の4400円に離島加算400円を足した4800円が最終請求になる。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "c2191aa2b6ad43ad4740a3f66cbcdccd7eef7c53d5459217e3f2d7ac6476005c",
+      "raw_sha256": "8f2cdd4a32f80171c8b522ede9627bac1b1ff8a0f7ba2469cbfd29f8a65fcade",
+      "session_sha256": "9b7cd63a0491544ea3a99edd1f09b5fb9d03bf7c52c836c344446667ec192b14",
+      "parent_sha256": "ab12aaba02689290538a9b94955872927100432b8c517a4bfebe35b76bdeceda",
+      "tokens": {
+        "input": 2,
+        "output": 72,
+        "cache_read": 3013,
+        "cache_write": 344
+      },
+      "thinking_tokens": 0,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 344
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 282,
+        "cache_read": 5280,
+        "cache_write": 1090
+      },
+      "cli_cumulative_usd": 0.00041220000000000004,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00013513000000000002,
+      "api_equivalent_usd": 0.00013513
+    },
+    "W": {
+      "phase": "W",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 337.641636,
+      "wall_seconds": 4.818,
+      "answer_text": "答え: B\n理由: 割引前の商品小計5000円は送料無料条件（5000円以上）を満たすので送料は0円、商品値引き後の4400円に離島加算400円を足した4800円が最終請求で、再計算しても結果は変わらない。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "8478034b6a7a71da5a80d06301a1e3808da72c7bbd40a2e2a7ae2875913755e5",
+      "raw_sha256": "f79df5737706b45ddb0bdfe06e157616d9c2d886c602818a34138463e3350305",
+      "session_sha256": "b455a7114a942e2e97a39a5d87b977a5c072f526ea41afa38d10e386e9d5a085",
+      "parent_sha256": "ab12aaba02689290538a9b94955872927100432b8c517a4bfebe35b76bdeceda",
+      "tokens": {
+        "input": 2,
+        "output": 360,
+        "cache_read": 3013,
+        "cache_write": 357
+      },
+      "thinking_tokens": 270,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 357
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 570,
+        "cache_read": 5280,
+        "cache_write": 1103
+      },
+      "cli_cumulative_usd": 0.0005588,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.00028172999999999995,
+      "api_equivalent_usd": 0.00028173
+    },
+    "S": {
+      "phase": "S",
+      "status": "ok",
+      "valid": true,
+      "stop": null,
+      "init_verified": true,
+      "advertised_tools_or_mcp": false,
+      "num_turns": 1,
+      "timed_out": false,
+      "model_check": "match",
+      "model_usage_models": [
+        "claude-haiku-5-5"
+      ],
+      "tool_use_count": 0,
+      "permission_denials": 0,
+      "start_offset_seconds": 342.480962,
+      "wall_seconds": 4.731,
+      "answer_text": "答え: B\n理由: 送料無料判定は割引前の小計5000円で行われて送料は0円、商品値引き後の4400円に離島加算400円を足すと4800円になり、計算を見直しても結果は変わらなかった。",
+      "grade": {
+        "choice": "B",
+        "content": "correct",
+        "format_ok": true
+      },
+      "prompt_sha256": "7d5b480d89ed539265143ec2d72bbb45bef757e4fa2da81160015a32255646c7",
+      "raw_sha256": "7a144db01b9251f2546861b2afdf1abcf597e0b91bb7eb31f8989c6a0a68c6f3",
+      "session_sha256": "0f2c0b6140fefb73ed54e5c93aee0325747c5e3b3dd225c8aab659c837cd17bc",
+      "parent_sha256": "ab12aaba02689290538a9b94955872927100432b8c517a4bfebe35b76bdeceda",
+      "tokens": {
+        "input": 2,
+        "output": 353,
+        "cache_read": 3013,
+        "cache_write": 357
+      },
+      "thinking_tokens": 272,
+      "cache_write_by_ttl": {
+        "5m": 0,
+        "1h": 357
+      },
+      "model_usage_tokens": {
+        "input": 4,
+        "output": 563,
+        "cache_read": 5280,
+        "cache_write": 1103
+      },
+      "cli_cumulative_usd": 0.0005553000000000001,
+      "usage_matches_model_delta": true,
+      "cli_turn_usd": 0.0002782300000000001,
+      "api_equivalent_usd": 0.00027823
+    }
+  }
+]
